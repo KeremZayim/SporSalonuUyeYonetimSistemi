@@ -1,7 +1,9 @@
-﻿using System;
+﻿using SporSalonuUyeYonetimSistemi.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.UI.Design.WebControls;
 using System.Windows.Forms;
 
 namespace SporSalonuUyeYonetimSistemi
@@ -16,7 +18,7 @@ namespace SporSalonuUyeYonetimSistemi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new LoginForm());
         }
     }
 }
