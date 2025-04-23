@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace SporSalonuUyeYonetimSistemi.Classes
+﻿namespace SporSalonuUyeYonetimSistemi.Classes
 {
     internal class DatabaseServer
     {
-        public static string ConnectionString = "";
+        public static string ConnectionString = "Data Source=KEREM_ZAYIM;" +
+                                                "Initial Catalog=SporSalonu;" +
+                                                "Integrated Security=SSPI;";
     }
 }
