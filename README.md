@@ -58,3 +58,4 @@ Bu proje, bir spor salonunun üyelik yönetimi, ödeme işlemleri, antrenman tak
 Bu proje, spor salonları için kapsamlı bir üye yönetim sistemi sunarak salon işletmecilerinin daha düzenli ve etkili bir şekilde hizmet sunmalarını sağlar. Sistem, her bir üye için kişisel, üyelik, ödeme, antrenman ve sağlık bilgilerini takip ederken, aynı zamanda antrenman programları ve katılım geçmişi gibi önemli verileri de yönetmektedir.
 
 *Proje Başlangıç Tarihi: 08.03.2025*
+*Otomasyon Yapımı Başlangıç Tarihi: 08.03.2025*
