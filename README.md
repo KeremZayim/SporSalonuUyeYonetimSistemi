@@ -50,6 +50,9 @@ Bu proje, bir spor salonunun üyelik yönetimi, ödeme işlemleri, antrenman tak
 - Üyelerin sağlık durumları, alerjileri ve acil durum iletişim bilgileri saklanır.
 - Sağlık bilgileri, üyelerin fiziksel durumlarına göre özelleştirilmiş antrenman ve diyet programları oluşturulmasına yardımcı olabilir.
 
+## Kullanılan Paketler
+ - MaterialSkin2
+
 ---
 
 Bu proje, spor salonları için kapsamlı bir üye yönetim sistemi sunarak salon işletmecilerinin daha düzenli ve etkili bir şekilde hizmet sunmalarını sağlar. Sistem, her bir üye için kişisel, üyelik, ödeme, antrenman ve sağlık bilgilerini takip ederken, aynı zamanda antrenman programları ve katılım geçmişi gibi önemli verileri de yönetmektedir.
