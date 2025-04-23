@@ -1,4 +1,4 @@
-# Spor Salonu Yönetim Sistemi
+# Spor Salonu Üye Yönetim Sistemi
 
 Bu proje, bir spor salonunun üyelik yönetimi, ödeme işlemleri, antrenman takibi ve sağlık bilgilerini saklamak için kullanılan bir veritabanı yapısını içermektedir. Kullanıcılar, üyelik bilgilerini, ödemelerini, antrenman programlarını ve sağlık durumlarını takip edebilirler. Bu sistem, salon yöneticilerinin üyeleri daha etkin bir şekilde yönetmesine yardımcı olmayı amaçlar.
 
