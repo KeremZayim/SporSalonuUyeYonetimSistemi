@@ -36,6 +36,7 @@
             this.pnlBody = new System.Windows.Forms.Panel();
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnMembershipTypes = new MaterialSkin.Controls.MaterialButton();
             this.btnPayments = new MaterialSkin.Controls.MaterialButton();
             this.btnParticipationHistory = new MaterialSkin.Controls.MaterialButton();
             this.btnTraningLists = new MaterialSkin.Controls.MaterialButton();
@@ -44,7 +45,6 @@
             this.btnCoach = new MaterialSkin.Controls.MaterialButton();
             this.btnMainPage = new MaterialSkin.Controls.MaterialButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMembershipTypes = new MaterialSkin.Controls.MaterialButton();
             this.pnlTitle.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.pnlBody.SuspendLayout();
@@ -138,6 +138,26 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(276, 689);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // btnMembershipTypes
+            // 
+            this.btnMembershipTypes.AutoSize = false;
+            this.btnMembershipTypes.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMembershipTypes.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnMembershipTypes.Depth = 0;
+            this.btnMembershipTypes.HighEmphasis = true;
+            this.btnMembershipTypes.Icon = null;
+            this.btnMembershipTypes.Location = new System.Drawing.Point(0, 292);
+            this.btnMembershipTypes.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnMembershipTypes.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnMembershipTypes.Name = "btnMembershipTypes";
+            this.btnMembershipTypes.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnMembershipTypes.Size = new System.Drawing.Size(275, 66);
+            this.btnMembershipTypes.TabIndex = 9;
+            this.btnMembershipTypes.Text = "Üyelik Tipleri";
+            this.btnMembershipTypes.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnMembershipTypes.UseAccentColor = false;
+            this.btnMembershipTypes.UseVisualStyleBackColor = true;
             // 
             // btnPayments
             // 
@@ -288,26 +308,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 689);
             this.panel1.TabIndex = 0;
-            // 
-            // btnMembershipTypes
-            // 
-            this.btnMembershipTypes.AutoSize = false;
-            this.btnMembershipTypes.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnMembershipTypes.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnMembershipTypes.Depth = 0;
-            this.btnMembershipTypes.HighEmphasis = true;
-            this.btnMembershipTypes.Icon = null;
-            this.btnMembershipTypes.Location = new System.Drawing.Point(0, 292);
-            this.btnMembershipTypes.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnMembershipTypes.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnMembershipTypes.Name = "btnMembershipTypes";
-            this.btnMembershipTypes.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnMembershipTypes.Size = new System.Drawing.Size(275, 66);
-            this.btnMembershipTypes.TabIndex = 9;
-            this.btnMembershipTypes.Text = "Üyeler";
-            this.btnMembershipTypes.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnMembershipTypes.UseAccentColor = false;
-            this.btnMembershipTypes.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 

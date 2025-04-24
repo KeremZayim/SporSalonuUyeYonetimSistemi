@@ -40,7 +40,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
         {
             string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
             MemberPayments paymentsForm = new MemberPayments(memberId);
-            paymentsForm.Show();
+            paymentsForm.ShowDialog();
         }
     }
 }

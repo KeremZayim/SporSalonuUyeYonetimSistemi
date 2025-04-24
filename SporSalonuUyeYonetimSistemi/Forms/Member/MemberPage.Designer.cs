@@ -47,6 +47,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.note = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabMemberAdd = new System.Windows.Forms.TabPage();
             this.tabMenberDelete = new System.Windows.Forms.TabPage();
+            this.btnMembership = new MaterialSkin.Controls.MaterialButton();
             this.tabControl.SuspendLayout();
             this.tabMemberInfo.SuspendLayout();
             this.SuspendLayout();
@@ -81,6 +82,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             // 
             // tabMemberInfo
             // 
+            this.tabMemberInfo.Controls.Add(this.btnMembership);
             this.tabMemberInfo.Controls.Add(this.btnAttendance);
             this.tabMemberInfo.Controls.Add(this.btnHealthInfo);
             this.tabMemberInfo.Controls.Add(this.btnTrainingInfo);
@@ -280,6 +282,27 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.tabMenberDelete.Text = "Üye Düzenle";
             this.tabMenberDelete.UseVisualStyleBackColor = true;
             // 
+            // btnMembership
+            // 
+            this.btnMembership.AutoSize = false;
+            this.btnMembership.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMembership.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnMembership.Depth = 0;
+            this.btnMembership.Enabled = false;
+            this.btnMembership.HighEmphasis = true;
+            this.btnMembership.Icon = null;
+            this.btnMembership.Location = new System.Drawing.Point(835, 318);
+            this.btnMembership.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnMembership.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnMembership.Name = "btnMembership";
+            this.btnMembership.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnMembership.Size = new System.Drawing.Size(133, 40);
+            this.btnMembership.TabIndex = 2;
+            this.btnMembership.Text = "Üyelik Bilgileri";
+            this.btnMembership.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnMembership.UseAccentColor = false;
+            this.btnMembership.UseVisualStyleBackColor = true;
+            // 
             // MemberPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,5 +341,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
         private MaterialSkin.Controls.MaterialButton btnTrainingInfo;
         private MaterialSkin.Controls.MaterialButton btnMemberTrainers;
         private MaterialSkin.Controls.MaterialButton btnAttendance;
+        private MaterialSkin.Controls.MaterialButton btnMembership;
     }
 }
