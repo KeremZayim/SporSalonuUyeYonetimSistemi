@@ -65,8 +65,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ColumnNames.cs" />
     <Compile Include="Classes\CommonMethods.cs" />
     <Compile Include="Classes\DatabaseServer.cs" />
+    <Compile Include="Classes\Functions.cs" />
     <Compile Include="Classes\ThemeProperties.cs" />
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -80,6 +82,18 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Member\MemberPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\MemberPage.Designer.cs">
+      <DependentUpon>MemberPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Member\MemberPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\MemberPayments.Designer.cs">
+      <DependentUpon>MemberPayments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\MainForm.resx">
@@ -87,6 +101,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\MemberPage.resx">
+      <DependentUpon>MemberPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\MemberPayments.resx">
+      <DependentUpon>MemberPayments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

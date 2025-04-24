@@ -30,6 +30,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            ThemeProperties.ApplyLightTheme(this);
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlRightLogin = new System.Windows.Forms.Panel();
             this.pbRightImage = new System.Windows.Forms.PictureBox();

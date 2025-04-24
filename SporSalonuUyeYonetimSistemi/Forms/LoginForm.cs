@@ -36,7 +36,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms
         public LoginForm()
         {
             InitializeComponent();
-            ThemeProperties.ApplyLightTheme(this);
             // 1.1-)
             lblTitle.MouseDown += (sender, e) =>
             {
@@ -58,7 +57,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms
         }
 
         // 2-)
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
 
             // 2.1-)
@@ -71,16 +70,16 @@ namespace SporSalonuUyeYonetimSistemi.Forms
             {
                 try
                 {
-                    con.Open();
-                    string query = "SELECT username,password FROM admins WHERE username = @username AND password = @password";
+                    await con.OpenAsync();
+                    string query = "SELECT username, password FROM admins WHERE username = @username AND password = @password";
                     SqlCommand command = new SqlCommand(query, con);
                     command.Parameters.AddWithValue("@username", tbUsername.Text);
                     command.Parameters.AddWithValue("@password", tbPassword.Text);
 
-                    SqlDataReader dataReader = command.ExecuteReader();
+                    SqlDataReader dataReader = await command.ExecuteReaderAsync();
                     bool foundUser = false;
 
-                    while (dataReader.Read())
+                    while (await dataReader.ReadAsync())
                     {
                         foundUser = true;
                         MainForm anasayfa = new MainForm();
@@ -160,8 +159,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnLogin.PerformClick(); // Burada tıklanmasını istediğin butonu çağır
-                e.SuppressKeyPress = true; // Enter tuşunun normal çalışmasını engelle
+                btnLogin.PerformClick();
+                e.SuppressKeyPress = true;
             }
         }
     }

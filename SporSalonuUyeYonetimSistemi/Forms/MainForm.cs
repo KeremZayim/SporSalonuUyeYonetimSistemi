@@ -1,4 +1,5 @@
 ﻿using SporSalonuUyeYonetimSistemi.Classes;
+using SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation;
 using System;
 using System.Windows.Forms;
 
@@ -10,9 +11,12 @@ namespace SporSalonuUyeYonetimSistemi
          
          1-) Form Ayarları
             1.1-) Form Başlık Form Taşıma Eventi Ekleme
-         
+
          2-) Child Form
-         
+
+         3-) Butonlar
+            3.1-) Ana Sayfa
+            3.2-) Üyeler
          */
 
         // 1-)
@@ -57,6 +61,11 @@ namespace SporSalonuUyeYonetimSistemi
         private void btnExitApplication_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnMembers_Click(object sender, EventArgs e)
+        {
+            ChildFormAc(new MemberPage());
         }
     }
 }
