@@ -53,6 +53,10 @@ Bu proje, bir spor salonunun üyelik yönetimi, ödeme işlemleri, antrenman tak
 ## Kullanılan Paketler
  - MaterialSkin2
 
+## Formlar
+![resim](https://github.com/user-attachments/assets/909b6730-099e-4845-9dc0-b753d29ecf46)
+
+
 ---
 
 Bu proje, spor salonları için kapsamlı bir üye yönetim sistemi sunarak salon işletmecilerinin daha düzenli ve etkili bir şekilde hizmet sunmalarını sağlar. Sistem, her bir üye için kişisel, üyelik, ödeme, antrenman ve sağlık bilgilerini takip ederken, aynı zamanda antrenman programları ve katılım geçmişi gibi önemli verileri de yönetmektedir.
