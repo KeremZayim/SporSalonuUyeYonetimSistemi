@@ -54,8 +54,7 @@ Bu proje, bir spor salonunun üyelik yönetimi, ödeme işlemleri, antrenman tak
  - MaterialSkin2
 
 ## Formlar
-![resim](https://github.com/user-attachments/assets/909b6730-099e-4845-9dc0-b753d29ecf46)
-
+![resim](https://github.com/user-attachments/assets/934b98d2-4438-47f3-aa30-3970ba5a7c99)
 
 ---
 
