@@ -7,7 +7,7 @@ namespace SporSalonuUyeYonetimSistemi.Classes
     /*
      
      1-) Form Taşıma
-     2-)
+     2-) TextBox Sadece Rakam Girişi
      
      
      
@@ -35,5 +35,14 @@ namespace SporSalonuUyeYonetimSistemi.Classes
         }
 
         // 2-)
+        public static void JustNumberEntering(object sender, KeyPressEventArgs e)
+        {
+            // Sadece rakamlar (0-9) ve Backspace'e izin veriyoruz.
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true; // Diğer tuşlara izin verilmiyor.
+            }
+        }
+
     }
 }

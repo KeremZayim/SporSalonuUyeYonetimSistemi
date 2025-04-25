@@ -42,7 +42,7 @@
             this.btnTraningLists = new MaterialSkin.Controls.MaterialButton();
             this.btnExercises = new MaterialSkin.Controls.MaterialButton();
             this.btnMembers = new MaterialSkin.Controls.MaterialButton();
-            this.btnCoach = new MaterialSkin.Controls.MaterialButton();
+            this.btnTrainers = new MaterialSkin.Controls.MaterialButton();
             this.btnMainPage = new MaterialSkin.Controls.MaterialButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlTitle.SuspendLayout();
@@ -130,7 +130,7 @@
             this.pnlMenu.Controls.Add(this.btnTraningLists);
             this.pnlMenu.Controls.Add(this.btnExercises);
             this.pnlMenu.Controls.Add(this.btnMembers);
-            this.pnlMenu.Controls.Add(this.btnCoach);
+            this.pnlMenu.Controls.Add(this.btnTrainers);
             this.pnlMenu.Controls.Add(this.btnMainPage);
             this.pnlMenu.Controls.Add(this.panel1);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -178,6 +178,7 @@
             this.btnPayments.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnPayments.UseAccentColor = false;
             this.btnPayments.UseVisualStyleBackColor = true;
+            this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
             // 
             // btnParticipationHistory
             // 
@@ -198,6 +199,7 @@
             this.btnParticipationHistory.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnParticipationHistory.UseAccentColor = false;
             this.btnParticipationHistory.UseVisualStyleBackColor = true;
+            this.btnParticipationHistory.Click += new System.EventHandler(this.btnParticipationHistory_Click);
             // 
             // btnTraningLists
             // 
@@ -260,25 +262,26 @@
             this.btnMembers.UseVisualStyleBackColor = true;
             this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
             // 
-            // btnCoach
+            // btnTrainers
             // 
-            this.btnCoach.AutoSize = false;
-            this.btnCoach.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCoach.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnCoach.Depth = 0;
-            this.btnCoach.HighEmphasis = true;
-            this.btnCoach.Icon = null;
-            this.btnCoach.Location = new System.Drawing.Point(0, 358);
-            this.btnCoach.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnCoach.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCoach.Name = "btnCoach";
-            this.btnCoach.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnCoach.Size = new System.Drawing.Size(275, 66);
-            this.btnCoach.TabIndex = 2;
-            this.btnCoach.Text = "Antrenörler";
-            this.btnCoach.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnCoach.UseAccentColor = false;
-            this.btnCoach.UseVisualStyleBackColor = true;
+            this.btnTrainers.AutoSize = false;
+            this.btnTrainers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTrainers.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnTrainers.Depth = 0;
+            this.btnTrainers.HighEmphasis = true;
+            this.btnTrainers.Icon = null;
+            this.btnTrainers.Location = new System.Drawing.Point(0, 358);
+            this.btnTrainers.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTrainers.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnTrainers.Name = "btnTrainers";
+            this.btnTrainers.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnTrainers.Size = new System.Drawing.Size(275, 66);
+            this.btnTrainers.TabIndex = 2;
+            this.btnTrainers.Text = "Antrenörler";
+            this.btnTrainers.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnTrainers.UseAccentColor = false;
+            this.btnTrainers.UseVisualStyleBackColor = true;
+            this.btnTrainers.Click += new System.EventHandler(this.btnTrainers_Click);
             // 
             // btnMainPage
             // 
@@ -339,7 +342,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlChildForm;
         private MaterialSkin.Controls.MaterialButton btnMainPage;
-        private MaterialSkin.Controls.MaterialButton btnCoach;
+        private MaterialSkin.Controls.MaterialButton btnTrainers;
         private MaterialSkin.Controls.MaterialButton btnMembers;
         private MaterialSkin.Controls.MaterialButton btnExercises;
         private MaterialSkin.Controls.MaterialButton btnParticipationHistory;

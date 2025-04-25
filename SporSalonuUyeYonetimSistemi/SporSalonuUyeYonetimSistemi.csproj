@@ -94,6 +94,30 @@
     <Compile Include="Forms\Member\MemberPayments.Designer.cs">
       <DependentUpon>MemberPayments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ParticipationHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ParticipationHistory.Designer.cs">
+      <DependentUpon>ParticipationHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Payments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Payments.Designer.cs">
+      <DependentUpon>Payments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Trainers\AddTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Trainers\AddTrainer.Designer.cs">
+      <DependentUpon>AddTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Trainers\TrainersPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Trainers\TrainersPage.Designer.cs">
+      <DependentUpon>TrainersPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\MainForm.resx">
@@ -107,6 +131,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Member\MemberPayments.resx">
       <DependentUpon>MemberPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParticipationHistory.resx">
+      <DependentUpon>ParticipationHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Payments.resx">
+      <DependentUpon>Payments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Trainers\AddTrainer.resx">
+      <DependentUpon>AddTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Trainers\TrainersPage.resx">
+      <DependentUpon>TrainersPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -146,12 +182,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Source\Images\Filter.png" />
     <Content Include="Source\Images\LoginForm\Closed Eye_1.png" />
     <Content Include="Source\Images\LoginForm\Eye.png" />
     <Content Include="Source\Images\LoginForm\Login.png" />
     <Content Include="Source\Images\LoginForm\Management.png" />
     <Content Include="Source\Images\LoginForm\Password.png" />
     <Content Include="Source\Images\LoginForm\Username.png" />
+    <Content Include="Source\Images\Phone.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

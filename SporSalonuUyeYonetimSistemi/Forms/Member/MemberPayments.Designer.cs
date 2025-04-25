@@ -34,8 +34,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             this.btnPay = new MaterialSkin.Controls.MaterialButton();
             this.cbAraVerdiMi = new MaterialSkin.Controls.MaterialCheckbox();
             this.pnlTitle = new System.Windows.Forms.Panel();
-            this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
             this.pnlTitleSeperator = new System.Windows.Forms.Panel();
+            this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
             this.btnExitApplication = new System.Windows.Forms.Button();
             this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
@@ -107,6 +107,15 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             this.pnlTitle.Size = new System.Drawing.Size(794, 31);
             this.pnlTitle.TabIndex = 3;
             // 
+            // pnlTitleSeperator
+            // 
+            this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
+            this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 30);
+            this.pnlTitleSeperator.Name = "pnlTitleSeperator";
+            this.pnlTitleSeperator.Size = new System.Drawing.Size(749, 1);
+            this.pnlTitleSeperator.TabIndex = 8;
+            // 
             // lblTitle
             // 
             this.lblTitle.Depth = 0;
@@ -119,15 +128,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlTitleSeperator
-            // 
-            this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
-            this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 30);
-            this.pnlTitleSeperator.Name = "pnlTitleSeperator";
-            this.pnlTitleSeperator.Size = new System.Drawing.Size(749, 1);
-            this.pnlTitleSeperator.TabIndex = 8;
             // 
             // btnExitApplication
             // 
@@ -158,6 +158,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

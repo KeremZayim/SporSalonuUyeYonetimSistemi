@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SporSalonuUyeYonetimSistemi.Classes
 {
@@ -61,7 +62,57 @@ namespace SporSalonuUyeYonetimSistemi.Classes
                 }
             }
         }
-        public static async Task detayGetir(string tablo, string member_id, MaterialListView materialListView)
+        public static async Task VerileriGetirManualAsync(string query, MaterialListView materialListView)
+        {
+            using (SqlConnection conn = new SqlConnection(DatabaseServer.ConnectionString))
+            {
+                try
+                {
+                    await conn.OpenAsync();
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    SqlDataReader reader = await cmd.ExecuteReaderAsync();
+
+                    if (reader.HasRows)
+                    {
+                        materialListView.Columns.Clear();
+                        materialListView.Items.Clear();
+
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            string originalColumnName = reader.GetName(i);
+                            string translatedColumnName = Translate.TranslateColumn(originalColumnName);
+                            materialListView.Columns.Add(translatedColumnName);
+                        }
+
+                        while (await reader.ReadAsync())
+                        {
+                            var item = new ListViewItem(reader[0].ToString().Trim());
+
+                            for (int i = 1; i < reader.FieldCount; i++)
+                            {
+                                item.SubItems.Add(reader[i].ToString().Trim());
+                            }
+
+                            materialListView.Items.Add(item);
+                        }
+                    }
+                    reader.Close();
+
+                    foreach (ColumnHeader column in materialListView.Columns)
+                    {
+                        column.Width = materialListView.Width / materialListView.Columns.Count;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Veriler getirilemedi: " + ex.Message);
+                }
+            }
+        }
+
+        public static async Task DetayGetirAsync(string tablo, string member_id, MaterialListView materialListView)
         {
             using (SqlConnection con = new SqlConnection(DatabaseServer.ConnectionString))
             {
@@ -135,7 +186,5 @@ namespace SporSalonuUyeYonetimSistemi.Classes
                 }
             }
         }
-
-
     }
 }

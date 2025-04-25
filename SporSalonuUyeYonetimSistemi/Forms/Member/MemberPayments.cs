@@ -26,13 +26,13 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
 
         private async void MemberPayments_Load(object sender, EventArgs e)
         {
-            await Functions.detayGetir("payments", member_id, dtData);
+            await Functions.DetayGetirAsync("payments", member_id, dtData);
         }
 
         private async void btnPay_Click(object sender, EventArgs e)
         {
             odemeYap(member_id,cbAraVerdiMi);
-            await Functions.detayGetir("payments", member_id, dtData);
+            await Functions.DetayGetirAsync("payments", member_id, dtData);
         }
         async void odemeYap(string memberId,MaterialCheckbox AraVerdiMi)
         {
