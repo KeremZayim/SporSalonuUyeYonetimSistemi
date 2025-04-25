@@ -59,12 +59,14 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             this.dtData.TabIndex = 0;
             this.dtData.UseCompatibleStateImageBehavior = false;
             this.dtData.View = System.Windows.Forms.View.Details;
+            this.dtData.SelectedIndexChanged += new System.EventHandler(this.dtData_SelectedIndexChanged);
             // 
             // btnPay
             // 
             this.btnPay.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnPay.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnPay.Depth = 0;
+            this.btnPay.Enabled = false;
             this.btnPay.HighEmphasis = true;
             this.btnPay.Icon = null;
             this.btnPay.Location = new System.Drawing.Point(349, 439);

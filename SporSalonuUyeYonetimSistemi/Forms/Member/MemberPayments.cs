@@ -31,10 +31,10 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
 
         private async void btnPay_Click(object sender, EventArgs e)
         {
-            odemeYap(member_id,cbAraVerdiMi);
+            odemeYap(member_id, cbAraVerdiMi);
             await Functions.DetayGetirAsync("payments", member_id, dtData);
         }
-        async void odemeYap(string memberId,MaterialCheckbox AraVerdiMi)
+        async void odemeYap(string memberId, MaterialCheckbox AraVerdiMi)
         {
             using (SqlConnection connection = new SqlConnection(DatabaseServer.ConnectionString))
             {
@@ -137,6 +137,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
                     {
                         MessageBox.Show("Üyenin üyelik tipi bulunamadı!");
                     }
+                    buttonControl();
                 }
             }
         }
@@ -144,6 +145,22 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
         private void btnFormExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        void buttonControl()
+        {
+            if (dtData.SelectedItems.Count > 0)
+            {
+                btnPay.Enabled = true;
+            }
+            else
+            {
+                btnPay.Enabled = false;
+            }
+        }
+        private void dtData_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buttonControl();
         }
     }
 }

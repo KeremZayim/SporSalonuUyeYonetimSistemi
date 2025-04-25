@@ -118,6 +118,12 @@
     <Compile Include="Forms\Trainers\TrainersPage.Designer.cs">
       <DependentUpon>TrainersPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Trainers\TrainerStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Trainers\TrainerStudents.Designer.cs">
+      <DependentUpon>TrainerStudents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\MainForm.resx">
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Trainers\TrainersPage.resx">
       <DependentUpon>TrainersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Trainers\TrainerStudents.resx">
+      <DependentUpon>TrainerStudents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -31,14 +31,15 @@
             this.tabSelector = new MaterialSkin.Controls.MaterialTabSelector();
             this.tabPages = new MaterialSkin.Controls.MaterialTabControl();
             this.tabTrainers = new System.Windows.Forms.TabPage();
+            this.btnStudents = new MaterialSkin.Controls.MaterialButton();
+            this.btnDeleteTrainer = new MaterialSkin.Controls.MaterialButton();
+            this.btnEditTrainer = new MaterialSkin.Controls.MaterialButton();
+            this.btnAddTrainer = new MaterialSkin.Controls.MaterialButton();
             this.dtTrainerInfo = new MaterialSkin.Controls.MaterialListView();
             this.trainer_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.trainer_name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.trainer_surname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.phone_number = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnAddTrainer = new MaterialSkin.Controls.MaterialButton();
-            this.btnEditTrainer = new MaterialSkin.Controls.MaterialButton();
-            this.btnDeleteTrainer = new MaterialSkin.Controls.MaterialButton();
             this.tabPages.SuspendLayout();
             this.tabTrainers.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +72,7 @@
             // 
             // tabTrainers
             // 
+            this.tabTrainers.Controls.Add(this.btnStudents);
             this.tabTrainers.Controls.Add(this.btnDeleteTrainer);
             this.tabTrainers.Controls.Add(this.btnEditTrainer);
             this.tabTrainers.Controls.Add(this.btnAddTrainer);
@@ -82,6 +84,92 @@
             this.tabTrainers.TabIndex = 0;
             this.tabTrainers.Text = "Antrenörler";
             this.tabTrainers.UseVisualStyleBackColor = true;
+            // 
+            // btnStudents
+            // 
+            this.btnStudents.AutoSize = false;
+            this.btnStudents.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnStudents.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnStudents.Depth = 0;
+            this.btnStudents.Enabled = false;
+            this.btnStudents.HighEmphasis = true;
+            this.btnStudents.Icon = null;
+            this.btnStudents.Location = new System.Drawing.Point(828, 246);
+            this.btnStudents.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnStudents.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnStudents.Name = "btnStudents";
+            this.btnStudents.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnStudents.Size = new System.Drawing.Size(142, 44);
+            this.btnStudents.TabIndex = 6;
+            this.btnStudents.Text = "Öğrencileri";
+            this.btnStudents.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnStudents.UseAccentColor = false;
+            this.btnStudents.UseVisualStyleBackColor = true;
+            this.btnStudents.Click += new System.EventHandler(this.btnStudents_Click);
+            // 
+            // btnDeleteTrainer
+            // 
+            this.btnDeleteTrainer.AutoSize = false;
+            this.btnDeleteTrainer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDeleteTrainer.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnDeleteTrainer.Depth = 0;
+            this.btnDeleteTrainer.Enabled = false;
+            this.btnDeleteTrainer.HighEmphasis = true;
+            this.btnDeleteTrainer.Icon = null;
+            this.btnDeleteTrainer.Location = new System.Drawing.Point(828, 190);
+            this.btnDeleteTrainer.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDeleteTrainer.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDeleteTrainer.Name = "btnDeleteTrainer";
+            this.btnDeleteTrainer.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnDeleteTrainer.Size = new System.Drawing.Size(142, 44);
+            this.btnDeleteTrainer.TabIndex = 6;
+            this.btnDeleteTrainer.Text = "Antrenörü Sil";
+            this.btnDeleteTrainer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnDeleteTrainer.UseAccentColor = false;
+            this.btnDeleteTrainer.UseVisualStyleBackColor = true;
+            this.btnDeleteTrainer.Click += new System.EventHandler(this.btnDeleteTrainer_Click);
+            // 
+            // btnEditTrainer
+            // 
+            this.btnEditTrainer.AutoSize = false;
+            this.btnEditTrainer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEditTrainer.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnEditTrainer.Depth = 0;
+            this.btnEditTrainer.Enabled = false;
+            this.btnEditTrainer.HighEmphasis = true;
+            this.btnEditTrainer.Icon = null;
+            this.btnEditTrainer.Location = new System.Drawing.Point(828, 134);
+            this.btnEditTrainer.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnEditTrainer.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEditTrainer.Name = "btnEditTrainer";
+            this.btnEditTrainer.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnEditTrainer.Size = new System.Drawing.Size(142, 44);
+            this.btnEditTrainer.TabIndex = 6;
+            this.btnEditTrainer.Text = "Antrenörü Düzenle";
+            this.btnEditTrainer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnEditTrainer.UseAccentColor = false;
+            this.btnEditTrainer.UseVisualStyleBackColor = true;
+            // 
+            // btnAddTrainer
+            // 
+            this.btnAddTrainer.AutoSize = false;
+            this.btnAddTrainer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAddTrainer.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnAddTrainer.Depth = 0;
+            this.btnAddTrainer.HighEmphasis = true;
+            this.btnAddTrainer.Icon = null;
+            this.btnAddTrainer.Location = new System.Drawing.Point(828, 78);
+            this.btnAddTrainer.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAddTrainer.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAddTrainer.Name = "btnAddTrainer";
+            this.btnAddTrainer.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnAddTrainer.Size = new System.Drawing.Size(142, 44);
+            this.btnAddTrainer.TabIndex = 6;
+            this.btnAddTrainer.Text = "Antrenör Ekle";
+            this.btnAddTrainer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAddTrainer.UseAccentColor = false;
+            this.btnAddTrainer.UseVisualStyleBackColor = true;
+            this.btnAddTrainer.Click += new System.EventHandler(this.btnAddTrainer_Click);
             // 
             // dtTrainerInfo
             // 
@@ -108,6 +196,7 @@
             this.dtTrainerInfo.TabIndex = 1;
             this.dtTrainerInfo.UseCompatibleStateImageBehavior = false;
             this.dtTrainerInfo.View = System.Windows.Forms.View.Details;
+            this.dtTrainerInfo.SelectedIndexChanged += new System.EventHandler(this.dtTrainerInfo_SelectedIndexChanged);
             // 
             // trainer_id
             // 
@@ -128,69 +217,6 @@
             // 
             this.phone_number.Text = "Telefon No";
             this.phone_number.Width = 120;
-            // 
-            // btnAddTrainer
-            // 
-            this.btnAddTrainer.AutoSize = false;
-            this.btnAddTrainer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAddTrainer.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnAddTrainer.Depth = 0;
-            this.btnAddTrainer.HighEmphasis = true;
-            this.btnAddTrainer.Icon = null;
-            this.btnAddTrainer.Location = new System.Drawing.Point(828, 78);
-            this.btnAddTrainer.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnAddTrainer.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnAddTrainer.Name = "btnAddTrainer";
-            this.btnAddTrainer.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnAddTrainer.Size = new System.Drawing.Size(142, 44);
-            this.btnAddTrainer.TabIndex = 6;
-            this.btnAddTrainer.Text = "Antrenör Ekle";
-            this.btnAddTrainer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnAddTrainer.UseAccentColor = false;
-            this.btnAddTrainer.UseVisualStyleBackColor = true;
-            this.btnAddTrainer.Click += new System.EventHandler(this.btnAddTrainer_Click);
-            // 
-            // btnEditTrainer
-            // 
-            this.btnEditTrainer.AutoSize = false;
-            this.btnEditTrainer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnEditTrainer.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnEditTrainer.Depth = 0;
-            this.btnEditTrainer.Enabled = false;
-            this.btnEditTrainer.HighEmphasis = true;
-            this.btnEditTrainer.Icon = null;
-            this.btnEditTrainer.Location = new System.Drawing.Point(828, 134);
-            this.btnEditTrainer.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnEditTrainer.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnEditTrainer.Name = "btnEditTrainer";
-            this.btnEditTrainer.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnEditTrainer.Size = new System.Drawing.Size(142, 44);
-            this.btnEditTrainer.TabIndex = 6;
-            this.btnEditTrainer.Text = "Antrenörü Düzenle";
-            this.btnEditTrainer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnEditTrainer.UseAccentColor = false;
-            this.btnEditTrainer.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteTrainer
-            // 
-            this.btnDeleteTrainer.AutoSize = false;
-            this.btnDeleteTrainer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDeleteTrainer.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnDeleteTrainer.Depth = 0;
-            this.btnDeleteTrainer.Enabled = false;
-            this.btnDeleteTrainer.HighEmphasis = true;
-            this.btnDeleteTrainer.Icon = null;
-            this.btnDeleteTrainer.Location = new System.Drawing.Point(828, 190);
-            this.btnDeleteTrainer.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnDeleteTrainer.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnDeleteTrainer.Name = "btnDeleteTrainer";
-            this.btnDeleteTrainer.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnDeleteTrainer.Size = new System.Drawing.Size(142, 44);
-            this.btnDeleteTrainer.TabIndex = 6;
-            this.btnDeleteTrainer.Text = "Antrenörü Sil";
-            this.btnDeleteTrainer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnDeleteTrainer.UseAccentColor = false;
-            this.btnDeleteTrainer.UseVisualStyleBackColor = true;
             // 
             // TrainersPage
             // 
@@ -224,5 +250,6 @@
         private MaterialSkin.Controls.MaterialButton btnDeleteTrainer;
         private MaterialSkin.Controls.MaterialButton btnEditTrainer;
         private MaterialSkin.Controls.MaterialButton btnAddTrainer;
+        private MaterialSkin.Controls.MaterialButton btnStudents;
     }
 }
