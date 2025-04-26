@@ -33,6 +33,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.tabSelector = new MaterialSkin.Controls.MaterialTabSelector();
             this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.tabMemberInfo = new System.Windows.Forms.TabPage();
+            this.btnMembership = new MaterialSkin.Controls.MaterialButton();
             this.btnAttendance = new MaterialSkin.Controls.MaterialButton();
             this.btnHealthInfo = new MaterialSkin.Controls.MaterialButton();
             this.btnTrainingInfo = new MaterialSkin.Controls.MaterialButton();
@@ -45,9 +46,9 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.member_birthday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.phone_number = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.note = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabMemberAdd = new System.Windows.Forms.TabPage();
-            this.tabMenberDelete = new System.Windows.Forms.TabPage();
-            this.btnMembership = new MaterialSkin.Controls.MaterialButton();
+            this.btnEditMember = new MaterialSkin.Controls.MaterialButton();
+            this.btnAddMember = new MaterialSkin.Controls.MaterialButton();
+            this.btnDeleteMember = new MaterialSkin.Controls.MaterialButton();
             this.tabControl.SuspendLayout();
             this.tabMemberInfo.SuspendLayout();
             this.SuspendLayout();
@@ -68,8 +69,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             // tabControl
             // 
             this.tabControl.Controls.Add(this.tabMemberInfo);
-            this.tabControl.Controls.Add(this.tabMemberAdd);
-            this.tabControl.Controls.Add(this.tabMenberDelete);
             this.tabControl.Depth = 0;
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(3, 50);
@@ -84,6 +83,9 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             // 
             this.tabMemberInfo.Controls.Add(this.btnMembership);
             this.tabMemberInfo.Controls.Add(this.btnAttendance);
+            this.tabMemberInfo.Controls.Add(this.btnAddMember);
+            this.tabMemberInfo.Controls.Add(this.btnDeleteMember);
+            this.tabMemberInfo.Controls.Add(this.btnEditMember);
             this.tabMemberInfo.Controls.Add(this.btnHealthInfo);
             this.tabMemberInfo.Controls.Add(this.btnTrainingInfo);
             this.tabMemberInfo.Controls.Add(this.btnMemberTrainers);
@@ -97,6 +99,28 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.tabMemberInfo.Text = "Üye Bilgileri";
             this.tabMemberInfo.UseVisualStyleBackColor = true;
             // 
+            // btnMembership
+            // 
+            this.btnMembership.AutoSize = false;
+            this.btnMembership.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMembership.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnMembership.Depth = 0;
+            this.btnMembership.Enabled = false;
+            this.btnMembership.HighEmphasis = true;
+            this.btnMembership.Icon = null;
+            this.btnMembership.Location = new System.Drawing.Point(835, 227);
+            this.btnMembership.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnMembership.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnMembership.Name = "btnMembership";
+            this.btnMembership.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnMembership.Size = new System.Drawing.Size(133, 40);
+            this.btnMembership.TabIndex = 2;
+            this.btnMembership.Text = "Üyelik Bilgileri";
+            this.btnMembership.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnMembership.UseAccentColor = false;
+            this.btnMembership.UseVisualStyleBackColor = true;
+            this.btnMembership.Click += new System.EventHandler(this.btnMembership_Click);
+            // 
             // btnAttendance
             // 
             this.btnAttendance.AutoSize = false;
@@ -106,7 +130,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnAttendance.Enabled = false;
             this.btnAttendance.HighEmphasis = true;
             this.btnAttendance.Icon = null;
-            this.btnAttendance.Location = new System.Drawing.Point(835, 266);
+            this.btnAttendance.Location = new System.Drawing.Point(835, 484);
             this.btnAttendance.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAttendance.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAttendance.Name = "btnAttendance";
@@ -127,7 +151,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnHealthInfo.Enabled = false;
             this.btnHealthInfo.HighEmphasis = true;
             this.btnHealthInfo.Icon = null;
-            this.btnHealthInfo.Location = new System.Drawing.Point(835, 214);
+            this.btnHealthInfo.Location = new System.Drawing.Point(835, 276);
             this.btnHealthInfo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnHealthInfo.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnHealthInfo.Name = "btnHealthInfo";
@@ -148,7 +172,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnTrainingInfo.Enabled = false;
             this.btnTrainingInfo.HighEmphasis = true;
             this.btnTrainingInfo.Icon = null;
-            this.btnTrainingInfo.Location = new System.Drawing.Point(835, 162);
+            this.btnTrainingInfo.Location = new System.Drawing.Point(835, 380);
             this.btnTrainingInfo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnTrainingInfo.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnTrainingInfo.Name = "btnTrainingInfo";
@@ -169,7 +193,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnMemberTrainers.Enabled = false;
             this.btnMemberTrainers.HighEmphasis = true;
             this.btnMemberTrainers.Icon = null;
-            this.btnMemberTrainers.Location = new System.Drawing.Point(835, 110);
+            this.btnMemberTrainers.Location = new System.Drawing.Point(835, 328);
             this.btnMemberTrainers.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnMemberTrainers.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMemberTrainers.Name = "btnMemberTrainers";
@@ -180,6 +204,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnMemberTrainers.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnMemberTrainers.UseAccentColor = false;
             this.btnMemberTrainers.UseVisualStyleBackColor = true;
+            this.btnMemberTrainers.Click += new System.EventHandler(this.btnMemberTrainers_Click);
             // 
             // btnPayments
             // 
@@ -190,7 +215,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnPayments.Enabled = false;
             this.btnPayments.HighEmphasis = true;
             this.btnPayments.Icon = null;
-            this.btnPayments.Location = new System.Drawing.Point(835, 58);
+            this.btnPayments.Location = new System.Drawing.Point(835, 432);
             this.btnPayments.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnPayments.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPayments.Name = "btnPayments";
@@ -262,46 +287,67 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.note.Text = "Not";
             this.note.Width = 240;
             // 
-            // tabMemberAdd
+            // btnEditMember
             // 
-            this.tabMemberAdd.Location = new System.Drawing.Point(4, 22);
-            this.tabMemberAdd.Name = "tabMemberAdd";
-            this.tabMemberAdd.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMemberAdd.Size = new System.Drawing.Size(990, 610);
-            this.tabMemberAdd.TabIndex = 1;
-            this.tabMemberAdd.Text = "Üye Ekle";
-            this.tabMemberAdd.UseVisualStyleBackColor = true;
+            this.btnEditMember.AutoSize = false;
+            this.btnEditMember.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEditMember.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnEditMember.Depth = 0;
+            this.btnEditMember.Enabled = false;
+            this.btnEditMember.HighEmphasis = true;
+            this.btnEditMember.Icon = null;
+            this.btnEditMember.Location = new System.Drawing.Point(835, 123);
+            this.btnEditMember.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnEditMember.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEditMember.Name = "btnEditMember";
+            this.btnEditMember.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnEditMember.Size = new System.Drawing.Size(133, 40);
+            this.btnEditMember.TabIndex = 1;
+            this.btnEditMember.Text = "Üyeyi Düzenle";
+            this.btnEditMember.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnEditMember.UseAccentColor = true;
+            this.btnEditMember.UseVisualStyleBackColor = true;
             // 
-            // tabMenberDelete
+            // btnAddMember
             // 
-            this.tabMenberDelete.Location = new System.Drawing.Point(4, 22);
-            this.tabMenberDelete.Name = "tabMenberDelete";
-            this.tabMenberDelete.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMenberDelete.Size = new System.Drawing.Size(990, 610);
-            this.tabMenberDelete.TabIndex = 2;
-            this.tabMenberDelete.Text = "Üye Düzenle";
-            this.tabMenberDelete.UseVisualStyleBackColor = true;
+            this.btnAddMember.AutoSize = false;
+            this.btnAddMember.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAddMember.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnAddMember.Depth = 0;
+            this.btnAddMember.HighEmphasis = true;
+            this.btnAddMember.Icon = null;
+            this.btnAddMember.Location = new System.Drawing.Point(835, 71);
+            this.btnAddMember.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAddMember.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAddMember.Name = "btnAddMember";
+            this.btnAddMember.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnAddMember.Size = new System.Drawing.Size(133, 40);
+            this.btnAddMember.TabIndex = 1;
+            this.btnAddMember.Text = "Üye Ekle";
+            this.btnAddMember.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAddMember.UseAccentColor = true;
+            this.btnAddMember.UseVisualStyleBackColor = true;
             // 
-            // btnMembership
+            // btnDeleteMember
             // 
-            this.btnMembership.AutoSize = false;
-            this.btnMembership.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnMembership.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnMembership.Depth = 0;
-            this.btnMembership.Enabled = false;
-            this.btnMembership.HighEmphasis = true;
-            this.btnMembership.Icon = null;
-            this.btnMembership.Location = new System.Drawing.Point(835, 318);
-            this.btnMembership.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnMembership.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnMembership.Name = "btnMembership";
-            this.btnMembership.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnMembership.Size = new System.Drawing.Size(133, 40);
-            this.btnMembership.TabIndex = 2;
-            this.btnMembership.Text = "Üyelik Bilgileri";
-            this.btnMembership.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnMembership.UseAccentColor = false;
-            this.btnMembership.UseVisualStyleBackColor = true;
+            this.btnDeleteMember.AutoSize = false;
+            this.btnDeleteMember.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDeleteMember.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnDeleteMember.Depth = 0;
+            this.btnDeleteMember.Enabled = false;
+            this.btnDeleteMember.HighEmphasis = true;
+            this.btnDeleteMember.Icon = null;
+            this.btnDeleteMember.Location = new System.Drawing.Point(835, 175);
+            this.btnDeleteMember.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDeleteMember.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDeleteMember.Name = "btnDeleteMember";
+            this.btnDeleteMember.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnDeleteMember.Size = new System.Drawing.Size(133, 40);
+            this.btnDeleteMember.TabIndex = 1;
+            this.btnDeleteMember.Text = "Üyeyi Sil";
+            this.btnDeleteMember.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnDeleteMember.UseAccentColor = true;
+            this.btnDeleteMember.UseVisualStyleBackColor = true;
             // 
             // MemberPage
             // 
@@ -327,8 +373,12 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
         private MaterialSkin.Controls.MaterialTabSelector tabSelector;
         private MaterialSkin.Controls.MaterialTabControl tabControl;
         private System.Windows.Forms.TabPage tabMemberInfo;
-        private System.Windows.Forms.TabPage tabMemberAdd;
-        private System.Windows.Forms.TabPage tabMenberDelete;
+        private MaterialSkin.Controls.MaterialButton btnMembership;
+        private MaterialSkin.Controls.MaterialButton btnAttendance;
+        private MaterialSkin.Controls.MaterialButton btnHealthInfo;
+        private MaterialSkin.Controls.MaterialButton btnTrainingInfo;
+        private MaterialSkin.Controls.MaterialButton btnMemberTrainers;
+        private MaterialSkin.Controls.MaterialButton btnPayments;
         private MaterialSkin.Controls.MaterialListView dtMemberInfo;
         private System.Windows.Forms.ColumnHeader member_id;
         private System.Windows.Forms.ColumnHeader member_name;
@@ -336,11 +386,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
         private System.Windows.Forms.ColumnHeader member_birthday;
         private System.Windows.Forms.ColumnHeader phone_number;
         private System.Windows.Forms.ColumnHeader note;
-        private MaterialSkin.Controls.MaterialButton btnPayments;
-        private MaterialSkin.Controls.MaterialButton btnHealthInfo;
-        private MaterialSkin.Controls.MaterialButton btnTrainingInfo;
-        private MaterialSkin.Controls.MaterialButton btnMemberTrainers;
-        private MaterialSkin.Controls.MaterialButton btnAttendance;
-        private MaterialSkin.Controls.MaterialButton btnMembership;
+        private MaterialSkin.Controls.MaterialButton btnEditMember;
+        private MaterialSkin.Controls.MaterialButton btnAddMember;
+        private MaterialSkin.Controls.MaterialButton btnDeleteMember;
     }
 }

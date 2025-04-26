@@ -1,0 +1,128 @@
+﻿namespace SporSalonuUyeYonetimSistemi.Forms.Member
+{
+    partial class MemberMemberships
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.pnlTitle = new System.Windows.Forms.Panel();
+            this.pnlTitleSeperator = new System.Windows.Forms.Panel();
+            this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
+            this.btnExitApplication = new System.Windows.Forms.Button();
+            this.dtMemberMemberships = new MaterialSkin.Controls.MaterialListView();
+            this.pnlTitle.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pnlTitle
+            // 
+            this.pnlTitle.Controls.Add(this.pnlTitleSeperator);
+            this.pnlTitle.Controls.Add(this.lblTitle);
+            this.pnlTitle.Controls.Add(this.btnExitApplication);
+            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitle.Location = new System.Drawing.Point(3, 0);
+            this.pnlTitle.Name = "pnlTitle";
+            this.pnlTitle.Size = new System.Drawing.Size(745, 31);
+            this.pnlTitle.TabIndex = 4;
+            // 
+            // pnlTitleSeperator
+            // 
+            this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
+            this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 30);
+            this.pnlTitleSeperator.Name = "pnlTitleSeperator";
+            this.pnlTitleSeperator.Size = new System.Drawing.Size(700, 1);
+            this.pnlTitleSeperator.TabIndex = 8;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Depth = 0;
+            this.lblTitle.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblTitle.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
+            this.lblTitle.Location = new System.Drawing.Point(59, 0);
+            this.lblTitle.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(633, 30);
+            this.lblTitle.TabIndex = 5;
+            this.lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnExitApplication
+            // 
+            this.btnExitApplication.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExitApplication.Location = new System.Drawing.Point(700, 0);
+            this.btnExitApplication.Name = "btnExitApplication";
+            this.btnExitApplication.Size = new System.Drawing.Size(45, 31);
+            this.btnExitApplication.TabIndex = 0;
+            this.btnExitApplication.Text = "X";
+            this.btnExitApplication.UseVisualStyleBackColor = true;
+            this.btnExitApplication.Click += new System.EventHandler(this.btnExitForm_Click);
+            // 
+            // dtMemberMemberships
+            // 
+            this.dtMemberMemberships.AutoSizeTable = false;
+            this.dtMemberMemberships.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dtMemberMemberships.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtMemberMemberships.Depth = 0;
+            this.dtMemberMemberships.FullRowSelect = true;
+            this.dtMemberMemberships.HideSelection = false;
+            this.dtMemberMemberships.Location = new System.Drawing.Point(40, 82);
+            this.dtMemberMemberships.MinimumSize = new System.Drawing.Size(200, 100);
+            this.dtMemberMemberships.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.dtMemberMemberships.MouseState = MaterialSkin.MouseState.OUT;
+            this.dtMemberMemberships.Name = "dtMemberMemberships";
+            this.dtMemberMemberships.OwnerDraw = true;
+            this.dtMemberMemberships.Size = new System.Drawing.Size(671, 431);
+            this.dtMemberMemberships.TabIndex = 5;
+            this.dtMemberMemberships.UseCompatibleStateImageBehavior = false;
+            this.dtMemberMemberships.View = System.Windows.Forms.View.Details;
+            // 
+            // MemberMemberships
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(751, 532);
+            this.Controls.Add(this.dtMemberMemberships);
+            this.Controls.Add(this.pnlTitle);
+            this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.Name = "MemberMemberships";
+            this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Spor Salonu Üye Yönetim Sistemi";
+            this.Shown += new System.EventHandler(this.MemberMemberships_Shown);
+            this.pnlTitle.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel pnlTitle;
+        private System.Windows.Forms.Panel pnlTitleSeperator;
+        private MaterialSkin.Controls.MaterialLabel lblTitle;
+        private System.Windows.Forms.Button btnExitApplication;
+        private MaterialSkin.Controls.MaterialListView dtMemberMemberships;
+    }
+}

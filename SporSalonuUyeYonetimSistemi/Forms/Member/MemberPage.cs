@@ -40,7 +40,10 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             {
                 if (item is MaterialButton materialButton)
                 {
-                    materialButton.Enabled = aktiflik;
+                    if (materialButton.Name != "btnAddMember")
+                    {
+                        materialButton.Enabled = aktiflik;
+                    }
                 }
             }
         }
@@ -54,6 +57,23 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
             MemberPayments paymentsForm = new MemberPayments(memberId);
             paymentsForm.ShowDialog();
+            buttonControl();
+        }
+
+        private void btnMembership_Click(object sender, EventArgs e)
+        {
+            string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
+            MemberMemberships membershipsForm = new MemberMemberships(memberId);
+            membershipsForm.ShowDialog();
+            buttonControl();
+        }
+
+        private void btnMemberTrainers_Click(object sender, EventArgs e)
+        {
+            string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
+            MemberTrainers membershipsForm = new MemberTrainers(memberId);
+            membershipsForm.ShowDialog();
+            buttonControl();
         }
     }
 }

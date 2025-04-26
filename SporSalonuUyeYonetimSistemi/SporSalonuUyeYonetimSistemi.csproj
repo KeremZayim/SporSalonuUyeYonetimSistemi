@@ -82,6 +82,18 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Member\AddMemberTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\AddMemberTrainer.Designer.cs">
+      <DependentUpon>AddMemberTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Member\MemberMemberships.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\MemberMemberships.Designer.cs">
+      <DependentUpon>MemberMemberships.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Member\MemberPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     </Compile>
     <Compile Include="Forms\Member\MemberPayments.Designer.cs">
       <DependentUpon>MemberPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Member\MemberTrainers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\MemberTrainers.Designer.cs">
+      <DependentUpon>MemberTrainers.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ParticipationHistory.cs">
       <SubType>Form</SubType>
@@ -111,6 +129,12 @@
     </Compile>
     <Compile Include="Forms\Trainers\AddTrainer.Designer.cs">
       <DependentUpon>AddTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Trainers\EditTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Trainers\EditTrainer.Designer.cs">
+      <DependentUpon>EditTrainer.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Trainers\TrainersPage.cs">
       <SubType>Form</SubType>
@@ -132,11 +156,20 @@
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\AddMemberTrainer.resx">
+      <DependentUpon>AddMemberTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\MemberMemberships.resx">
+      <DependentUpon>MemberMemberships.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Member\MemberPage.resx">
       <DependentUpon>MemberPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Member\MemberPayments.resx">
       <DependentUpon>MemberPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\MemberTrainers.resx">
+      <DependentUpon>MemberTrainers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ParticipationHistory.resx">
       <DependentUpon>ParticipationHistory.cs</DependentUpon>
@@ -146,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Trainers\AddTrainer.resx">
       <DependentUpon>AddTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Trainers\EditTrainer.resx">
+      <DependentUpon>EditTrainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Trainers\TrainersPage.resx">
       <DependentUpon>TrainersPage.cs</DependentUpon>

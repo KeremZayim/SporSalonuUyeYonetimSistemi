@@ -149,6 +149,7 @@
             this.btnEditTrainer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditTrainer.UseAccentColor = false;
             this.btnEditTrainer.UseVisualStyleBackColor = true;
+            this.btnEditTrainer.Click += new System.EventHandler(this.btnEditTrainer_Click);
             // 
             // btnAddTrainer
             // 

@@ -31,6 +31,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
             AddTrainer addTrainer = new AddTrainer();
             addTrainer.ShowDialog();
             await Functions.VerileriGetirAsync("trainers", dtTrainerInfo);
+            buttonControl();
         }
         private async Task TrainerDelete(int trainerId)
         {
@@ -88,7 +89,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
                 MessageBox.Show("Lütfen silmek istediğiniz antrenörü seçin.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        void butonControl()
+        void buttonControl()
         {
             bool aktiflik;
             if (dtTrainerInfo.SelectedItems.Count > 0)
@@ -112,7 +113,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
         }
         private void dtTrainerInfo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            butonControl();
+            buttonControl();
         }
 
         private async void btnStudents_Click(object sender, EventArgs e)
@@ -121,7 +122,16 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
             TrainerStudents trainerStudents = new TrainerStudents(trainerID);
             trainerStudents.ShowDialog();
             await Functions.VerileriGetirAsync("trainers", dtTrainerInfo);
-            butonControl();
+            buttonControl();
+        }
+
+        private async void btnEditTrainer_Click(object sender, EventArgs e)
+        {
+            string trainerID = dtTrainerInfo.SelectedItems[0].SubItems[0].Text;
+            EditTrainer trainerStudents = new EditTrainer(trainerID);
+            trainerStudents.ShowDialog();
+            await Functions.VerileriGetirAsync("trainers", dtTrainerInfo);
+            buttonControl();
         }
     }
 }

@@ -32,10 +32,10 @@
             this.tbTrainerSurname = new MaterialSkin.Controls.MaterialTextBox();
             this.tbTrainerName = new MaterialSkin.Controls.MaterialTextBox();
             this.pnlTitle = new System.Windows.Forms.Panel();
-            this.pnlTitleSeperator = new System.Windows.Forms.Panel();
             this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
             this.btnExitForm = new System.Windows.Forms.Button();
             this.btnAddTrainer = new MaterialSkin.Controls.MaterialButton();
+            this.pnlTitleSeperator = new System.Windows.Forms.Panel();
             this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,15 +104,6 @@
             this.pnlTitle.Size = new System.Drawing.Size(394, 31);
             this.pnlTitle.TabIndex = 4;
             // 
-            // pnlTitleSeperator
-            // 
-            this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
-            this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 30);
-            this.pnlTitleSeperator.Name = "pnlTitleSeperator";
-            this.pnlTitleSeperator.Size = new System.Drawing.Size(349, 1);
-            this.pnlTitleSeperator.TabIndex = 8;
-            // 
             // lblTitle
             // 
             this.lblTitle.Depth = 0;
@@ -158,6 +149,15 @@
             this.btnAddTrainer.UseVisualStyleBackColor = true;
             this.btnAddTrainer.Click += new System.EventHandler(this.btnAddTrainer_Click);
             // 
+            // pnlTitleSeperator
+            // 
+            this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
+            this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 30);
+            this.pnlTitleSeperator.Name = "pnlTitleSeperator";
+            this.pnlTitleSeperator.Size = new System.Drawing.Size(349, 1);
+            this.pnlTitleSeperator.TabIndex = 9;
+            // 
             // AddTrainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,7 +172,8 @@
             this.Name = "AddTrainer";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddTrainer";
+            this.Text = "Spor Salonu Üye Yönetim Sistemi";
+            this.Load += new System.EventHandler(this.AddTrainer_Load);
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -184,9 +185,9 @@
         private MaterialSkin.Controls.MaterialTextBox tbTrainerSurname;
         private MaterialSkin.Controls.MaterialTextBox tbTrainerName;
         private System.Windows.Forms.Panel pnlTitle;
-        private System.Windows.Forms.Panel pnlTitleSeperator;
         private MaterialSkin.Controls.MaterialLabel lblTitle;
         private System.Windows.Forms.Button btnExitForm;
         private MaterialSkin.Controls.MaterialButton btnAddTrainer;
+        private System.Windows.Forms.Panel pnlTitleSeperator;
     }
 }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.pnlTitle = new System.Windows.Forms.Panel();
+            this.btnExitForm = new System.Windows.Forms.Button();
             this.pnlTitleSeperator = new System.Windows.Forms.Panel();
             this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
-            this.btnExitForm = new System.Windows.Forms.Button();
             this.dtTrainerStudents = new MaterialSkin.Controls.MaterialListView();
             this.btnDeleteStudent = new MaterialSkin.Controls.MaterialButton();
             this.pnlTitle.SuspendLayout();
@@ -48,6 +48,17 @@
             this.pnlTitle.Size = new System.Drawing.Size(544, 31);
             this.pnlTitle.TabIndex = 5;
             // 
+            // btnExitForm
+            // 
+            this.btnExitForm.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExitForm.Location = new System.Drawing.Point(499, 0);
+            this.btnExitForm.Name = "btnExitForm";
+            this.btnExitForm.Size = new System.Drawing.Size(45, 30);
+            this.btnExitForm.TabIndex = 0;
+            this.btnExitForm.Text = "X";
+            this.btnExitForm.UseVisualStyleBackColor = true;
+            this.btnExitForm.Click += new System.EventHandler(this.btnExitForm_Click);
+            // 
             // pnlTitleSeperator
             // 
             this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
@@ -62,24 +73,13 @@
             this.lblTitle.Depth = 0;
             this.lblTitle.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblTitle.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
-            this.lblTitle.Location = new System.Drawing.Point(50, 1);
+            this.lblTitle.Location = new System.Drawing.Point(50, 0);
             this.lblTitle.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(450, 30);
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnExitForm
-            // 
-            this.btnExitForm.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExitForm.Location = new System.Drawing.Point(499, 0);
-            this.btnExitForm.Name = "btnExitForm";
-            this.btnExitForm.Size = new System.Drawing.Size(45, 30);
-            this.btnExitForm.TabIndex = 0;
-            this.btnExitForm.Text = "X";
-            this.btnExitForm.UseVisualStyleBackColor = true;
-            this.btnExitForm.Click += new System.EventHandler(this.btnExitForm_Click);
             // 
             // dtTrainerStudents
             // 
@@ -89,13 +89,13 @@
             this.dtTrainerStudents.Depth = 0;
             this.dtTrainerStudents.FullRowSelect = true;
             this.dtTrainerStudents.HideSelection = false;
-            this.dtTrainerStudents.Location = new System.Drawing.Point(25, 61);
+            this.dtTrainerStudents.Location = new System.Drawing.Point(25, 60);
             this.dtTrainerStudents.MinimumSize = new System.Drawing.Size(200, 100);
             this.dtTrainerStudents.MouseLocation = new System.Drawing.Point(-1, -1);
             this.dtTrainerStudents.MouseState = MaterialSkin.MouseState.OUT;
             this.dtTrainerStudents.Name = "dtTrainerStudents";
             this.dtTrainerStudents.OwnerDraw = true;
-            this.dtTrainerStudents.Size = new System.Drawing.Size(344, 356);
+            this.dtTrainerStudents.Size = new System.Drawing.Size(500, 350);
             this.dtTrainerStudents.TabIndex = 6;
             this.dtTrainerStudents.UseCompatibleStateImageBehavior = false;
             this.dtTrainerStudents.View = System.Windows.Forms.View.Details;
@@ -110,7 +110,7 @@
             this.btnDeleteStudent.Enabled = false;
             this.btnDeleteStudent.HighEmphasis = true;
             this.btnDeleteStudent.Icon = null;
-            this.btnDeleteStudent.Location = new System.Drawing.Point(388, 203);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(204, 435);
             this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDeleteStudent.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDeleteStudent.Name = "btnDeleteStudent";
@@ -127,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 450);
+            this.ClientSize = new System.Drawing.Size(550, 500);
             this.Controls.Add(this.btnDeleteStudent);
             this.Controls.Add(this.dtTrainerStudents);
             this.Controls.Add(this.pnlTitle);
