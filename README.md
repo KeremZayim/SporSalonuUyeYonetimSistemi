@@ -54,7 +54,10 @@ Bu proje, bir spor salonunun üyelik yönetimi, ödeme işlemleri, antrenman tak
  - MaterialSkin2
 
 ## Formlar
-![resim](https://github.com/user-attachments/assets/934b98d2-4438-47f3-aa30-3970ba5a7c99)
+Yaklaşık  Olarak 32 Adet Form Vardır.
+
+![resim](https://github.com/user-attachments/assets/027c37ba-15d1-41ee-9a8c-0dbcf99e61ac)
+
 
 ---
 
