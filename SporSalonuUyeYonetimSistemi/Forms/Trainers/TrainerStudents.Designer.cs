@@ -34,6 +34,7 @@
             this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
             this.dtTrainerStudents = new MaterialSkin.Controls.MaterialListView();
             this.btnDeleteStudent = new MaterialSkin.Controls.MaterialButton();
+            this.btnAddStudent = new MaterialSkin.Controls.MaterialButton();
             this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,7 +111,7 @@
             this.btnDeleteStudent.Enabled = false;
             this.btnDeleteStudent.HighEmphasis = true;
             this.btnDeleteStudent.Icon = null;
-            this.btnDeleteStudent.Location = new System.Drawing.Point(204, 435);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(279, 436);
             this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDeleteStudent.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDeleteStudent.Name = "btnDeleteStudent";
@@ -123,11 +124,33 @@
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
             this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
+            // btnAddStudent
+            // 
+            this.btnAddStudent.AutoSize = false;
+            this.btnAddStudent.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAddStudent.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnAddStudent.Depth = 0;
+            this.btnAddStudent.HighEmphasis = true;
+            this.btnAddStudent.Icon = null;
+            this.btnAddStudent.Location = new System.Drawing.Point(129, 436);
+            this.btnAddStudent.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAddStudent.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAddStudent.Name = "btnAddStudent";
+            this.btnAddStudent.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnAddStudent.Size = new System.Drawing.Size(142, 44);
+            this.btnAddStudent.TabIndex = 7;
+            this.btnAddStudent.Text = "Öğrenci Ekle";
+            this.btnAddStudent.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAddStudent.UseAccentColor = false;
+            this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
+            // 
             // TrainerStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 500);
+            this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.btnDeleteStudent);
             this.Controls.Add(this.dtTrainerStudents);
             this.Controls.Add(this.pnlTitle);
@@ -150,5 +173,6 @@
         private System.Windows.Forms.Button btnExitForm;
         private MaterialSkin.Controls.MaterialListView dtTrainerStudents;
         private MaterialSkin.Controls.MaterialButton btnDeleteStudent;
+        private MaterialSkin.Controls.MaterialButton btnAddStudent;
     }
 }

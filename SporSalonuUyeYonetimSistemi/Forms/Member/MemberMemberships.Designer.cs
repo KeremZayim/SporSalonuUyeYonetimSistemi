@@ -29,32 +29,22 @@
         private void InitializeComponent()
         {
             this.pnlTitle = new System.Windows.Forms.Panel();
-            this.pnlTitleSeperator = new System.Windows.Forms.Panel();
             this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
             this.btnExitApplication = new System.Windows.Forms.Button();
+            this.pnlTitleSeperator = new System.Windows.Forms.Panel();
             this.dtMemberMemberships = new MaterialSkin.Controls.MaterialListView();
             this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTitle
             // 
-            this.pnlTitle.Controls.Add(this.pnlTitleSeperator);
             this.pnlTitle.Controls.Add(this.lblTitle);
             this.pnlTitle.Controls.Add(this.btnExitApplication);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(3, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(745, 31);
+            this.pnlTitle.Size = new System.Drawing.Size(745, 30);
             this.pnlTitle.TabIndex = 4;
-            // 
-            // pnlTitleSeperator
-            // 
-            this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
-            this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 30);
-            this.pnlTitleSeperator.Name = "pnlTitleSeperator";
-            this.pnlTitleSeperator.Size = new System.Drawing.Size(700, 1);
-            this.pnlTitleSeperator.TabIndex = 8;
             // 
             // lblTitle
             // 
@@ -74,11 +64,20 @@
             this.btnExitApplication.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExitApplication.Location = new System.Drawing.Point(700, 0);
             this.btnExitApplication.Name = "btnExitApplication";
-            this.btnExitApplication.Size = new System.Drawing.Size(45, 31);
+            this.btnExitApplication.Size = new System.Drawing.Size(45, 30);
             this.btnExitApplication.TabIndex = 0;
             this.btnExitApplication.Text = "X";
             this.btnExitApplication.UseVisualStyleBackColor = true;
             this.btnExitApplication.Click += new System.EventHandler(this.btnExitForm_Click);
+            // 
+            // pnlTitleSeperator
+            // 
+            this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
+            this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitleSeperator.Location = new System.Drawing.Point(3, 30);
+            this.pnlTitleSeperator.Name = "pnlTitleSeperator";
+            this.pnlTitleSeperator.Size = new System.Drawing.Size(745, 1);
+            this.pnlTitleSeperator.TabIndex = 8;
             // 
             // dtMemberMemberships
             // 
@@ -104,13 +103,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 532);
+            this.Controls.Add(this.pnlTitleSeperator);
             this.Controls.Add(this.dtMemberMemberships);
             this.Controls.Add(this.pnlTitle);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
             this.Name = "MemberMemberships";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Spor Salonu Üye Yönetim Sistemi";
+            this.Text = "Üyelikler";
             this.Shown += new System.EventHandler(this.MemberMemberships_Shown);
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);

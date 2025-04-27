@@ -34,9 +34,9 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             this.btnPay = new MaterialSkin.Controls.MaterialButton();
             this.cbAraVerdiMi = new MaterialSkin.Controls.MaterialCheckbox();
             this.pnlTitle = new System.Windows.Forms.Panel();
-            this.pnlTitleSeperator = new System.Windows.Forms.Panel();
             this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
             this.btnExitApplication = new System.Windows.Forms.Button();
+            this.pnlTitleSeperator = new System.Windows.Forms.Panel();
             this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,23 +100,13 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             // 
             // pnlTitle
             // 
-            this.pnlTitle.Controls.Add(this.pnlTitleSeperator);
             this.pnlTitle.Controls.Add(this.lblTitle);
             this.pnlTitle.Controls.Add(this.btnExitApplication);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(3, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(794, 31);
+            this.pnlTitle.Size = new System.Drawing.Size(794, 30);
             this.pnlTitle.TabIndex = 3;
-            // 
-            // pnlTitleSeperator
-            // 
-            this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
-            this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 30);
-            this.pnlTitleSeperator.Name = "pnlTitleSeperator";
-            this.pnlTitleSeperator.Size = new System.Drawing.Size(749, 1);
-            this.pnlTitleSeperator.TabIndex = 8;
             // 
             // lblTitle
             // 
@@ -136,17 +126,27 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             this.btnExitApplication.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExitApplication.Location = new System.Drawing.Point(749, 0);
             this.btnExitApplication.Name = "btnExitApplication";
-            this.btnExitApplication.Size = new System.Drawing.Size(45, 31);
+            this.btnExitApplication.Size = new System.Drawing.Size(45, 30);
             this.btnExitApplication.TabIndex = 0;
             this.btnExitApplication.Text = "X";
             this.btnExitApplication.UseVisualStyleBackColor = true;
             this.btnExitApplication.Click += new System.EventHandler(this.btnFormExit_Click);
+            // 
+            // pnlTitleSeperator
+            // 
+            this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
+            this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitleSeperator.Location = new System.Drawing.Point(3, 30);
+            this.pnlTitleSeperator.Name = "pnlTitleSeperator";
+            this.pnlTitleSeperator.Size = new System.Drawing.Size(794, 1);
+            this.pnlTitleSeperator.TabIndex = 8;
             // 
             // MemberPayments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.pnlTitleSeperator);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.cbAraVerdiMi);
             this.Controls.Add(this.btnPay);
@@ -155,7 +155,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             this.Name = "MemberPayments";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Spor Salonu Üye Yönetim Sistemi";
+            this.Text = "Üye Ödemeleri";
             this.Load += new System.EventHandler(this.MemberPayments_Load);
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);

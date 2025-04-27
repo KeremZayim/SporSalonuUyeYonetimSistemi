@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.pnlTitle = new System.Windows.Forms.Panel();
-            this.pnlTitleSeperator = new System.Windows.Forms.Panel();
             this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
             this.btnExitForm = new System.Windows.Forms.Button();
+            this.pnlTitleSeperator = new System.Windows.Forms.Panel();
             this.btnDeleteTrainer = new MaterialSkin.Controls.MaterialButton();
             this.dtMemberTrainers = new MaterialSkin.Controls.MaterialListView();
             this.btnAddTrainer = new MaterialSkin.Controls.MaterialButton();
@@ -40,23 +40,13 @@
             // 
             // pnlTitle
             // 
-            this.pnlTitle.Controls.Add(this.pnlTitleSeperator);
             this.pnlTitle.Controls.Add(this.lblTitle);
             this.pnlTitle.Controls.Add(this.btnExitForm);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(3, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(544, 31);
+            this.pnlTitle.Size = new System.Drawing.Size(544, 30);
             this.pnlTitle.TabIndex = 4;
-            // 
-            // pnlTitleSeperator
-            // 
-            this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
-            this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 30);
-            this.pnlTitleSeperator.Name = "pnlTitleSeperator";
-            this.pnlTitleSeperator.Size = new System.Drawing.Size(499, 1);
-            this.pnlTitleSeperator.TabIndex = 8;
             // 
             // lblTitle
             // 
@@ -76,11 +66,20 @@
             this.btnExitForm.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExitForm.Location = new System.Drawing.Point(499, 0);
             this.btnExitForm.Name = "btnExitForm";
-            this.btnExitForm.Size = new System.Drawing.Size(45, 31);
+            this.btnExitForm.Size = new System.Drawing.Size(45, 30);
             this.btnExitForm.TabIndex = 0;
             this.btnExitForm.Text = "X";
             this.btnExitForm.UseVisualStyleBackColor = true;
             this.btnExitForm.Click += new System.EventHandler(this.btnExitForm_Click);
+            // 
+            // pnlTitleSeperator
+            // 
+            this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
+            this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitleSeperator.Location = new System.Drawing.Point(3, 30);
+            this.pnlTitleSeperator.Name = "pnlTitleSeperator";
+            this.pnlTitleSeperator.Size = new System.Drawing.Size(544, 1);
+            this.pnlTitleSeperator.TabIndex = 8;
             // 
             // btnDeleteTrainer
             // 
@@ -150,6 +149,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 500);
+            this.Controls.Add(this.pnlTitleSeperator);
             this.Controls.Add(this.btnAddTrainer);
             this.Controls.Add(this.btnDeleteTrainer);
             this.Controls.Add(this.dtMemberTrainers);
@@ -158,7 +158,7 @@
             this.Name = "MemberTrainers";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MemberTrainers";
+            this.Text = "Üye Antrenörleri";
             this.Shown += new System.EventHandler(this.MemberTrainers_Shown);
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);

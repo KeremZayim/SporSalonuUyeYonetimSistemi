@@ -90,7 +90,7 @@
             this.cbTrainers.DropDownHeight = 174;
             this.cbTrainers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTrainers.DropDownWidth = 121;
-            this.cbTrainers.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbTrainers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cbTrainers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbTrainers.FormattingEnabled = true;
             this.cbTrainers.Hint = "Antrenör Seç";
@@ -137,7 +137,7 @@
             this.Name = "AddMemberTrainer";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddMemberTrainer";
+            this.Text = "Üye Antrenörü Ekle";
             this.Shown += new System.EventHandler(this.AddMemberTrainer_Shown);
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -26,7 +26,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
 
         private async void TrainerStudents_Shown(object sender, EventArgs e)
         {
-            string query = "SELECT mt.trainer_id, m.member_id, m.member_name, m.member_surname " +
+            string query = "SELECT m.member_name, m.member_surname " +
                "FROM member_trainers mt " +
                "JOIN members m ON m.member_id = mt.member_id " +
                "WHERE mt.trainer_id = " + trainerID;
@@ -105,6 +105,19 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
         private void dtTrainerStudents_SelectedIndexChanged(object sender, EventArgs e)
         {
             butonControl();
+        }
+
+        private async void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            TrainerStudentAdd trainerStudentAdd = new TrainerStudentAdd(trainerID);
+            trainerStudentAdd.ShowDialog();
+
+            string query = "SELECT mt.trainer_id, m.member_id, m.member_name, m.member_surname " +
+               "FROM member_trainers mt " +
+               "JOIN members m ON m.member_id = mt.member_id " +
+               "WHERE mt.trainer_id = " + trainerID;
+
+            await Functions.VerileriGetirManualAsync(query, dtTrainerStudents);
         }
     }
 }

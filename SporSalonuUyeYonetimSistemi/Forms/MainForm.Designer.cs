@@ -154,7 +154,7 @@
             this.btnMembershipTypes.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnMembershipTypes.Size = new System.Drawing.Size(275, 66);
             this.btnMembershipTypes.TabIndex = 9;
-            this.btnMembershipTypes.Text = "Üyelik Tipleri";
+            this.btnMembershipTypes.Text = "Üyelik Türleri";
             this.btnMembershipTypes.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnMembershipTypes.UseAccentColor = false;
             this.btnMembershipTypes.UseVisualStyleBackColor = true;

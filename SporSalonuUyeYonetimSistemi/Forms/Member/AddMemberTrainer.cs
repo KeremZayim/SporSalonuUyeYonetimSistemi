@@ -20,6 +20,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
         {
             InitializeComponent();
             this.memberID = memberID;
+            lblTitle.MouseDown += (sender, e) => CommonMethods.MoveForm(this.Handle, e);
+            pnlTitle.MouseDown += (sender, e) => CommonMethods.MoveForm(this.Handle, e);
         }
         private Dictionary<string, int> trainerDictionary = new Dictionary<string, int>();
 
