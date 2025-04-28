@@ -70,6 +70,18 @@
     <Compile Include="Classes\DatabaseServer.cs" />
     <Compile Include="Classes\Functions.cs" />
     <Compile Include="Classes\ThemeProperties.cs" />
+    <Compile Include="Forms\Exercise\AddExercise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exercise\AddExercise.Designer.cs">
+      <DependentUpon>AddExercise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exercise\Exercise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exercise\Exercise.Designer.cs">
+      <DependentUpon>Exercise.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +186,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Exercise\AddExercise.resx">
+      <DependentUpon>AddExercise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exercise\Exercise.resx">
+      <DependentUpon>Exercise.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

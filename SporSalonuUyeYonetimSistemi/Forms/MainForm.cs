@@ -4,6 +4,7 @@ using SporSalonuUyeYonetimSistemi.Forms;
 using System;
 using System.Windows.Forms;
 using SporSalonuUyeYonetimSistemi.Forms.Trainers;
+using SporSalonuUyeYonetimSistemi.Forms.Exercise;
 
 namespace SporSalonuUyeYonetimSistemi
 {
@@ -87,6 +88,12 @@ namespace SporSalonuUyeYonetimSistemi
         {
             ChildFormAc(new TrainersPage());
             lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnTrainers.Text;
+        }
+
+        private void btnExercises_Click(object sender, EventArgs e)
+        {
+            ChildFormAc(new Exercise());
+            lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnExercises.Text;
         }
     }
 }

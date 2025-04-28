@@ -240,6 +240,7 @@
             this.btnExercises.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnExercises.UseAccentColor = false;
             this.btnExercises.UseVisualStyleBackColor = true;
+            this.btnExercises.Click += new System.EventHandler(this.btnExercises_Click);
             // 
             // btnMembers
             // 
