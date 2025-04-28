@@ -20,6 +20,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
         public MemberPage()
         {
             InitializeComponent();
+            ThemeProperties.ApplyLightTheme(this);
         }
         private async void MemberPage_Shown(object sender, EventArgs e)
         {

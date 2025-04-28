@@ -17,6 +17,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms
         public ParticipationHistory()
         {
             InitializeComponent();
+            ThemeProperties.ApplyLightTheme(this);
+
         }
         private async void listele()
         {

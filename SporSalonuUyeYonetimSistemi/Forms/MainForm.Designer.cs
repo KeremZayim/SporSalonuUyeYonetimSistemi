@@ -72,7 +72,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(661, 30);
             this.lblTitle.TabIndex = 3;
-            this.lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi";
+            this.lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | Ana Sayfa";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnExitApplication
@@ -303,6 +303,7 @@
             this.btnMainPage.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnMainPage.UseAccentColor = false;
             this.btnMainPage.UseVisualStyleBackColor = true;
+            this.btnMainPage.Click += new System.EventHandler(this.btnMainPage_Click);
             // 
             // panel1
             // 

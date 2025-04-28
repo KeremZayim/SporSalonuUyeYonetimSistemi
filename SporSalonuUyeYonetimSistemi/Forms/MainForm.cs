@@ -95,5 +95,11 @@ namespace SporSalonuUyeYonetimSistemi
             ChildFormAc(new Exercise());
             lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnExercises.Text;
         }
+
+        private void btnMainPage_Click(object sender, EventArgs e)
+        {
+            ChildFormAc(new HomePage());
+            lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnMainPage.Text;
+        }
     }
 }

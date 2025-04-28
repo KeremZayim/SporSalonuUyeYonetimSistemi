@@ -114,7 +114,7 @@
             this.cbSetCount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSetCount.DropDownWidth = 121;
             this.cbSetCount.Enabled = false;
-            this.cbSetCount.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbSetCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cbSetCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbSetCount.FormattingEnabled = true;
             this.cbSetCount.Hint = "Set Sayısı";
@@ -237,7 +237,7 @@
             this.Name = "AddExercise";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddExercise";
+            this.Text = "Egzersiz Ekle";
             this.Shown += new System.EventHandler(this.AddExercise_Shown);
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);
