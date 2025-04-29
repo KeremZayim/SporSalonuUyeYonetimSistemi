@@ -18,7 +18,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms
         {
             InitializeComponent();
             ThemeProperties.ApplyLightTheme(this);
-
         }
         private async void listele()
         {

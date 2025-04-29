@@ -106,6 +106,24 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Membership_Types\AddMembershipType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Membership_Types\AddMembershipType.Designer.cs">
+      <DependentUpon>AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Membership_Types\EditMembershipType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Membership_Types\EditMembershipType.Designer.cs">
+      <DependentUpon>EditMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Membership_Types\MembershipTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Membership_Types\MembershipTypes.Designer.cs">
+      <DependentUpon>MembershipTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Member\AddMemberTrainer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +233,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Membership_Types\AddMembershipType.resx">
+      <DependentUpon>AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Membership_Types\EditMembershipType.resx">
+      <DependentUpon>EditMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Membership_Types\MembershipTypes.resx">
+      <DependentUpon>MembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Member\AddMemberTrainer.resx">
       <DependentUpon>AddMemberTrainer.cs</DependentUpon>

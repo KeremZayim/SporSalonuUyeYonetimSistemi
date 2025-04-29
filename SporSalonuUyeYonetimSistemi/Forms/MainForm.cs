@@ -5,6 +5,7 @@ using System;
 using System.Windows.Forms;
 using SporSalonuUyeYonetimSistemi.Forms.Trainers;
 using SporSalonuUyeYonetimSistemi.Forms.Exercise;
+using SporSalonuUyeYonetimSistemi.Forms.Membership_Types;
 
 namespace SporSalonuUyeYonetimSistemi
 {
@@ -100,6 +101,12 @@ namespace SporSalonuUyeYonetimSistemi
         {
             ChildFormAc(new HomePage());
             lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnMainPage.Text;
+        }
+
+        private void btnMembershipTypes_Click(object sender, EventArgs e)
+        {
+            ChildFormAc(new MembershipTypes());
+            lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnMembershipTypes.Text;
         }
     }
 }

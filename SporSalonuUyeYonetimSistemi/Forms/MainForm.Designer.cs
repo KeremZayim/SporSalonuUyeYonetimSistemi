@@ -158,6 +158,7 @@
             this.btnMembershipTypes.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnMembershipTypes.UseAccentColor = false;
             this.btnMembershipTypes.UseVisualStyleBackColor = true;
+            this.btnMembershipTypes.Click += new System.EventHandler(this.btnMembershipTypes_Click);
             // 
             // btnPayments
             // 
