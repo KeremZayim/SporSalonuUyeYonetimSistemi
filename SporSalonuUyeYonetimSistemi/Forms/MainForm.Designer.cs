@@ -39,7 +39,7 @@
             this.btnMembershipTypes = new MaterialSkin.Controls.MaterialButton();
             this.btnPayments = new MaterialSkin.Controls.MaterialButton();
             this.btnParticipationHistory = new MaterialSkin.Controls.MaterialButton();
-            this.btnTraningLists = new MaterialSkin.Controls.MaterialButton();
+            this.btnWorkoutLists = new MaterialSkin.Controls.MaterialButton();
             this.btnExercises = new MaterialSkin.Controls.MaterialButton();
             this.btnMembers = new MaterialSkin.Controls.MaterialButton();
             this.btnTrainers = new MaterialSkin.Controls.MaterialButton();
@@ -127,7 +127,7 @@
             this.pnlMenu.Controls.Add(this.btnMembershipTypes);
             this.pnlMenu.Controls.Add(this.btnPayments);
             this.pnlMenu.Controls.Add(this.btnParticipationHistory);
-            this.pnlMenu.Controls.Add(this.btnTraningLists);
+            this.pnlMenu.Controls.Add(this.btnWorkoutLists);
             this.pnlMenu.Controls.Add(this.btnExercises);
             this.pnlMenu.Controls.Add(this.btnMembers);
             this.pnlMenu.Controls.Add(this.btnTrainers);
@@ -202,25 +202,26 @@
             this.btnParticipationHistory.UseVisualStyleBackColor = true;
             this.btnParticipationHistory.Click += new System.EventHandler(this.btnParticipationHistory_Click);
             // 
-            // btnTraningLists
+            // btnWorkoutLists
             // 
-            this.btnTraningLists.AutoSize = false;
-            this.btnTraningLists.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnTraningLists.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnTraningLists.Depth = 0;
-            this.btnTraningLists.HighEmphasis = true;
-            this.btnTraningLists.Icon = null;
-            this.btnTraningLists.Location = new System.Drawing.Point(0, 490);
-            this.btnTraningLists.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnTraningLists.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnTraningLists.Name = "btnTraningLists";
-            this.btnTraningLists.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnTraningLists.Size = new System.Drawing.Size(275, 66);
-            this.btnTraningLists.TabIndex = 8;
-            this.btnTraningLists.Text = "Antrenman Listeleri";
-            this.btnTraningLists.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnTraningLists.UseAccentColor = false;
-            this.btnTraningLists.UseVisualStyleBackColor = true;
+            this.btnWorkoutLists.AutoSize = false;
+            this.btnWorkoutLists.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnWorkoutLists.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnWorkoutLists.Depth = 0;
+            this.btnWorkoutLists.HighEmphasis = true;
+            this.btnWorkoutLists.Icon = null;
+            this.btnWorkoutLists.Location = new System.Drawing.Point(0, 490);
+            this.btnWorkoutLists.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnWorkoutLists.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnWorkoutLists.Name = "btnWorkoutLists";
+            this.btnWorkoutLists.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnWorkoutLists.Size = new System.Drawing.Size(275, 66);
+            this.btnWorkoutLists.TabIndex = 8;
+            this.btnWorkoutLists.Text = "Antrenman Listeleri";
+            this.btnWorkoutLists.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnWorkoutLists.UseAccentColor = false;
+            this.btnWorkoutLists.UseVisualStyleBackColor = true;
+            this.btnWorkoutLists.Click += new System.EventHandler(this.btnTraningLists_Click);
             // 
             // btnExercises
             // 
@@ -350,7 +351,7 @@
         private MaterialSkin.Controls.MaterialButton btnExercises;
         private MaterialSkin.Controls.MaterialButton btnParticipationHistory;
         private MaterialSkin.Controls.MaterialButton btnPayments;
-        private MaterialSkin.Controls.MaterialButton btnTraningLists;
+        private MaterialSkin.Controls.MaterialButton btnWorkoutLists;
         private MaterialSkin.Controls.MaterialButton btnMembershipTypes;
     }
 }

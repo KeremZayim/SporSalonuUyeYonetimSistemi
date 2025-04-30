@@ -41,7 +41,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
             await Functions.FillMemberList(cbMember);
         }
 
-        void buttonControl()
+        void ButtonControl()
         {
             bool aktiflik;
             if (dtExercise.SelectedItems.Count > 0)
@@ -118,7 +118,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
 
         private void dtExercise_SelectedIndexChanged(object sender, EventArgs e)
         {
-            buttonControl();
+            ButtonControl();
         }
 
         private async void btnDeleteExercise_Click(object sender, EventArgs e)
@@ -210,7 +210,21 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
             string exerciseID = dtExercise.SelectedItems[0].SubItems[0].Text.ToString().Trim();
             EditExercise editExercise = new EditExercise(exerciseID);
             editExercise.ShowDialog();
-            await Functions.VerileriGetirAsync("exercise", dtExercise);
+            string query = @"
+                            SELECT 
+                                e.exercise_id,
+                                e.exercise_name, 
+                                e.set_count, 
+                                e.repetition_count, 
+                                w.workout_id,
+                                m.member_name + ' ' + m.member_surname AS Üye
+                            FROM exercise e
+                            INNER JOIN workout_list w ON e.workout_id = w.workout_id
+                            INNER JOIN members m ON w.member_id = m.member_id";
+
+
+            await Functions.VerileriGetirManualAsync(query, dtExercise);
+            ButtonControl();
         }
     }
 }
