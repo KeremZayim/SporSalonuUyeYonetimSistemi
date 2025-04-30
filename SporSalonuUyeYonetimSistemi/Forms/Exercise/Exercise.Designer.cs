@@ -146,6 +146,7 @@
             this.btnEditExercise.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditExercise.UseAccentColor = false;
             this.btnEditExercise.UseVisualStyleBackColor = true;
+            this.btnEditExercise.Click += new System.EventHandler(this.btnEditExercise_Click);
             // 
             // btnDeleteExercise
             // 

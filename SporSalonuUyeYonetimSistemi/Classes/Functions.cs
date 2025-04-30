@@ -72,42 +72,58 @@ namespace SporSalonuUyeYonetimSistemi.Classes
 
                     SqlCommand cmd = new SqlCommand(query, conn);
 
-                    SqlDataReader reader = await cmd.ExecuteReaderAsync();
-
-                    if (reader.HasRows)
+                    using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
                     {
-                        materialListView.Columns.Clear();
-                        materialListView.Items.Clear();
-
-                        for (int i = 0; i < reader.FieldCount; i++)
+                        if (reader.HasRows)
                         {
-                            string originalColumnName = reader.GetName(i);
-                            string translatedColumnName = Translate.TranslateColumn(originalColumnName);
-                            materialListView.Columns.Add(translatedColumnName);
-                        }
+                            materialListView.Columns.Clear();
+                            materialListView.Items.Clear();
 
-                        while (await reader.ReadAsync())
-                        {
-                            var item = new ListViewItem(reader[0].ToString().Trim());
-
-                            for (int i = 1; i < reader.FieldCount; i++)
+                            // Sütun başlıklarını oluştur
+                            for (int i = 0; i < reader.FieldCount; i++)
                             {
-                                item.SubItems.Add(reader[i].ToString().Trim());
+                                string originalColumnName = reader.GetName(i);
+                                string translatedColumnName = Translate.TranslateColumn(originalColumnName);
+                                materialListView.Columns.Add(translatedColumnName);
                             }
 
-                            materialListView.Items.Add(item);
+                            // Veri satırlarını işle
+                            while (await reader.ReadAsync())
+                            {
+                                var item = new ListViewItem(reader[0]?.ToString().Trim() ?? string.Empty);
+
+                                for (int i = 1; i < reader.FieldCount; i++)
+                                {
+                                    // Özel kontrol: Eğer bu bir birleştirilmiş ad-soyad sütunuysa
+                                    if (reader.GetName(i).Equals("Üye", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        string fullName = reader[i]?.ToString().Trim() ?? string.Empty;
+                                        // Fazla boşlukları temizle
+                                        fullName = string.Join(" ", fullName.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
+                                        item.SubItems.Add(fullName);
+                                    }
+                                    else
+                                    {
+                                        item.SubItems.Add(reader[i]?.ToString().Trim() ?? string.Empty);
+                                    }
+                                }
+
+                                materialListView.Items.Add(item);
+                            }
                         }
                     }
-                    reader.Close();
+
+                    // Sütun genişliklerini ayarla
 
                     foreach (ColumnHeader column in materialListView.Columns)
                     {
                         column.Width = materialListView.Width / materialListView.Columns.Count;
                     }
+
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Veriler getirilemedi: " + ex.Message);
+                    MessageBox.Show("Veriler getirilemedi: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -185,6 +201,34 @@ namespace SporSalonuUyeYonetimSistemi.Classes
                     con.Close();
                 }
             }
+        }
+        public static async Task FillMemberList(MaterialComboBox cb)
+        {
+            cb.Items.Clear();
+            cb.Items.Add("Herkes");
+
+            using (SqlConnection conn = new SqlConnection(DatabaseServer.ConnectionString))
+            {
+                await conn.OpenAsync();
+
+                using (SqlCommand cmd = new SqlCommand("SELECT member_name, member_surname FROM members", conn))
+                {
+                    using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            string ad = reader["member_name"].ToString().Trim();
+                            string soyad = reader["member_surname"].ToString().Trim();
+                            string fullName = $"{ad} {soyad}";
+
+                            cb.Items.Add(fullName);
+                        }
+                    }
+                }
+            }
+
+            cb.SelectedIndex = 0;
+            cb.Refresh();
         }
     }
 }

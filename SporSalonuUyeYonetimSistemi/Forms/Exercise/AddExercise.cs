@@ -168,6 +168,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                     }
 
                     MessageBox.Show("Egzersiz başarıyla eklendi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
             }
             catch (Exception ex)

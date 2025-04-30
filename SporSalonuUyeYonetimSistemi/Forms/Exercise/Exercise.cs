@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,107 +22,23 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
             ThemeProperties.ApplyLightTheme(this);
         }
 
-        private async Task UyeListesiniDoldurAsync()
-        {
-            cbMember.Items.Clear();
-            cbMember.Items.Add("Herkes");
-
-            using (SqlConnection conn = new SqlConnection(DatabaseServer.ConnectionString))
-            {
-                await conn.OpenAsync();
-
-                using (SqlCommand cmd = new SqlCommand("SELECT member_name, member_surname FROM members", conn))
-                {
-                    using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
-                    {
-                        while (await reader.ReadAsync())
-                        {
-                            string ad = reader["member_name"].ToString().Trim();
-                            string soyad = reader["member_surname"].ToString().Trim();
-                            string fullName = $"{ad} {soyad}";
-
-                            cbMember.Items.Add(fullName);
-                        }
-                    }
-                }
-            }
-
-            cbMember.SelectedIndex = 0;
-        }
-
-        private async Task EgzersizleriFiltreleAsync()
-        {
-            if (cbMember.SelectedItem == null)
-                return;
-
-            string selectedMember = cbMember.SelectedItem.ToString().Trim();
-            dtExercise.Items.Clear();
-
-            using (SqlConnection conn = new SqlConnection(DatabaseServer.ConnectionString))
-            {
-                await conn.OpenAsync();
-
-                SqlCommand cmd;
-
-                if (selectedMember == "Herkes")
-                {
-                    cmd = new SqlCommand("SELECT exercise_Name, set_count, repetition_count FROM exercise", conn);
-                }
-                else
-                {
-                    string[] adSoyad = selectedMember.Split(' ');
-
-                    if (adSoyad.Length < 2)
-                    {
-                        MessageBox.Show("Geçerli bir üye seçin.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    string ad = adSoyad[0];
-                    string soyad = adSoyad[1];
-
-                    // Üyenin ID'sini bul
-                    SqlCommand findMemberCmd = new SqlCommand("SELECT member_id FROM members WHERE member_name = @ad AND member_surname = @soyad", conn);
-                    findMemberCmd.Parameters.AddWithValue("@ad", ad);
-                    findMemberCmd.Parameters.AddWithValue("@soyad", soyad);
-
-                    object result = await findMemberCmd.ExecuteScalarAsync();
-
-                    if (result == null)
-                    {
-                        MessageBox.Show("Üye bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    int uyeId = Convert.ToInt32(result);
-
-                    cmd = new SqlCommand("SELECT exercise_Name, set_count, repetition_count FROM exercise WHERE workout_id IN (SELECT workout_id FROM workout_list WHERE member_id = @uyeId)", conn);
-                    cmd.Parameters.AddWithValue("@uyeId", uyeId);
-                }
-
-                using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
-                {
-                    while (await reader.ReadAsync())
-                    {
-                        string exerciseName = reader["exercise_Name"].ToString();
-                        string setCount = reader["set_count"].ToString();
-                        string repetitionCount = reader["repetition_count"].ToString();
-
-                        ListViewItem item = new ListViewItem(exerciseName);
-                        item.SubItems.Add(setCount);
-                        item.SubItems.Add(repetitionCount);
-
-                        dtExercise.Items.Add(item);
-                    }
-                }
-            }
-        }
-
-
         private async void Exercise_Shown(object sender, EventArgs e)
         {
-            await Functions.VerileriGetirAsync("exercise", dtExercise);
-            await UyeListesiniDoldurAsync();
+            string query = @"
+                            SELECT 
+                                e.exercise_id,
+                                e.exercise_name, 
+                                e.set_count, 
+                                e.repetition_count, 
+                                w.workout_id,
+                                m.member_name + ' ' + m.member_surname AS Üye
+                            FROM exercise e
+                            INNER JOIN workout_list w ON e.workout_id = w.workout_id
+                            INNER JOIN members m ON w.member_id = m.member_id";
+
+
+            await Functions.VerileriGetirManualAsync(query, dtExercise);
+            await Functions.FillMemberList(cbMember);
         }
 
         void buttonControl()
@@ -146,6 +63,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                 }
             }
         }
+        // Silme
         public static async Task DeleteSelectedExerciseAsync(MaterialListView listView)
         {
             if (listView.SelectedItems.Count == 0)
@@ -196,7 +114,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                 }
             }
         }
-
+        // --
 
         private void dtExercise_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -215,10 +133,84 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
             addExercise.ShowDialog();
             await Functions.VerileriGetirAsync("exercise", dtExercise);
         }
+        public async Task<string> GetMemberIdAsync(string fullName)
+        {
+            string memberId = null;
+
+            string[] parts = fullName.Split(' ');
+            if (parts.Length < 2)
+                return null;
+
+            string firstName = parts[0];
+            string lastName = parts[1];
+
+            using (SqlConnection conn = new SqlConnection(DatabaseServer.ConnectionString))
+            {
+                await conn.OpenAsync();
+
+                string query = "SELECT member_id FROM members WHERE member_name = @firstName AND member_surname = @lastName";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@firstName", firstName);
+                    cmd.Parameters.AddWithValue("@lastName", lastName);
+
+                    var result = await cmd.ExecuteScalarAsync();
+                    if (result != null && int.TryParse(result.ToString(), out int id))
+                        memberId = id.ToString();
+                }
+            }
+
+            return memberId;
+        }
 
         private async void cbMember_SelectedIndexChanged(object sender, EventArgs e)
         {
-            await EgzersizleriFiltreleAsync();
+            if (cbMember.SelectedIndex != -1)
+            {
+                if (cbMember.SelectedItem.ToString() == "Herkes")
+                {
+                    string query = @"
+                            SELECT 
+                                e.exercise_id,
+                                e.exercise_name, 
+                                e.set_count, 
+                                e.repetition_count, 
+                                w.workout_id,
+                                m.member_name + ' ' + m.member_surname AS Üye
+                            FROM exercise e
+                            INNER JOIN workout_list w ON e.workout_id = w.workout_id
+                            INNER JOIN members m ON w.member_id = m.member_id";
+
+
+                    await Functions.VerileriGetirManualAsync(query, dtExercise);
+                }
+                else
+                {
+                    string memberID = await GetMemberIdAsync(cbMember.SelectedItem.ToString().Trim());
+                    string query = $@"
+                            SELECT 
+                                e.exercise_id,
+                                e.exercise_name, 
+                                e.set_count, 
+                                e.repetition_count, 
+                                w.workout_id,
+                                m.member_name + ' ' + m.member_surname AS Üye
+                            FROM exercise e
+                            INNER JOIN workout_list w ON e.workout_id = w.workout_id
+                            INNER JOIN members m ON w.member_id = m.member_id
+                            WHERE m.member_id = {memberID}";
+
+                    await Functions.VerileriGetirManualAsync(query, dtExercise);
+                }
+            }
+        }
+
+        private async void btnEditExercise_Click(object sender, EventArgs e)
+        {
+            string exerciseID = dtExercise.SelectedItems[0].SubItems[0].Text.ToString().Trim();
+            EditExercise editExercise = new EditExercise(exerciseID);
+            editExercise.ShowDialog();
+            await Functions.VerileriGetirAsync("exercise", dtExercise);
         }
     }
 }
