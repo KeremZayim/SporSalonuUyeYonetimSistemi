@@ -31,6 +31,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
             AddTrainer addTrainer = new AddTrainer();
             addTrainer.ShowDialog();
             await Functions.VerileriGetirAsync("trainers", dtTrainerInfo);
+            dtTrainerInfo.SelectedItems.Clear();
             buttonControl();
         }
         private async Task TrainerDelete(int trainerId)
@@ -122,6 +123,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
             TrainerStudents trainerStudents = new TrainerStudents(trainerID);
             trainerStudents.ShowDialog();
             await Functions.VerileriGetirAsync("trainers", dtTrainerInfo);
+            dtTrainerInfo.SelectedItems.Clear();
             buttonControl();
         }
 
@@ -131,6 +133,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
             EditTrainer trainerStudents = new EditTrainer(trainerID);
             trainerStudents.ShowDialog();
             await Functions.VerileriGetirAsync("trainers", dtTrainerInfo);
+            dtTrainerInfo.SelectedItems.Clear();
             buttonControl();
         }
     }

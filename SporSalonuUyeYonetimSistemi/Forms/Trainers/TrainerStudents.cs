@@ -89,9 +89,10 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
             {
                 MessageBox.Show("Lütfen silmek istediğiniz öğrenciyi seçin.", "Seçim Hatası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            butonControl();
+            dtTrainerStudents.SelectedItems.Clear();
+            ButtonControl();
         }
-        void butonControl()
+        void ButtonControl()
         {
             if (dtTrainerStudents.SelectedItems.Count > 0)
             {
@@ -104,7 +105,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
         }
         private void dtTrainerStudents_SelectedIndexChanged(object sender, EventArgs e)
         {
-            butonControl();
+            ButtonControl();
         }
 
         private async void btnAddStudent_Click(object sender, EventArgs e)
@@ -118,6 +119,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
                "WHERE mt.trainer_id = " + trainerID;
 
             await Functions.VerileriGetirManualAsync(query, dtTrainerStudents);
+            dtTrainerStudents.SelectedItems.Clear();
+            ButtonControl();
         }
     }
 }

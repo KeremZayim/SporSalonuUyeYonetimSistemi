@@ -72,6 +72,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Membership_Types
         {
             await DeleteMembershipTypes();
             await Functions.VerileriGetirAsync("membership_types", dtMembershipTypes);
+            dtMembershipTypes.SelectedItems.Clear();
+            ButtonControl();
         }
         void ButtonControl()
         {
@@ -105,6 +107,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Membership_Types
             AddMembershipType addMembershipType = new AddMembershipType();
             addMembershipType.ShowDialog();
             await Functions.VerileriGetirAsync("membership_types", dtMembershipTypes);
+            dtMembershipTypes.SelectedItems.Clear();
+            ButtonControl();
         }
 
         private async void btnEditMembershipType_Click(object sender, EventArgs e)
@@ -113,6 +117,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Membership_Types
             EditMembershipType editMembershipType = new EditMembershipType(membershipTypeID);
             editMembershipType.ShowDialog();
             await Functions.VerileriGetirAsync("membership_types", dtMembershipTypes);
+            dtMembershipTypes.SelectedItems.Clear();
+            ButtonControl();
         }
     }
 }

@@ -30,6 +30,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberPayments));
             this.dtData = new MaterialSkin.Controls.MaterialListView();
             this.btnPay = new MaterialSkin.Controls.MaterialButton();
             this.cbAraVerdiMi = new MaterialSkin.Controls.MaterialCheckbox();
@@ -152,6 +153,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             this.Controls.Add(this.btnPay);
             this.Controls.Add(this.dtData);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MemberPayments";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

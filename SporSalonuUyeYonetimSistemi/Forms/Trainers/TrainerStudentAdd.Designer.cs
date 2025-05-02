@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrainerStudentAdd));
             this.pnlTitle = new System.Windows.Forms.Panel();
-            this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlTitleSeperator = new System.Windows.Forms.Panel();
+            this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
             this.cbStudents = new MaterialSkin.Controls.MaterialComboBox();
             this.btnAddStudent = new MaterialSkin.Controls.MaterialButton();
             this.pnlTitle.SuspendLayout();
@@ -47,19 +48,6 @@
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(410, 30);
             this.pnlTitle.TabIndex = 0;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Depth = 0;
-            this.lblTitle.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.lblTitle.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
-            this.lblTitle.Location = new System.Drawing.Point(77, 0);
-            this.lblTitle.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(262, 30);
-            this.lblTitle.TabIndex = 6;
-            this.lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnExit
             // 
@@ -80,6 +68,19 @@
             this.pnlTitleSeperator.Name = "pnlTitleSeperator";
             this.pnlTitleSeperator.Size = new System.Drawing.Size(410, 1);
             this.pnlTitleSeperator.TabIndex = 1;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Depth = 0;
+            this.lblTitle.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblTitle.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
+            this.lblTitle.Location = new System.Drawing.Point(77, 0);
+            this.lblTitle.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(262, 30);
+            this.lblTitle.TabIndex = 6;
+            this.lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbStudents
             // 
@@ -133,6 +134,7 @@
             this.Controls.Add(this.cbStudents);
             this.Controls.Add(this.pnlTitle);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TrainerStudentAdd";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

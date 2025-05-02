@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditExercise));
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlTitleSeperator = new System.Windows.Forms.Panel();
@@ -155,7 +156,7 @@
             this.tbExerciseName.AnimateReadOnly = false;
             this.tbExerciseName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbExerciseName.Depth = 0;
-            this.tbExerciseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbExerciseName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbExerciseName.Hint = "Egzersiz Adı";
             this.tbExerciseName.LeadingIcon = null;
             this.tbExerciseName.Location = new System.Drawing.Point(51, 73);
@@ -179,6 +180,7 @@
             this.Controls.Add(this.tbExerciseName);
             this.Controls.Add(this.pnlTitle);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditExercise";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

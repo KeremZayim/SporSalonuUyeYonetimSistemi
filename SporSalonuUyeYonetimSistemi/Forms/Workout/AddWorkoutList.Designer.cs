@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWorkoutList));
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlTitleSeperator = new System.Windows.Forms.Panel();
@@ -133,7 +134,7 @@
             this.tbTargetArea.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTargetArea.Depth = 0;
             this.tbTargetArea.Enabled = false;
-            this.tbTargetArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbTargetArea.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbTargetArea.Hint = "Hedef Bölge";
             this.tbTargetArea.LeadingIcon = null;
             this.tbTargetArea.Location = new System.Drawing.Point(254, 135);
@@ -152,7 +153,7 @@
             this.tbWorkoutDay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbWorkoutDay.Depth = 0;
             this.tbWorkoutDay.Enabled = false;
-            this.tbWorkoutDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbWorkoutDay.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbWorkoutDay.Hint = "Çalışma Günü";
             this.tbWorkoutDay.LeadingIcon = null;
             this.tbWorkoutDay.Location = new System.Drawing.Point(254, 191);
@@ -186,7 +187,7 @@
             this.btnAddWorkoutList.UseVisualStyleBackColor = true;
             this.btnAddWorkoutList.Click += new System.EventHandler(this.btnAddWorkoutList_Click);
             // 
-            // AddWorkout
+            // AddWorkoutList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -198,7 +199,8 @@
             this.Controls.Add(this.cbMember);
             this.Controls.Add(this.pnlTitle);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
-            this.Name = "AddWorkout";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "AddWorkoutList";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddWorkout";

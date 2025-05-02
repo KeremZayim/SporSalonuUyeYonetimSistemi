@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTrainer));
             this.tbTrainerPhoneNumber = new MaterialSkin.Controls.MaterialTextBox();
             this.tbTrainerSurname = new MaterialSkin.Controls.MaterialTextBox();
             this.tbTrainerName = new MaterialSkin.Controls.MaterialTextBox();
             this.pnlTitle = new System.Windows.Forms.Panel();
+            this.pnlTitleSeperator = new System.Windows.Forms.Panel();
             this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
             this.btnExitForm = new System.Windows.Forms.Button();
             this.btnAddTrainer = new MaterialSkin.Controls.MaterialButton();
-            this.pnlTitleSeperator = new System.Windows.Forms.Panel();
             this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,6 +105,15 @@
             this.pnlTitle.Size = new System.Drawing.Size(394, 31);
             this.pnlTitle.TabIndex = 4;
             // 
+            // pnlTitleSeperator
+            // 
+            this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
+            this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 30);
+            this.pnlTitleSeperator.Name = "pnlTitleSeperator";
+            this.pnlTitleSeperator.Size = new System.Drawing.Size(349, 1);
+            this.pnlTitleSeperator.TabIndex = 9;
+            // 
             // lblTitle
             // 
             this.lblTitle.Depth = 0;
@@ -149,15 +159,6 @@
             this.btnAddTrainer.UseVisualStyleBackColor = true;
             this.btnAddTrainer.Click += new System.EventHandler(this.btnAddTrainer_Click);
             // 
-            // pnlTitleSeperator
-            // 
-            this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
-            this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 30);
-            this.pnlTitleSeperator.Name = "pnlTitleSeperator";
-            this.pnlTitleSeperator.Size = new System.Drawing.Size(349, 1);
-            this.pnlTitleSeperator.TabIndex = 9;
-            // 
             // AddTrainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,6 +170,7 @@
             this.Controls.Add(this.tbTrainerSurname);
             this.Controls.Add(this.tbTrainerName);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddTrainer";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

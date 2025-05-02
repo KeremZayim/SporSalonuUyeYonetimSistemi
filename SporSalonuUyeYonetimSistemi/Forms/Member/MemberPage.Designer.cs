@@ -30,6 +30,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberPage));
             this.tabSelector = new MaterialSkin.Controls.MaterialTabSelector();
             this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.tabMemberInfo = new System.Windows.Forms.TabPage();
@@ -162,6 +163,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnAddMember.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddMember.UseAccentColor = true;
             this.btnAddMember.UseVisualStyleBackColor = true;
+            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
             // 
             // btnDeleteMember
             // 
@@ -205,6 +207,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnEditMember.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditMember.UseAccentColor = true;
             this.btnEditMember.UseVisualStyleBackColor = true;
+            this.btnEditMember.Click += new System.EventHandler(this.btnEditMember_Click);
             // 
             // btnHealthInfo
             // 
@@ -248,6 +251,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnTrainingInfo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnTrainingInfo.UseAccentColor = false;
             this.btnTrainingInfo.UseVisualStyleBackColor = true;
+            this.btnTrainingInfo.Click += new System.EventHandler(this.btnTrainingInfo_Click);
             // 
             // btnMemberTrainers
             // 
@@ -360,6 +364,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.tabSelector);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MemberPage";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

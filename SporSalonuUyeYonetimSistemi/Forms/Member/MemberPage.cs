@@ -58,6 +58,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
             MemberPayments paymentsForm = new MemberPayments(memberId);
             paymentsForm.ShowDialog();
+            dtMemberInfo.SelectedItems.Clear();
             buttonControl();
         }
 
@@ -66,6 +67,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
             MemberMemberships membershipsForm = new MemberMemberships(memberId);
             membershipsForm.ShowDialog();
+            dtMemberInfo.SelectedItems.Clear();
             buttonControl();
         }
 
@@ -74,6 +76,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
             MemberTrainers membershipsForm = new MemberTrainers(memberId);
             membershipsForm.ShowDialog();
+            dtMemberInfo.SelectedItems.Clear();
             buttonControl();
         }
 
@@ -82,6 +85,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
             MemberParticipationHistory membershipsForm = new MemberParticipationHistory(memberId);
             membershipsForm.ShowDialog();
+            dtMemberInfo.SelectedItems.Clear();
             buttonControl();
         }
 
@@ -90,40 +94,54 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
             MemberHealthInformation membershipsForm = new MemberHealthInformation(memberId);
             membershipsForm.ShowDialog();
+            dtMemberInfo.SelectedItems.Clear();
             buttonControl();
         }
-        public static async Task UyeSilAsync(int memberId)
+        private static async Task UyeSilAsync(int memberId)
         {
-            try
+            DialogResult result = MessageBox.Show("Üyeyi ve tüm bağlı verileri silmek istediğinizden emin misiniz?",
+                                                  "Onay",
+                                                  MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
             {
-                using (SqlConnection connection = new SqlConnection(DatabaseServer.ConnectionString))
+                try
                 {
-                    await connection.OpenAsync();
-
-                    string query = "DELETE FROM members WHERE member_id = @memberId";
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlConnection connection = new SqlConnection(DatabaseServer.ConnectionString))
                     {
-                        command.Parameters.AddWithValue("@memberId", memberId);
+                        await connection.OpenAsync();
 
-                        int rowsAffected = await command.ExecuteNonQueryAsync();
+                        string query = "DELETE FROM members WHERE member_id = @memberId";
 
-                        if (rowsAffected > 0)
+                        using (SqlCommand command = new SqlCommand(query, connection))
                         {
-                            MessageBox.Show("Üye ve tüm bağlı verileri başarıyla silindi!", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Belirtilen ID'ye sahip bir üye bulunamadı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            command.Parameters.AddWithValue("@memberId", memberId);
+
+                            int rowsAffected = await command.ExecuteNonQueryAsync();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Üye ve tüm bağlı verileri başarıyla silindi!", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Belirtilen ID'ye sahip bir üye bulunamadı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
                         }
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Üye silinirken bir hata oluştu: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Üye silinirken bir hata oluştu: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Üye silme işlemi iptal edildi.", "İptal", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
 
         private async void btnDeleteMember_Click(object sender, EventArgs e)
         {
@@ -136,6 +154,21 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
                 MessageBox.Show("Geçerli bir MemberID girin.", "Hatalı Giriş", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             await Functions.VerileriGetirAsync("members", dtMemberInfo);
+        }
+
+        private void btnTrainingInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddMember_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditMember_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

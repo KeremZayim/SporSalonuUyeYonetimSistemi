@@ -125,6 +125,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
         {
             await DeleteSelectedExerciseAsync(dtExercise);
             await Functions.VerileriGetirAsync("exercise", dtExercise);
+            dtExercise.SelectedItems.Clear();
         }
 
         private async void btnAddExercise_Click(object sender, EventArgs e)
@@ -132,6 +133,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
             AddExercise addExercise = new AddExercise();
             addExercise.ShowDialog();
             await Functions.VerileriGetirAsync("exercise", dtExercise);
+            dtExercise.SelectedItems.Clear();
         }
         public async Task<string> GetMemberIdAsync(string fullName)
         {
@@ -224,6 +226,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
 
 
             await Functions.VerileriGetirManualAsync(query, dtExercise);
+            dtExercise.SelectedItems.Clear();
             ButtonControl();
         }
     }

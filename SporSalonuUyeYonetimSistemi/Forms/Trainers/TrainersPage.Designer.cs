@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrainersPage));
             this.tabSelector = new MaterialSkin.Controls.MaterialTabSelector();
             this.tabPages = new MaterialSkin.Controls.MaterialTabControl();
             this.tabTrainers = new System.Windows.Forms.TabPage();
@@ -227,6 +228,7 @@
             this.Controls.Add(this.tabPages);
             this.Controls.Add(this.tabSelector);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TrainersPage";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

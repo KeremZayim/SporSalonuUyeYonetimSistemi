@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditTrainer));
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.pnlTitleSeperator = new System.Windows.Forms.Panel();
             this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
@@ -88,7 +89,7 @@
             this.tbTrainerPhoneNumber.AnimateReadOnly = false;
             this.tbTrainerPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTrainerPhoneNumber.Depth = 0;
-            this.tbTrainerPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbTrainerPhoneNumber.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbTrainerPhoneNumber.Hint = "0(5xx xxx xx xx)";
             this.tbTrainerPhoneNumber.LeadingIcon = null;
             this.tbTrainerPhoneNumber.Location = new System.Drawing.Point(72, 225);
@@ -106,7 +107,7 @@
             this.tbTrainerSurname.AnimateReadOnly = false;
             this.tbTrainerSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTrainerSurname.Depth = 0;
-            this.tbTrainerSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbTrainerSurname.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbTrainerSurname.Hint = "Antrenör Soyadı";
             this.tbTrainerSurname.LeadingIcon = null;
             this.tbTrainerSurname.Location = new System.Drawing.Point(72, 169);
@@ -124,7 +125,7 @@
             this.tbTrainerName.AnimateReadOnly = false;
             this.tbTrainerName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTrainerName.Depth = 0;
-            this.tbTrainerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbTrainerName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbTrainerName.Hint = "Antrenör Adı";
             this.tbTrainerName.LeadingIcon = null;
             this.tbTrainerName.Location = new System.Drawing.Point(72, 113);
@@ -169,6 +170,7 @@
             this.Controls.Add(this.tbTrainerName);
             this.Controls.Add(this.pnlTitle);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditTrainer";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

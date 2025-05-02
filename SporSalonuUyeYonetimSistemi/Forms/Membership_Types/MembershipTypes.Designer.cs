@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MembershipTypes));
             this.tabSelector = new MaterialSkin.Controls.MaterialTabSelector();
             this.tabController = new MaterialSkin.Controls.MaterialTabControl();
             this.tabMembership_types = new System.Windows.Forms.TabPage();
@@ -172,6 +173,7 @@
             this.Controls.Add(this.tabController);
             this.Controls.Add(this.tabSelector);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MembershipTypes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Spor Salonu Üye Yönetim Sistemi";
