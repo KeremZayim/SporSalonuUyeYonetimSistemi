@@ -30,7 +30,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            ThemeProperties.ApplyLightTheme(this);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlRightLogin = new System.Windows.Forms.Panel();
             this.pbRightImage = new System.Windows.Forms.PictureBox();
@@ -78,7 +78,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms
             // 
             // pbRightImage
             // 
-            this.pbRightImage.Image = global::SporSalonuUyeYonetimSistemi.Properties.Resources.Management;
+            this.pbRightImage.Image = global::SporSalonuUyeYonetimSistemi.Properties.Resources.logo;
             this.pbRightImage.Location = new System.Drawing.Point(87, 57);
             this.pbRightImage.Name = "pbRightImage";
             this.pbRightImage.Size = new System.Drawing.Size(196, 196);
@@ -253,6 +253,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms
             this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.pnlMain);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "LoginForm";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);

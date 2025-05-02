@@ -93,19 +93,38 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
         }
         void ButtonControl()
         {
-            if (dtWorkoutList.SelectedItems.Count < 1)
-            {
-                btnDeleteWorkoutList.Enabled = false;
-                btnEditWorkoutList.Enabled = false;
-            }
-            else
+            if (dtWorkoutList.SelectedItems.Count > 0)
             {
                 btnDeleteWorkoutList.Enabled = true;
                 btnEditWorkoutList.Enabled = true;
             }
+            else
+            {
+                btnEditWorkoutList.Enabled = false;
+                btnDeleteWorkoutList.Enabled = false;
+            }
         }
         private void dtWorkoutList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ButtonControl();
+        }
+
+        private void btnAddWorkoutList_Click(object sender, EventArgs e)
+        {
+            AddWorkoutList addWorkoutList = new AddWorkoutList();
+            addWorkoutList.ShowDialog();
+            FillList();
+            dtWorkoutList.SelectedItems.Clear();
+            ButtonControl();
+        }
+
+        private void btnEditWorkoutList_Click(object sender, EventArgs e)
+        {
+            string workoutID = dtWorkoutList.SelectedItems[0].SubItems[0].Text;
+            EditWorkoutList editWorkoutList = new EditWorkoutList(workoutID);
+            editWorkoutList.ShowDialog();
+            FillList();
+            dtWorkoutList.SelectedItems.Clear();
             ButtonControl();
         }
     }

@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
@@ -214,6 +217,18 @@
     <Compile Include="Forms\Trainers\TrainerStudents.Designer.cs">
       <DependentUpon>TrainerStudents.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Workout\AddWorkoutList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Workout\AddWorkoutList.Designer.cs">
+      <DependentUpon>AddWorkoutList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Workout\EditWorkoutList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Workout\EditWorkoutList.Designer.cs">
+      <DependentUpon>EditWorkoutList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Workout\WorkoutList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +309,12 @@
     <EmbeddedResource Include="Forms\Trainers\TrainerStudents.resx">
       <DependentUpon>TrainerStudents.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Workout\AddWorkoutList.resx">
+      <DependentUpon>AddWorkoutList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Workout\EditWorkoutList.resx">
+      <DependentUpon>EditWorkoutList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Workout\WorkoutList.resx">
       <DependentUpon>WorkoutList.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +356,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="logo.ico" />
     <Content Include="Source\Images\Filter.png" />
     <Content Include="Source\Images\LoginForm\Closed Eye_1.png" />
     <Content Include="Source\Images\LoginForm\Eye.png" />
@@ -342,6 +364,8 @@
     <Content Include="Source\Images\LoginForm\Management.png" />
     <Content Include="Source\Images\LoginForm\Password.png" />
     <Content Include="Source\Images\LoginForm\Username.png" />
+    <Content Include="Source\Images\logo.ico" />
+    <Content Include="Source\Images\logo.png" />
     <Content Include="Source\Images\Phone.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

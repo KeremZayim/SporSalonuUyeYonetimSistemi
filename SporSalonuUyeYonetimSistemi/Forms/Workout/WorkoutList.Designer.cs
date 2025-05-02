@@ -31,10 +31,10 @@
             this.tabSelector = new MaterialSkin.Controls.MaterialTabSelector();
             this.tabController = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dtWorkoutList = new MaterialSkin.Controls.MaterialListView();
             this.btnAddWorkoutList = new MaterialSkin.Controls.MaterialButton();
             this.btnEditWorkoutList = new MaterialSkin.Controls.MaterialButton();
             this.btnDeleteWorkoutList = new MaterialSkin.Controls.MaterialButton();
+            this.dtWorkoutList = new MaterialSkin.Controls.MaterialListView();
             this.tabController.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -79,26 +79,6 @@
             this.tabPage1.Text = "Antrenman Listelsi";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dtWorkoutList
-            // 
-            this.dtWorkoutList.AutoSizeTable = false;
-            this.dtWorkoutList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dtWorkoutList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtWorkoutList.Depth = 0;
-            this.dtWorkoutList.FullRowSelect = true;
-            this.dtWorkoutList.HideSelection = false;
-            this.dtWorkoutList.Location = new System.Drawing.Point(6, 24);
-            this.dtWorkoutList.MinimumSize = new System.Drawing.Size(200, 100);
-            this.dtWorkoutList.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.dtWorkoutList.MouseState = MaterialSkin.MouseState.OUT;
-            this.dtWorkoutList.Name = "dtWorkoutList";
-            this.dtWorkoutList.OwnerDraw = true;
-            this.dtWorkoutList.Size = new System.Drawing.Size(800, 550);
-            this.dtWorkoutList.TabIndex = 2;
-            this.dtWorkoutList.UseCompatibleStateImageBehavior = false;
-            this.dtWorkoutList.View = System.Windows.Forms.View.Details;
-            this.dtWorkoutList.SelectedIndexChanged += new System.EventHandler(this.dtWorkoutList_SelectedIndexChanged);
-            // 
             // btnAddWorkoutList
             // 
             this.btnAddWorkoutList.AutoSize = false;
@@ -118,6 +98,7 @@
             this.btnAddWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddWorkoutList.UseAccentColor = false;
             this.btnAddWorkoutList.UseVisualStyleBackColor = true;
+            this.btnAddWorkoutList.Click += new System.EventHandler(this.btnAddWorkoutList_Click);
             // 
             // btnEditWorkoutList
             // 
@@ -139,6 +120,7 @@
             this.btnEditWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditWorkoutList.UseAccentColor = false;
             this.btnEditWorkoutList.UseVisualStyleBackColor = true;
+            this.btnEditWorkoutList.Click += new System.EventHandler(this.btnEditWorkoutList_Click);
             // 
             // btnDeleteWorkoutList
             // 
@@ -161,6 +143,27 @@
             this.btnDeleteWorkoutList.UseAccentColor = false;
             this.btnDeleteWorkoutList.UseVisualStyleBackColor = true;
             this.btnDeleteWorkoutList.Click += new System.EventHandler(this.btnDeleteWorkoutList_Click);
+            // 
+            // dtWorkoutList
+            // 
+            this.dtWorkoutList.AutoSizeTable = false;
+            this.dtWorkoutList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dtWorkoutList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtWorkoutList.Depth = 0;
+            this.dtWorkoutList.FullRowSelect = true;
+            this.dtWorkoutList.HideSelection = false;
+            this.dtWorkoutList.Location = new System.Drawing.Point(6, 24);
+            this.dtWorkoutList.MinimumSize = new System.Drawing.Size(200, 100);
+            this.dtWorkoutList.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.dtWorkoutList.MouseState = MaterialSkin.MouseState.OUT;
+            this.dtWorkoutList.MultiSelect = false;
+            this.dtWorkoutList.Name = "dtWorkoutList";
+            this.dtWorkoutList.OwnerDraw = true;
+            this.dtWorkoutList.Size = new System.Drawing.Size(800, 550);
+            this.dtWorkoutList.TabIndex = 2;
+            this.dtWorkoutList.UseCompatibleStateImageBehavior = false;
+            this.dtWorkoutList.View = System.Windows.Forms.View.Details;
+            this.dtWorkoutList.SelectedIndexChanged += new System.EventHandler(this.dtWorkoutList_SelectedIndexChanged);
             // 
             // WorkoutList
             // 

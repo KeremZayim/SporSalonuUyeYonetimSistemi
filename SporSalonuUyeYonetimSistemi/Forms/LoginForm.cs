@@ -15,6 +15,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms
          1-) Form Ayarları
             1.1-) Form Başlık Form Taşıma Eventi Ekleme
             1.2-) Beni Hatırla Kontrolü
+            1.3-) Form Tema Ayarı
 
          2-) Giriş Yap Butonu
             2.1-) Giriş Yapma
@@ -48,6 +49,9 @@ namespace SporSalonuUyeYonetimSistemi.Forms
 
             // 1.2-)
             LoadRememberMe();
+
+            // 1.3-)
+            ThemeProperties.ApplyLightTheme(this);
         }
 
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
             this.btnExitApplication = new System.Windows.Forms.Button();
@@ -45,10 +46,12 @@
             this.btnTrainers = new MaterialSkin.Controls.MaterialButton();
             this.btnMainPage = new MaterialSkin.Controls.MaterialButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlTitle.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.pnlBody.SuspendLayout();
             this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitle
@@ -124,6 +127,7 @@
             // 
             // pnlMenu
             // 
+            this.pnlMenu.Controls.Add(this.pictureBox1);
             this.pnlMenu.Controls.Add(this.btnMembershipTypes);
             this.pnlMenu.Controls.Add(this.btnPayments);
             this.pnlMenu.Controls.Add(this.btnParticipationHistory);
@@ -316,6 +320,16 @@
             this.panel1.Size = new System.Drawing.Size(1, 689);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SporSalonuUyeYonetimSistemi.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(74, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,6 +337,7 @@
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.pnlMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Spor Salonu Üye Yönetim Sistemi";
@@ -330,6 +345,7 @@
             this.pnlMain.ResumeLayout(false);
             this.pnlBody.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,6 +369,7 @@
         private MaterialSkin.Controls.MaterialButton btnPayments;
         private MaterialSkin.Controls.MaterialButton btnWorkoutLists;
         private MaterialSkin.Controls.MaterialButton btnMembershipTypes;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
