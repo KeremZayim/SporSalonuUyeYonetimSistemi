@@ -174,7 +174,7 @@
             this.Name = "EditTrainer";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Spor Salonu Üye Yönetim Sistemi";
+            this.Text = "Antrenör Düzenle";
             this.Shown += new System.EventHandler(this.EditTrainer_Shown);
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);

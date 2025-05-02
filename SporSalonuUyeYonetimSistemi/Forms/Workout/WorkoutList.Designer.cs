@@ -177,7 +177,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WorkoutList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "WorkoutList";
+            this.Text = "Spor Salonu Üye Yönetim Sistemi";
             this.Shown += new System.EventHandler(this.WorkoutList_Shown);
             this.tabController.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

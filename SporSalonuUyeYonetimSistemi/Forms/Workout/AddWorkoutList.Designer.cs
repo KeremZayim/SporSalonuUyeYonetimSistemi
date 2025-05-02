@@ -203,7 +203,7 @@
             this.Name = "AddWorkoutList";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddWorkout";
+            this.Text = "Antrenman Listesi Ekle";
             this.Shown += new System.EventHandler(this.AddWorkout_Shown);
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);

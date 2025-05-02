@@ -46,13 +46,13 @@
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(3, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(410, 30);
+            this.pnlTitle.Size = new System.Drawing.Size(414, 30);
             this.pnlTitle.TabIndex = 0;
             // 
             // btnExit
             // 
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExit.Location = new System.Drawing.Point(365, 0);
+            this.btnExit.Location = new System.Drawing.Point(369, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
             this.btnExit.TabIndex = 1;
@@ -66,7 +66,7 @@
             this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 29);
             this.pnlTitleSeperator.Name = "pnlTitleSeperator";
-            this.pnlTitleSeperator.Size = new System.Drawing.Size(410, 1);
+            this.pnlTitleSeperator.Size = new System.Drawing.Size(414, 1);
             this.pnlTitleSeperator.TabIndex = 1;
             // 
             // lblTitle
@@ -74,7 +74,7 @@
             this.lblTitle.Depth = 0;
             this.lblTitle.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblTitle.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
-            this.lblTitle.Location = new System.Drawing.Point(77, 0);
+            this.lblTitle.Location = new System.Drawing.Point(79, 0);
             this.lblTitle.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(262, 30);
@@ -96,7 +96,7 @@
             this.cbStudents.FormattingEnabled = true;
             this.cbStudents.IntegralHeight = false;
             this.cbStudents.ItemHeight = 43;
-            this.cbStudents.Location = new System.Drawing.Point(90, 54);
+            this.cbStudents.Location = new System.Drawing.Point(92, 54);
             this.cbStudents.MaxDropDownItems = 4;
             this.cbStudents.MouseState = MaterialSkin.MouseState.OUT;
             this.cbStudents.Name = "cbStudents";
@@ -112,7 +112,7 @@
             this.btnAddStudent.Depth = 0;
             this.btnAddStudent.HighEmphasis = true;
             this.btnAddStudent.Icon = null;
-            this.btnAddStudent.Location = new System.Drawing.Point(137, 118);
+            this.btnAddStudent.Location = new System.Drawing.Point(139, 118);
             this.btnAddStudent.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAddStudent.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAddStudent.Name = "btnAddStudent";
@@ -129,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 180);
+            this.ClientSize = new System.Drawing.Size(420, 180);
             this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.cbStudents);
             this.Controls.Add(this.pnlTitle);
@@ -138,7 +138,7 @@
             this.Name = "TrainerStudentAdd";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TrainerStudentAdd";
+            this.Text = "Antrenör Öğrenci Ekle";
             this.Shown += new System.EventHandler(this.TrainerStudentAdd_Shown);
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);

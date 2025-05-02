@@ -48,13 +48,13 @@
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(3, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(321, 30);
+            this.pnlTitle.Size = new System.Drawing.Size(344, 30);
             this.pnlTitle.TabIndex = 0;
             // 
             // btnExit
             // 
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExit.Location = new System.Drawing.Point(276, 0);
+            this.btnExit.Location = new System.Drawing.Point(299, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
             this.btnExit.TabIndex = 1;
@@ -68,7 +68,7 @@
             this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 29);
             this.pnlTitleSeperator.Name = "pnlTitleSeperator";
-            this.pnlTitleSeperator.Size = new System.Drawing.Size(321, 1);
+            this.pnlTitleSeperator.Size = new System.Drawing.Size(344, 1);
             this.pnlTitleSeperator.TabIndex = 1;
             // 
             // lblTitle
@@ -76,7 +76,7 @@
             this.lblTitle.Depth = 0;
             this.lblTitle.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblTitle.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
-            this.lblTitle.Location = new System.Drawing.Point(48, -1);
+            this.lblTitle.Location = new System.Drawing.Point(60, -1);
             this.lblTitle.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(231, 30);
@@ -92,7 +92,7 @@
             this.btnEditWorkoutList.Depth = 0;
             this.btnEditWorkoutList.HighEmphasis = true;
             this.btnEditWorkoutList.Icon = null;
-            this.btnEditWorkoutList.Location = new System.Drawing.Point(97, 265);
+            this.btnEditWorkoutList.Location = new System.Drawing.Point(109, 272);
             this.btnEditWorkoutList.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEditWorkoutList.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEditWorkoutList.Name = "btnEditWorkoutList";
@@ -113,7 +113,7 @@
             this.tbWorkoutDay.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbWorkoutDay.Hint = "Çalışma Günü";
             this.tbWorkoutDay.LeadingIcon = null;
-            this.tbWorkoutDay.Location = new System.Drawing.Point(64, 181);
+            this.tbWorkoutDay.Location = new System.Drawing.Point(76, 188);
             this.tbWorkoutDay.MaxLength = 50;
             this.tbWorkoutDay.MouseState = MaterialSkin.MouseState.OUT;
             this.tbWorkoutDay.Multiline = false;
@@ -131,7 +131,7 @@
             this.tbTargetArea.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbTargetArea.Hint = "Hedef Bölge";
             this.tbTargetArea.LeadingIcon = null;
-            this.tbTargetArea.Location = new System.Drawing.Point(64, 125);
+            this.tbTargetArea.Location = new System.Drawing.Point(76, 132);
             this.tbTargetArea.MaxLength = 50;
             this.tbTargetArea.MouseState = MaterialSkin.MouseState.OUT;
             this.tbTargetArea.Multiline = false;
@@ -149,7 +149,7 @@
             this.tbWorkoutName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbWorkoutName.Hint = "Liste Adı";
             this.tbWorkoutName.LeadingIcon = null;
-            this.tbWorkoutName.Location = new System.Drawing.Point(64, 69);
+            this.tbWorkoutName.Location = new System.Drawing.Point(76, 76);
             this.tbWorkoutName.MaxLength = 50;
             this.tbWorkoutName.MouseState = MaterialSkin.MouseState.OUT;
             this.tbWorkoutName.Multiline = false;
@@ -163,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 350);
+            this.ClientSize = new System.Drawing.Size(350, 350);
             this.Controls.Add(this.btnEditWorkoutList);
             this.Controls.Add(this.tbWorkoutDay);
             this.Controls.Add(this.tbTargetArea);
@@ -174,7 +174,7 @@
             this.Name = "EditWorkoutList";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EditWorkoutList";
+            this.Text = "Antrenman Listesi Düzenle";
             this.Shown += new System.EventHandler(this.EditWorkoutList_Shown);
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);

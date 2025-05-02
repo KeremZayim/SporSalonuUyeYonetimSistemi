@@ -46,7 +46,7 @@
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(3, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(387, 31);
+            this.pnlTitle.Size = new System.Drawing.Size(394, 31);
             this.pnlTitle.TabIndex = 5;
             // 
             // pnlTitleSeperator
@@ -55,7 +55,7 @@
             this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 30);
             this.pnlTitleSeperator.Name = "pnlTitleSeperator";
-            this.pnlTitleSeperator.Size = new System.Drawing.Size(342, 1);
+            this.pnlTitleSeperator.Size = new System.Drawing.Size(349, 1);
             this.pnlTitleSeperator.TabIndex = 8;
             // 
             // lblTitle
@@ -63,7 +63,7 @@
             this.lblTitle.Depth = 0;
             this.lblTitle.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblTitle.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
-            this.lblTitle.Location = new System.Drawing.Point(79, 0);
+            this.lblTitle.Location = new System.Drawing.Point(83, 0);
             this.lblTitle.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(235, 30);
@@ -74,7 +74,7 @@
             // btnExitForm
             // 
             this.btnExitForm.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExitForm.Location = new System.Drawing.Point(342, 0);
+            this.btnExitForm.Location = new System.Drawing.Point(349, 0);
             this.btnExitForm.Name = "btnExitForm";
             this.btnExitForm.Size = new System.Drawing.Size(45, 31);
             this.btnExitForm.TabIndex = 0;
@@ -97,7 +97,7 @@
             this.cbTrainers.Hint = "Antrenör Seç";
             this.cbTrainers.IntegralHeight = false;
             this.cbTrainers.ItemHeight = 43;
-            this.cbTrainers.Location = new System.Drawing.Point(85, 71);
+            this.cbTrainers.Location = new System.Drawing.Point(89, 71);
             this.cbTrainers.MaxDropDownItems = 4;
             this.cbTrainers.MouseState = MaterialSkin.MouseState.OUT;
             this.cbTrainers.Name = "cbTrainers";
@@ -113,7 +113,7 @@
             this.btnAddTrainer.Depth = 0;
             this.btnAddTrainer.HighEmphasis = true;
             this.btnAddTrainer.Icon = null;
-            this.btnAddTrainer.Location = new System.Drawing.Point(125, 167);
+            this.btnAddTrainer.Location = new System.Drawing.Point(129, 167);
             this.btnAddTrainer.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAddTrainer.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAddTrainer.Name = "btnAddTrainer";
@@ -130,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 248);
+            this.ClientSize = new System.Drawing.Size(400, 250);
             this.Controls.Add(this.btnAddTrainer);
             this.Controls.Add(this.cbTrainers);
             this.Controls.Add(this.pnlTitle);

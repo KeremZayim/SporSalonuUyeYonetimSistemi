@@ -160,7 +160,7 @@
             this.Name = "TrainerStudents";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Spor Salonu Üye Yönetim Sistemi";
+            this.Text = "Antrenör Öğrencileri";
             this.Shown += new System.EventHandler(this.TrainerStudents_Shown);
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);

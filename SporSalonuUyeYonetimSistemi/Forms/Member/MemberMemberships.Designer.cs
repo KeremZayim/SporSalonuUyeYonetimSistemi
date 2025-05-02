@@ -44,7 +44,7 @@
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(3, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(745, 30);
+            this.pnlTitle.Size = new System.Drawing.Size(744, 30);
             this.pnlTitle.TabIndex = 4;
             // 
             // lblTitle
@@ -63,7 +63,7 @@
             // btnExitApplication
             // 
             this.btnExitApplication.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExitApplication.Location = new System.Drawing.Point(700, 0);
+            this.btnExitApplication.Location = new System.Drawing.Point(699, 0);
             this.btnExitApplication.Name = "btnExitApplication";
             this.btnExitApplication.Size = new System.Drawing.Size(45, 30);
             this.btnExitApplication.TabIndex = 0;
@@ -77,7 +77,7 @@
             this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitleSeperator.Location = new System.Drawing.Point(3, 30);
             this.pnlTitleSeperator.Name = "pnlTitleSeperator";
-            this.pnlTitleSeperator.Size = new System.Drawing.Size(745, 1);
+            this.pnlTitleSeperator.Size = new System.Drawing.Size(744, 1);
             this.pnlTitleSeperator.TabIndex = 8;
             // 
             // dtMemberMemberships
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 532);
+            this.ClientSize = new System.Drawing.Size(750, 550);
             this.Controls.Add(this.pnlTitleSeperator);
             this.Controls.Add(this.dtMemberMemberships);
             this.Controls.Add(this.pnlTitle);
