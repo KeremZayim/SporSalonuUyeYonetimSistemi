@@ -1,25 +1,25 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SporSalonuUyeYonetimSistemi.Forms
 {
     public partial class Payments : MaterialForm
     {
+        /*
+         
+            1-) Filtreleme ve Listeleme
+
+        */
+
         public Payments()
         {
             InitializeComponent();
             ThemeProperties.ApplyLightTheme(this);
         }
-        private async void listele()
+
+        // 1-)
+        private async void ListPayments()
         {
             string query = "SELECT p.payment_id, m.member_id, m.member_name, m.member_surname, p.payment_status, p.payment_date, p.amount " +
                "FROM members AS m " +
@@ -29,16 +29,17 @@ namespace SporSalonuUyeYonetimSistemi.Forms
                    "(m.member_name LIKE '%" + tbFilter.Text.Trim() + "%') OR " +
                    "(m.member_surname LIKE '%" + tbFilter.Text.Trim() + "%') OR " +
                    "(m.member_name + ' ' + m.member_surname LIKE '%" + tbFilter.Text.Trim() + "%')";
-            await Functions.VerileriGetirManualAsync(query,dtPayments);
+            await Functions.GetDatasManualAsync(query,dtPayments);
         }
+
         private void Payments_Shown(object sender, EventArgs e)
         {
-            listele();
+            ListPayments();
         }
 
         private void tbFilter_TextChanged(object sender, EventArgs e)
         {
-            listele();
+            ListPayments();
         }
     }
 }

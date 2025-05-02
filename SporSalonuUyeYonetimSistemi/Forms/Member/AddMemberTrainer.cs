@@ -2,12 +2,7 @@
 using SporSalonuUyeYonetimSistemi.Classes;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +10,17 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
 {
     public partial class AddMemberTrainer : MaterialForm
     {
+
+        /*
+
+            1-) Combobox'a Antrenörleri Listeler (GetTrainerAsync)
+            2-) Üyeye Antrenör Ata (AddMemberTrainerAsync)
+            3-) Butonlar
+                3.1-) Ekle
+                3.2-) Formu Kapat
+
+         */
+
         string memberID;
         public AddMemberTrainer(string memberID)
         {
@@ -120,17 +126,19 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             }
         }
 
-
         private async void AddMemberTrainer_Shown(object sender, EventArgs e)
         {
             await GetTrainerAsync();
         }
 
+        // 3-)
+        // 3.1-)
         private async void btnAddTrainer_Click(object sender, EventArgs e)
         {
             await AddMemberTrainerAsync(memberID);
         }
 
+        // 3.2-)
         private void btnExitForm_Click(object sender, EventArgs e)
         {
             this.Close();

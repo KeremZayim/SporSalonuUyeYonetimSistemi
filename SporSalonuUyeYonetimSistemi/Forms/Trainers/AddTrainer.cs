@@ -1,13 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,15 +9,25 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
 {
     public partial class AddTrainer : MaterialForm
     {
+        /*
+
+            1-) Antrenör Ekle (AddTrainerAsync)
+            2-) Butonlar
+                2.1-) Antrenör Ekle
+                2.2-) Formu Kapat
+
+         */
+
         public AddTrainer()
         {
             InitializeComponent();
-            //ThemeProperties.ApplyLightTheme(this); seperator bozuluyor açarsak
             lblTitle.MouseDown += (sender, e) => CommonMethods.MoveForm(this.Handle, e);
             pnlTitle.MouseDown += (sender, e) => CommonMethods.MoveForm(this.Handle, e);
             tbTrainerPhoneNumber.KeyPress += (sender, e) => CommonMethods.JustNumberEntering(this.Handle, e);
         }
-        public static async Task VeriEkleAsync(string trainerName, string trainerSurname, string phoneNumber)
+
+        // 1-)
+        private static async Task AddTrainerAsync(string trainerName, string trainerSurname, string phoneNumber)
         {
             try
             {
@@ -59,6 +63,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
             }
         }
 
+        // 2-)
+        // 2.1-)
         private async void btnAddTrainer_Click(object sender, EventArgs e)
         {
             if (tbTrainerName.Text != "" && tbTrainerSurname.Text != "" && tbTrainerPhoneNumber.Text.Length == 11)
@@ -67,7 +73,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
                 string soyad = tbTrainerSurname.Text;
                 string telno = tbTrainerPhoneNumber.Text;
 
-                await VeriEkleAsync(ad, soyad, telno);
+                await AddTrainerAsync(ad, soyad, telno);
                 MessageBox.Show("Antrenör Başarıyla Eklendi");
                 this.Close();
             }
@@ -85,14 +91,10 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
             }
         }
 
+        // 2.2-)
         private void btnExitForm_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void AddTrainer_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

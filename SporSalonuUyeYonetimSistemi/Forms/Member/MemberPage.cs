@@ -1,15 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
-using SporSalonuUyeYonetimSistemi.Forms.Trainers;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +9,24 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
 {
     public partial class MemberPage : MaterialForm
     {
+
+        /*
+
+            1-) Buton Aktifliği - Tablodan Seçilen Öğe Kontrolü (ButtonControl)
+            2-) Üye Sil (DeleteMemberAsync)
+            3-) Butonlar
+                3.1-) Üye Ekle
+                3.2-) Üye Düzenle
+                3.3-) Üye Sil
+                3.4-) Üyelik Bilgileri
+                3.5-) Sağlık Bilgileri
+                3.6-) Antrenörler
+                3.7-) Antrenman Bilgileri
+                3.8-) Ödeme Bilgileri
+                3.9-) Giriş-Çıkışlar
+
+         */
+
         public MemberPage()
         {
             InitializeComponent();
@@ -24,9 +34,11 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
         }
         private async void MemberPage_Shown(object sender, EventArgs e)
         {
-            await Functions.VerileriGetirAsync("members", dtMemberInfo);
+            await Functions.GetDatasAsync("members", dtMemberInfo);
         }
-        void buttonControl()
+
+        // 1-)
+        private void ButtonControl()
         {
             bool aktiflik;
             if (dtMemberInfo.SelectedItems.Count > 0)
@@ -48,56 +60,9 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
                 }
             }
         }
-        private void dtMemberInfo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            buttonControl();
-        }
 
-        private void btnPayments_Click(object sender, EventArgs e)
-        {
-            string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
-            MemberPayments paymentsForm = new MemberPayments(memberId);
-            paymentsForm.ShowDialog();
-            dtMemberInfo.SelectedItems.Clear();
-            buttonControl();
-        }
-
-        private void btnMembership_Click(object sender, EventArgs e)
-        {
-            string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
-            MemberMemberships membershipsForm = new MemberMemberships(memberId);
-            membershipsForm.ShowDialog();
-            dtMemberInfo.SelectedItems.Clear();
-            buttonControl();
-        }
-
-        private void btnMemberTrainers_Click(object sender, EventArgs e)
-        {
-            string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
-            MemberTrainers membershipsForm = new MemberTrainers(memberId);
-            membershipsForm.ShowDialog();
-            dtMemberInfo.SelectedItems.Clear();
-            buttonControl();
-        }
-
-        private void btnAttendance_Click(object sender, EventArgs e)
-        {
-            string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
-            MemberParticipationHistory membershipsForm = new MemberParticipationHistory(memberId);
-            membershipsForm.ShowDialog();
-            dtMemberInfo.SelectedItems.Clear();
-            buttonControl();
-        }
-
-        private void btnHealthInfo_Click(object sender, EventArgs e)
-        {
-            string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
-            MemberHealthInformation membershipsForm = new MemberHealthInformation(memberId);
-            membershipsForm.ShowDialog();
-            dtMemberInfo.SelectedItems.Clear();
-            buttonControl();
-        }
-        private static async Task UyeSilAsync(int memberId)
+        // 2-)
+        private static async Task DeleteMemberAsync(int memberId)
         {
             DialogResult result = MessageBox.Show("Üyeyi ve tüm bağlı verileri silmek istediğinizden emin misiniz?",
                                                   "Onay",
@@ -142,33 +107,92 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             }
         }
 
-
-        private async void btnDeleteMember_Click(object sender, EventArgs e)
+        private void dtMemberInfo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(dtMemberInfo.SelectedItems[0].SubItems[0].Text, out int memberId))
-            {
-                await UyeSilAsync(memberId);
-            }
-            else
-            {
-                MessageBox.Show("Geçerli bir MemberID girin.", "Hatalı Giriş", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            await Functions.VerileriGetirAsync("members", dtMemberInfo);
+            ButtonControl();
         }
 
-        private void btnTrainingInfo_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // 3-)
+        // 3.1-)
         private void btnAddMember_Click(object sender, EventArgs e)
         {
 
         }
 
+        // 3.2-)
         private void btnEditMember_Click(object sender, EventArgs e)
         {
 
+        }
+
+        // 3.3-)
+        private async void btnDeleteMember_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(dtMemberInfo.SelectedItems[0].SubItems[0].Text, out int memberId))
+            {
+                await DeleteMemberAsync(memberId);
+            }
+            else
+            {
+                MessageBox.Show("Geçerli bir MemberID girin.", "Hatalı Giriş", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            await Functions.GetDatasAsync("members", dtMemberInfo);
+        }
+
+        // 3.4-)
+        private void btnMembership_Click(object sender, EventArgs e)
+        {
+            string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
+            MemberMemberships membershipsForm = new MemberMemberships(memberId);
+            membershipsForm.ShowDialog();
+            dtMemberInfo.SelectedItems.Clear();
+            ButtonControl();
+        }
+
+        // 3.5-)
+        private void btnHealthInfo_Click(object sender, EventArgs e)
+        {
+            string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
+            MemberHealthInformation membershipsForm = new MemberHealthInformation(memberId);
+            membershipsForm.ShowDialog();
+            dtMemberInfo.SelectedItems.Clear();
+            ButtonControl();
+        }
+
+        // 3.6-)
+        private void btnMemberTrainers_Click(object sender, EventArgs e)
+        {
+            string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
+            MemberTrainers membershipsForm = new MemberTrainers(memberId);
+            membershipsForm.ShowDialog();
+            dtMemberInfo.SelectedItems.Clear();
+            ButtonControl();
+        }
+
+        // 3.7-)
+        private void btnTrainingInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // 3.8-)
+        private void btnPayments_Click(object sender, EventArgs e)
+        {
+            string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
+            MemberPayments paymentsForm = new MemberPayments(memberId);
+            paymentsForm.ShowDialog();
+            dtMemberInfo.SelectedItems.Clear();
+            ButtonControl();
+        }
+
+        // 3.9-)
+        private void btnAttendance_Click(object sender, EventArgs e)
+        {
+            string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
+            MemberParticipationHistory membershipsForm = new MemberParticipationHistory(memberId);
+            membershipsForm.ShowDialog();
+            dtMemberInfo.SelectedItems.Clear();
+            ButtonControl();
         }
     }
 }

@@ -1,18 +1,25 @@
 ﻿using MaterialSkin.Controls;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+/*
+
+    1-) Girilen Tablo Adındaki Bütün Verileri Bir ListView'e Listeleme Fonksiyonu (GetDataAsync)
+    2-) Girilen Sorguya Özel Verileri Bir ListView'e Listeleme Fonksiyonu (GetDatasManualAsync)
+    3-) Belirli Kullanıcının Girilen Tabloda Adındaki Bütün Verilerini Listeleyen Fonksiyon (GetDataByMemberIDAsync)
+    4-) Belirtilen MaterialCombobox'a Bütün Üyelerin Ad Soyadlarını "{Ad} {Soyad}" Şeklinde Listeler ve En Üste "Herkes" Seçeneği Koyar. (FillMemberList)
+
+*/
+
 
 namespace SporSalonuUyeYonetimSistemi.Classes
 {
     internal class Functions
     {
-        public static async Task VerileriGetirAsync(string Tablo, MaterialListView materialListView)
+        // 1-)
+        public static async Task GetDatasAsync(string Tablo, MaterialListView materialListView)
         {
             using (SqlConnection conn = new SqlConnection(DatabaseServer.ConnectionString))
             {
@@ -62,7 +69,9 @@ namespace SporSalonuUyeYonetimSistemi.Classes
                 }
             }
         }
-        public static async Task VerileriGetirManualAsync(string query, MaterialListView materialListView)
+
+        // 2-)
+        public static async Task GetDatasManualAsync(string query, MaterialListView materialListView)
         {
             using (SqlConnection conn = new SqlConnection(DatabaseServer.ConnectionString))
             {
@@ -79,7 +88,6 @@ namespace SporSalonuUyeYonetimSistemi.Classes
                             materialListView.Columns.Clear();
                             materialListView.Items.Clear();
 
-                            // Sütun başlıklarını oluştur
                             for (int i = 0; i < reader.FieldCount; i++)
                             {
                                 string originalColumnName = reader.GetName(i);
@@ -87,14 +95,13 @@ namespace SporSalonuUyeYonetimSistemi.Classes
                                 materialListView.Columns.Add(translatedColumnName);
                             }
 
-                            // Veri satırlarını işle
                             while (await reader.ReadAsync())
                             {
                                 var item = new ListViewItem(reader[0]?.ToString().Trim() ?? string.Empty);
 
                                 for (int i = 1; i < reader.FieldCount; i++)
                                 {
-                                    // Özel kontrol: Eğer bu bir birleştirilmiş ad-soyad sütunuysa
+                                    // Özel kontrol: Eğer bu bir birleştirilmiş "{ad} {soyad}" sütunuysa
                                     if (reader.GetName(i).Equals("Üye", StringComparison.OrdinalIgnoreCase))
                                     {
                                         string fullName = reader[i]?.ToString().Trim() ?? string.Empty;
@@ -113,8 +120,6 @@ namespace SporSalonuUyeYonetimSistemi.Classes
                         }
                     }
 
-                    // Sütun genişliklerini ayarla
-
                     foreach (ColumnHeader column in materialListView.Columns)
                     {
                         column.Width = materialListView.Width / materialListView.Columns.Count;
@@ -128,7 +133,8 @@ namespace SporSalonuUyeYonetimSistemi.Classes
             }
         }
 
-        public static async Task DetayGetirAsync(string tablo, string member_id, MaterialListView materialListView)
+        // 3-)
+        public static async Task GetDataByMemberIDAsync(string tablo, string member_id, MaterialListView materialListView)
         {
             using (SqlConnection con = new SqlConnection(DatabaseServer.ConnectionString))
             {
@@ -202,6 +208,8 @@ namespace SporSalonuUyeYonetimSistemi.Classes
                 }
             }
         }
+
+        // 4-)
         public static async Task FillMemberList(MaterialComboBox cb)
         {
             cb.Items.Clear();

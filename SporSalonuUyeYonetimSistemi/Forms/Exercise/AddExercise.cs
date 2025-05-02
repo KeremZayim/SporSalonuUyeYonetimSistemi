@@ -1,13 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +9,22 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
 {
     public partial class AddExercise : MaterialForm
     {
+
+        /*
+
+            1-) Combobox'ta İki Veriyi De Saklayan Class (ComboBoxItem)
+            2-) Combobox'a 1-100 Arası Sayıları Ekler (NumberFill)
+            3-) Buton Aktifliği - Tablodan Seçilen Öğe Kontrolü (ButtonControl)
+            4-) Combobox'a Üyeleri Doldurur (LoadMembersAsync)
+            5-) Combobox'a Antrenman Adlarını Doldurur (LoadWorkoutsAsync)
+            6-) Egzersiz Ekle (AddExerciseAsync)
+            7-) Butonlar
+                7.1-) Ekle
+                7.2-) Formu Kapat
+
+         */
+
+        // 1-)
         private class ComboBoxItem
         {
             public string Text { get; set; }
@@ -31,22 +41,32 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                 return Text;
             }
         }
+
         public AddExercise()
         {
             InitializeComponent();
             lblTitle.MouseDown += (sender, e) => CommonMethods.MoveForm(this.Handle, e);
             pnlTitle.MouseDown += (sender, e) => CommonMethods.MoveForm(this.Handle, e);
-            numberFill(cbSetCount);
-            numberFill(cbRepetitionCount);
+            NumberFill(cbSetCount);
+            NumberFill(cbRepetitionCount);
         }
-        void numberFill(MaterialComboBox cb)
+
+        private async void AddExercise_Shown(object sender, EventArgs e)
+        {
+            await LoadMembersAsync();
+        }
+
+        // 2-)
+        private void NumberFill(MaterialComboBox cb)
         {
             for (int i = 1; i <= 100; i++)
             {
                 cb.Items.Add(i.ToString());
             }
         }
-        void selectionControl()
+
+        // 3-)
+        private void ButtonControl()
         {
             if (cbMember.SelectedItem != null)
             {
@@ -63,6 +83,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                 cbWorkout.Enabled = false;
             }
         }
+
+        // 4-)
         private async Task LoadMembersAsync()
         {
             cbMember.Items.Clear();
@@ -88,6 +110,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                 }
             }
         }
+
+        // 5-)
         private async Task LoadWorkoutsAsync(string memberId)
         {
             cbWorkout.Items.Clear();
@@ -115,6 +139,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                 }
             }
         }
+
+        // 6-)
         private async Task AddExerciseAsync()
         {
             if (cbWorkout.SelectedItem == null || cbSetCount.SelectedItem == null || cbRepetitionCount.SelectedItem == null || string.IsNullOrWhiteSpace(tbExerciseName.Text))
@@ -134,7 +160,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                 {
                     await connection.OpenAsync();
 
-                    // İlk önce workout_id'yi bul
                     string selectWorkoutIdQuery = "SELECT workout_id FROM workout_list WHERE workout_name = @workoutName";
 
                     int? workoutId = null;
@@ -153,7 +178,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                         return;
                     }
 
-                    // Şimdi egzersizi ekle
                     string insertExerciseQuery = @"INSERT INTO exercise (exercise_Name, set_count, repetition_count, workout_id) 
                                            VALUES (@exerciseName, @setCount, @repetitionCount, @workoutId)";
 
@@ -177,10 +201,9 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
             }
         }
 
-
         private async void cbMember_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectionControl();
+            ButtonControl();
 
             if (cbMember.SelectedItem is ComboBoxItem selectedMember)
             {
@@ -199,19 +222,17 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
             cbWorkout.Refresh();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private async void AddExercise_Shown(object sender, EventArgs e)
-        {
-            await LoadMembersAsync();
-        }
-
+        // 7-)
+        // 7.1-)
         private async void btnAddExercise_Click(object sender, EventArgs e)
         {
             await AddExerciseAsync();
+        }
+
+        // 7.2-)
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -1,12 +1,5 @@
 ﻿using MaterialSkin.Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SporSalonuUyeYonetimSistemi.Classes;
 using System.Data.SqlClient;
@@ -15,6 +8,17 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
 {
     public partial class MemberPayments : MaterialForm
     {
+
+        /*
+
+            1-) Buton Aktifliği - Tablodan Seçilen Öğe Kontrolü (ButtonControl)
+            2-) Ödeme Yap (PayAsync)
+            3-) Butonlar
+                3.1-) Öde
+                3.2-) Formu Kapat
+
+         */
+
         private string member_id;
         public MemberPayments(string member_id)
         {
@@ -24,23 +28,26 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             this.member_id = member_id;
         }
 
-        private async void MemberPayments_Load(object sender, EventArgs e)
+        // 1-)
+        private void ButtonControl()
         {
-            await Functions.DetayGetirAsync("payments", member_id, dtData);
+            if (dtData.SelectedItems.Count > 0)
+            {
+                btnPay.Enabled = true;
+            }
+            else
+            {
+                btnPay.Enabled = false;
+            }
         }
 
-        private async void btnPay_Click(object sender, EventArgs e)
-        {
-            odemeYap(member_id, cbAraVerdiMi);
-            await Functions.DetayGetirAsync("payments", member_id, dtData);
-        }
-        async void odemeYap(string memberId, MaterialCheckbox AraVerdiMi)
+        // 2-)
+        private async void PayAsync(string memberId, MaterialCheckbox AraVerdiMi)
         {
             using (SqlConnection connection = new SqlConnection(DatabaseServer.ConnectionString))
             {
                 await connection.OpenAsync();
 
-                // 1. Membership price ve end_date çekiliyor
                 SqlCommand cmd = new SqlCommand(@"
             SELECT mt.membership_price, m.membership_end_date, m.membership_type
             FROM memberships m
@@ -64,7 +71,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
 
                         DateTime today = DateTime.Today;
 
-                        // Eğer üyeliğin bitiş tarihi yoksa (sınırsızsa) veya bitmesine 1 aydan fazla varsa → Ödeme reddedilir
                         if (endDate == null)
                         {
                             MessageBox.Show("Üyelik bitiş tarihi tanımlı değil. Ödeme yapılamaz.");
@@ -79,7 +85,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
                             return;
                         }
 
-                        // 2. Ödeme kaydı ekleniyor
                         reader.Close();
 
                         SqlCommand insertCmd = new SqlCommand(@"
@@ -93,33 +98,28 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
 
                         await insertCmd.ExecuteNonQueryAsync();
 
-                        // 3. Yeni end date hesaplanıyor (AraVerdiMi'ye göre 1 ay veya 1 yıl ekleniyor)
                         DateTime yeniEndDate;
 
                         if (AraVerdiMi.Checked)
                         {
-                            // Üyelik türüne göre süre ekle
                             if (membershipType == "Aylık")
                             {
-                                yeniEndDate = endDate.Value.AddMonths(1); // 1 ay ekle
+                                yeniEndDate = endDate.Value.AddMonths(1);
                             }
                             else if (membershipType == "Yıllık")
                             {
-                                yeniEndDate = endDate.Value.AddYears(1); // 1 yıl ekle
+                                yeniEndDate = endDate.Value.AddYears(1);
                             }
                             else
                             {
-                                // Diğer üyelik tipleri için end date değişmiyor
                                 yeniEndDate = endDate.Value;
                             }
                         }
                         else
                         {
-                            // AraVerdiMi işaretli değilse end date değişmez
                             yeniEndDate = endDate.Value;
                         }
 
-                        // 4. Yeni end date'i güncelle
                         SqlCommand updateCmd = new SqlCommand(@"
                     UPDATE memberships
                     SET membership_end_date = @new_end_date
@@ -130,37 +130,39 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
 
                         await updateCmd.ExecuteNonQueryAsync();
 
-                        // 5. Kullanıcıya mesaj ver
                         MessageBox.Show("Ödeme başarılı! Yeni üyelik bitiş tarihi: " + yeniEndDate.ToString("dd.MM.yyyy"));
                     }
                     else
                     {
                         MessageBox.Show("Üyenin üyelik tipi bulunamadı!");
                     }
-                    buttonControl();
+                    ButtonControl();
                 }
             }
         }
 
+        private async void MemberPayments_Shown(object sender, EventArgs e)
+        {
+            await Functions.GetDataByMemberIDAsync("payments", member_id, dtData);
+        }
+
+        private void dtData_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ButtonControl();
+        }
+
+        // 3-)
+        // 3.1-)
+        private async void btnPay_Click(object sender, EventArgs e)
+        {
+            PayAsync(member_id, cbAraVerdiMi);
+            await Functions.GetDataByMemberIDAsync("payments", member_id, dtData);
+        }
+
+        // 3.2-)
         private void btnFormExit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        void buttonControl()
-        {
-            if (dtData.SelectedItems.Count > 0)
-            {
-                btnPay.Enabled = true;
-            }
-            else
-            {
-                btnPay.Enabled = false;
-            }
-        }
-        private void dtData_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            buttonControl();
         }
     }
 }

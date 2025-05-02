@@ -1,32 +1,34 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SporSalonuUyeYonetimSistemi.Forms.Membership_Types
 {
-    public partial class MembershipTypes : Form
+    public partial class MembershipTypes : MaterialForm
     {
+
+        /*
+
+            1-) Üyelik Türünü Sil (DeleteMembershipTypes)
+            2-) Buton Aktifliği - Tablodan Seçilen Öğe Kontrolü (ButtonControl)
+            3-) Butonlar
+                3.1-) Ekle
+                3.2-) Düzenle
+                3.3-) Sil
+
+         */
+
         public MembershipTypes()
         {
             InitializeComponent();
+            ThemeProperties.ApplyLightTheme(this);
         }
 
-        private async void membership_types_Shown(object sender, EventArgs e)
-        {
-            await Functions.VerileriGetirAsync("membership_types",dtMembershipTypes);
-        }
-
-        async Task DeleteMembershipTypes()
+        // 1-)
+        private async Task DeleteMembershipTypes()
         {
             if (dtMembershipTypes.SelectedItems.Count == 0)
             {
@@ -68,14 +70,9 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Membership_Types
                 }
             }
         }
-        private async void btnDeleteMembershipType_Click(object sender, EventArgs e)
-        {
-            await DeleteMembershipTypes();
-            await Functions.VerileriGetirAsync("membership_types", dtMembershipTypes);
-            dtMembershipTypes.SelectedItems.Clear();
-            ButtonControl();
-        }
-        void ButtonControl()
+
+        // 2-)
+        private void ButtonControl()
         {
             bool aktiflik;
             if (dtMembershipTypes.SelectedItems.Count > 0)
@@ -97,26 +94,45 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Membership_Types
                 }
             }
         }
+
+        private async void MembershipTypes_Shown(object sender, EventArgs e)
+        {
+            await Functions.GetDatasAsync("membership_types",dtMembershipTypes);
+        }
+
         private void dtMembershipTypes_SelectedIndexChanged(object sender, EventArgs e)
         {
             ButtonControl();
         }
 
+
+        // 3-)
+        // 3.1-)
         private async void btnAddMembershipType_Click(object sender, EventArgs e)
         {
             AddMembershipType addMembershipType = new AddMembershipType();
             addMembershipType.ShowDialog();
-            await Functions.VerileriGetirAsync("membership_types", dtMembershipTypes);
+            await Functions.GetDatasAsync("membership_types", dtMembershipTypes);
             dtMembershipTypes.SelectedItems.Clear();
             ButtonControl();
         }
 
+        // 3.2-)
         private async void btnEditMembershipType_Click(object sender, EventArgs e)
         {
             string membershipTypeID = dtMembershipTypes.SelectedItems[0].SubItems[0].Text;
             EditMembershipType editMembershipType = new EditMembershipType(membershipTypeID);
             editMembershipType.ShowDialog();
-            await Functions.VerileriGetirAsync("membership_types", dtMembershipTypes);
+            await Functions.GetDatasAsync("membership_types", dtMembershipTypes);
+            dtMembershipTypes.SelectedItems.Clear();
+            ButtonControl();
+        }
+
+        // 3.3-)
+        private async void btnDeleteMembershipType_Click(object sender, EventArgs e)
+        {
+            await DeleteMembershipTypes();
+            await Functions.GetDatasAsync("membership_types", dtMembershipTypes);
             dtMembershipTypes.SelectedItems.Clear();
             ButtonControl();
         }

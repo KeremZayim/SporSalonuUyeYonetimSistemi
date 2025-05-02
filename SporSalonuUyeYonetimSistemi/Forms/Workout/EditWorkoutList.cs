@@ -1,13 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +9,17 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
 {
     public partial class EditWorkoutList : MaterialForm
     {
+
+        /*
+
+            1-) Bilgileri Forma Doldurma (LoadWorkoutList)
+            2-) Bilgileri Güncelleme (UpdateWorkoutListAsync)
+            3-) Butonlar
+                3.1-) Düzenleme
+                3.2-) Form Kapatma
+
+         */
+
         string workoutID;
         public EditWorkoutList(string workoutID)
         {
@@ -24,11 +29,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
             this.workoutID = workoutID;
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        public async Task LoadWorkoutList(string workoutId)
+        // 1-)
+        private async Task LoadWorkoutList(string workoutId)
         {
             string query = "SELECT workout_name, target_area, workout_day FROM workout_list WHERE workout_id = @id";
 
@@ -61,7 +63,9 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
                 }
             }
         }
-        public async Task UpdateWorkoutListAsync(string workoutId)
+
+        // 2-)
+        private async Task UpdateWorkoutListAsync(string workoutId)
         {
             string query = "UPDATE workout_list SET workout_name = @workout_name, target_area = @target_area, workout_day = @workout_day WHERE workout_id = @id";
 
@@ -98,16 +102,22 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
             }
         }
 
-
-
         private async void EditWorkoutList_Shown(object sender, EventArgs e)
         {
             await LoadWorkoutList(workoutID);
         }
 
+        // 3-)
+        // 3.1-)
         private async void btnEditWorkoutList_Click(object sender, EventArgs e)
         {
             await UpdateWorkoutListAsync(workoutID);
+        }
+
+        // 3.2-)
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

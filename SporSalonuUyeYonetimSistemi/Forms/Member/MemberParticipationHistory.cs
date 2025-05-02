@@ -1,14 +1,6 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SporSalonuUyeYonetimSistemi.Forms.Member
 {
@@ -36,7 +28,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
                  ORDER BY 
                     check_in_time DESC";
 
-            await Functions.VerileriGetirManualAsync(query,dtMemberParticipationHistory);
+            await Functions.GetDatasManualAsync(query,dtMemberParticipationHistory);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

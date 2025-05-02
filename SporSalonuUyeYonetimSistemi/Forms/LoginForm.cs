@@ -55,10 +55,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms
         }
 
 
-        private void btnExitApplication_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         // 2-)
         private async void btnLogin_Click(object sender, EventArgs e)
@@ -118,7 +114,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms
             {
                 tbPassword.TrailingIcon = Properties.Resources.Closed_Eye_1;
                 tbPassword.Tag = "hidden";
-                tbPassword.UseSystemPasswordChar = true; // Gizle
+                tbPassword.UseSystemPasswordChar = true;
             }
             else
             {
@@ -130,7 +126,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms
 
         // 4-) Beni Hatırla
         // 4.1-)
-        void LoadRememberMe()
+        private void LoadRememberMe()
         {
             if (Settings.Default.username != "")
             {
@@ -145,7 +141,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms
         }
 
         // 4.2-)
-        void CheckRememberMe()
+        private void CheckRememberMe()
         {
             if (switchRememberMe.Checked)
             {
@@ -166,6 +162,10 @@ namespace SporSalonuUyeYonetimSistemi.Forms
                 btnLogin.PerformClick();
                 e.SuppressKeyPress = true;
             }
+        }
+        private void btnExitApplication_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

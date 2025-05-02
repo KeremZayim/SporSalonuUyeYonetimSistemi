@@ -16,6 +16,18 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
 {
     public partial class TrainerStudentAdd : MaterialForm
     {
+
+        /*
+
+            1-) Öğrenci Bilgileri (Stuednts)
+            2-) Üyeleri Combobox'a Listeler (ListMembersAsync)
+            3-) Öğrenci Ekle (AddStudentAsync)
+            4-) Butonlar
+                4.1-) Öğrenci Ekle
+                4.2-) Formu Kapat
+
+         */
+
         string trainerID;
         public TrainerStudentAdd(string trainerID)
         {
@@ -25,17 +37,15 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
             this.trainerID = trainerID;
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        public class Student
+        // 1-)
+        private class Student
         {
             public int Id { get; set; }
             public string FullName { get; set; }
         }
 
-        public static async Task OgrencileriListeleAsync(ComboBox cbStudents)
+        // 2-)
+        private static async Task ListMembersAsync(ComboBox cbStudents)
         {
             try
             {
@@ -74,8 +84,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
             }
         }
 
-
-        public static async Task AddStudentAsync(string trainerId, ComboBox cbStudents)
+        // 3-)
+        private static async Task AddStudentAsync(string trainerId, ComboBox cbStudents)
         {
             if (cbStudents.SelectedItem == null)
             {
@@ -83,7 +93,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
                 return;
             }
 
-            // Seçilen öğe Student sınıfına dönüşecektir.
             Student selectedStudent = cbStudents.SelectedItem as Student;
 
             if (selectedStudent == null)
@@ -126,16 +135,24 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
             }
         }
 
+        private async void TrainerStudentAdd_Shown(object sender, EventArgs e)
+        {
+            await ListMembersAsync(cbStudents);
+        }
 
+        // 4-)
+        // 4.1-)
         private async void btnAddStudent_Click(object sender, EventArgs e)
         {
             await AddStudentAsync(trainerID,cbStudents);
             this.Close();
         }
 
-        private async void TrainerStudentAdd_Shown(object sender, EventArgs e)
+        // 4.2-)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            await OgrencileriListeleAsync(cbStudents);
+            this.Close();
         }
+
     }
 }

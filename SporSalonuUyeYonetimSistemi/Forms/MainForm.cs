@@ -22,6 +22,12 @@ namespace SporSalonuUyeYonetimSistemi
          3-) Butonlar
             3.1-) Ana Sayfa
             3.2-) Üyeler
+            3.3-) Üyelik Türleri
+            3.4-) Antrenörler
+            3.5-) Egzersizler
+            3.6-) Antrenman Listeleri
+            3.7-) Ödemeler
+            3.8-) Giriş Çıkışlar
          */
 
         // 1-)
@@ -43,77 +49,87 @@ namespace SporSalonuUyeYonetimSistemi
 
         // 2-)
         private Form aktifForm = null;
-        private void ChildFormAc(Form childForm)
+        private void ChildFormOpen(Form childForm)
         {
             if (aktifForm != null)
             {
-                aktifForm.Close(); // Önceki açık formu kapat
+                aktifForm.Close();
             }
 
-            //Çerçevesiz ve tam boyuta ayarlama
             aktifForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
 
-            pnlChildForm.Controls.Clear(); // Paneli temizle
+            pnlChildForm.Controls.Clear();
             pnlChildForm.Controls.Add(childForm);
             pnlChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
 
-        private void btnExitApplication_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        // 3-)
 
+        // 3.1-)
+        private void btnMainPage_Click(object sender, EventArgs e)
+        {
+            ChildFormOpen(new HomePage());
+            lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnMainPage.Text;
+        }
+        
+        // 3.2-)
         private void btnMembers_Click(object sender, EventArgs e)
         {
-            ChildFormAc(new MemberPage());
+            ChildFormOpen(new MemberPage());
             lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnMembers.Text;
         }
 
-        private void btnParticipationHistory_Click(object sender, EventArgs e)
-        {
-            ChildFormAc(new ParticipationHistory());
-            lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnParticipationHistory.Text;
-        }
-
-        private void btnPayments_Click(object sender, EventArgs e)
-        {
-            ChildFormAc(new Payments());
-            lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnPayments.Text;
-        }
-
-        private void btnTrainers_Click(object sender, EventArgs e)
-        {
-            ChildFormAc(new TrainersPage());
-            lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnTrainers.Text;
-        }
-
-        private void btnExercises_Click(object sender, EventArgs e)
-        {
-            ChildFormAc(new Exercise());
-            lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnExercises.Text;
-        }
-
-        private void btnMainPage_Click(object sender, EventArgs e)
-        {
-            ChildFormAc(new HomePage());
-            lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnMainPage.Text;
-        }
-
+        // 3.3-)
         private void btnMembershipTypes_Click(object sender, EventArgs e)
         {
-            ChildFormAc(new MembershipTypes());
+            ChildFormOpen(new MembershipTypes());
             lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnMembershipTypes.Text;
         }
 
+        // 3.3-)
+        private void btnParticipationHistory_Click(object sender, EventArgs e)
+        {
+            ChildFormOpen(new ParticipationHistory());
+            lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnParticipationHistory.Text;
+        }
+
+        // 3.4-)
+        private void btnTrainers_Click(object sender, EventArgs e)
+        {
+            ChildFormOpen(new TrainersPage());
+            lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnTrainers.Text;
+        }
+
+        // 3.5-)
+        private void btnExercises_Click(object sender, EventArgs e)
+        {
+            ChildFormOpen(new Exercise());
+            lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnExercises.Text;
+        }
+
+        // 3.6-)
         private void btnTraningLists_Click(object sender, EventArgs e)
         {
-            ChildFormAc(new WorkoutList());
+            ChildFormOpen(new WorkoutList());
             lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnWorkoutLists.Text;
+        }
+
+        // 3.7-)
+        private void btnPayments_Click(object sender, EventArgs e)
+        {
+            ChildFormOpen(new Payments());
+            lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnPayments.Text;
+        }
+
+        // 3.8-)
+        private void btnExitApplication_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

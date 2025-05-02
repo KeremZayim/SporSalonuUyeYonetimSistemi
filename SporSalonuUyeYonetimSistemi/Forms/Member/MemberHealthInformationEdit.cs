@@ -1,13 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +9,16 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
 {
     public partial class MemberHealthInformationEdit : MaterialForm
     {
+
+        /*
+
+            1-) Forma Sağlık Bilgilerini Doldurur (LoadHealthInfoAsync)
+            2-) Butonlar
+                2.1-) Düzenle
+                2.2-) Formu Kapat
+
+         */
+
         string memberID;
         public MemberHealthInformationEdit(string memberID)
         {
@@ -24,6 +28,13 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             pnlTitle.MouseDown += (sender, e) => CommonMethods.MoveForm(this.Handle, e);
             tbEmergencyContactPhone.KeyPress += (sender, e) => CommonMethods.JustNumberEntering(this.Handle, e);
         }
+
+        private async void MemberHealthInformationEdit_Shown(object sender, EventArgs e)
+        {
+            await LoadHealthInfoAsync(memberID);
+        }
+
+        // 1-)
         private async Task LoadHealthInfoAsync(string memberId)
         {
             try
@@ -75,11 +86,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             }
         }
 
-        private async void MemberHealthInformationEdit_Load(object sender, EventArgs e)
-        {
-            await LoadHealthInfoAsync(memberID);
-        }
-
+        // 2-)
+        // 2.1-)
         private async void btnEdit_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(tbMedicalConditions.Text) ||
@@ -134,6 +142,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             }
         }
 
+        // 2.2-)
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();

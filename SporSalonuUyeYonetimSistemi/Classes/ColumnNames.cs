@@ -11,7 +11,7 @@ namespace SporSalonuUyeYonetimSistemi.Classes
         Veri Tabanından Çekilen Veriler Otomatik Olarak Çekildiği İçin Sütun Adlarını Değiştirmemiz Gerek.
         Buradan Yeni Veri Eklemesi veya Düzenlemesi Yapabilirsiniz.
      
-     */
+    */
     public static class Translate
     {
         public static Dictionary<string, string> ColumnTranslations = new Dictionary<string, string>()

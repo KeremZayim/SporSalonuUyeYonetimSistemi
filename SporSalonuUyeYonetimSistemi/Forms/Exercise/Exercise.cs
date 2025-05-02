@@ -1,14 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +9,20 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
 {
     public partial class Exercise : MaterialForm
     {
+
+        /*
+
+            1-) Buton Aktifliği - Tablodan Seçilen Öğe Kontrolü (ButtonControl)
+            2-) Egzersizi Sil (DeleteSelectedExerciseAsync)
+            3-) Üye ID'sini Bul (GetMemberIdAsync)
+            4-) Seçili Üyeye Göre Filtre
+            5-) Butonlar
+                5.1-) Ekle
+                5.2-) Düzenle
+                5.3-) Sil
+
+         */
+
         public Exercise()
         {
             InitializeComponent();
@@ -37,10 +44,11 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                             INNER JOIN members m ON w.member_id = m.member_id";
 
 
-            await Functions.VerileriGetirManualAsync(query, dtExercise);
+            await Functions.GetDatasManualAsync(query, dtExercise);
             await Functions.FillMemberList(cbMember);
         }
 
+        // 1-)
         void ButtonControl()
         {
             bool aktiflik;
@@ -63,8 +71,9 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                 }
             }
         }
-        // Silme
-        public static async Task DeleteSelectedExerciseAsync(MaterialListView listView)
+        
+        // 2-)
+        private static async Task DeleteSelectedExerciseAsync(MaterialListView listView)
         {
             if (listView.SelectedItems.Count == 0)
             {
@@ -114,28 +123,14 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                 }
             }
         }
-        // --
 
         private void dtExercise_SelectedIndexChanged(object sender, EventArgs e)
         {
             ButtonControl();
         }
 
-        private async void btnDeleteExercise_Click(object sender, EventArgs e)
-        {
-            await DeleteSelectedExerciseAsync(dtExercise);
-            await Functions.VerileriGetirAsync("exercise", dtExercise);
-            dtExercise.SelectedItems.Clear();
-        }
-
-        private async void btnAddExercise_Click(object sender, EventArgs e)
-        {
-            AddExercise addExercise = new AddExercise();
-            addExercise.ShowDialog();
-            await Functions.VerileriGetirAsync("exercise", dtExercise);
-            dtExercise.SelectedItems.Clear();
-        }
-        public async Task<string> GetMemberIdAsync(string fullName)
+        // 3-)
+        private async Task<string> GetMemberIdAsync(string fullName)
         {
             string memberId = null;
 
@@ -165,6 +160,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
             return memberId;
         }
 
+        // 4-)
         private async void cbMember_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbMember.SelectedIndex != -1)
@@ -184,7 +180,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                             INNER JOIN members m ON w.member_id = m.member_id";
 
 
-                    await Functions.VerileriGetirManualAsync(query, dtExercise);
+                    await Functions.GetDatasManualAsync(query, dtExercise);
                 }
                 else
                 {
@@ -202,11 +198,22 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                             INNER JOIN members m ON w.member_id = m.member_id
                             WHERE m.member_id = {memberID}";
 
-                    await Functions.VerileriGetirManualAsync(query, dtExercise);
+                    await Functions.GetDatasManualAsync(query, dtExercise);
                 }
             }
         }
 
+        // 5-)
+        // 5.1-)
+        private async void btnAddExercise_Click(object sender, EventArgs e)
+        {
+            AddExercise addExercise = new AddExercise();
+            addExercise.ShowDialog();
+            await Functions.GetDatasAsync("exercise", dtExercise);
+            dtExercise.SelectedItems.Clear();
+        }
+
+        // 5.2-)
         private async void btnEditExercise_Click(object sender, EventArgs e)
         {
             string exerciseID = dtExercise.SelectedItems[0].SubItems[0].Text.ToString().Trim();
@@ -225,9 +232,17 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                             INNER JOIN members m ON w.member_id = m.member_id";
 
 
-            await Functions.VerileriGetirManualAsync(query, dtExercise);
+            await Functions.GetDatasManualAsync(query, dtExercise);
             dtExercise.SelectedItems.Clear();
             ButtonControl();
+        }
+
+        // 5.3-)
+        private async void btnDeleteExercise_Click(object sender, EventArgs e)
+        {
+            await DeleteSelectedExerciseAsync(dtExercise);
+            await Functions.GetDatasAsync("exercise", dtExercise);
+            dtExercise.SelectedItems.Clear();
         }
     }
 }

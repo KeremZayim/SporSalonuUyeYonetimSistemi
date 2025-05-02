@@ -1,13 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +9,15 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Membership_Types
 {
     public partial class AddMembershipType : MaterialForm
     {
+        /*
+
+            1-) Üyelik Türü Ekle (AddMembershipTypeAsync)
+            2-) Butonlar
+                2.1-) Üyelik Türü Ekle
+                2.2-) Formu Kapat
+
+         */
+
         public AddMembershipType()
         {
             InitializeComponent();
@@ -23,11 +26,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Membership_Types
             tbPrice.KeyPress += (sender, e) => CommonMethods.JustNumberEntering(this.Handle, e);
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        private async Task UyelikTuruEkleAsync()
+        // 1-)
+        private async Task AddMembershipTypeAsync()
         {
             string membershipType = tbMembershipType.Text.Trim();
             string priceText = tbPrice.Text.Trim();
@@ -60,9 +60,17 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Membership_Types
             }
         }
 
+        // 2-)
+        // 2.1-)
         private async void btnAddMembershipType_Click(object sender, EventArgs e)
         {
-            await UyelikTuruEkleAsync();
+            await AddMembershipTypeAsync();
+        }
+
+        // 2.2-)
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

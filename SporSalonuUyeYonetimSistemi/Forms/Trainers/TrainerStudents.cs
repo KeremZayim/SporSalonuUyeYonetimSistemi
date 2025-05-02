@@ -1,20 +1,24 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
 {
     public partial class TrainerStudents : MaterialForm
     {
+
+        /*
+
+            1-) Buton Aktifliği - Tablodan Seçilen Öğe Kontrolü (ButtonControl)
+            2-) Butonlar
+                2.1-) Ekle
+                2.2-) Sil
+                2.3-) Formu Kapat
+
+         */
+
         string trainerID;
         public TrainerStudents(string trainerID)
         {
@@ -24,6 +28,19 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
             this.trainerID = trainerID;
         }
 
+        // 1-)
+        private void ButtonControl()
+        {
+            if (dtTrainerStudents.SelectedItems.Count > 0)
+            {
+                btnDeleteStudent.Enabled = true;
+            }
+            else
+            {
+                btnDeleteStudent.Enabled = false;
+            }
+        }
+
         private async void TrainerStudents_Shown(object sender, EventArgs e)
         {
             string query = "SELECT m.member_name, m.member_surname " +
@@ -31,14 +48,31 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
                "JOIN members m ON m.member_id = mt.member_id " +
                "WHERE mt.trainer_id = " + trainerID;
 
-            await Functions.VerileriGetirManualAsync(query, dtTrainerStudents);
+            await Functions.GetDatasManualAsync(query, dtTrainerStudents);
         }
-
-        private void btnExitForm_Click(object sender, EventArgs e)
+        private void dtTrainerStudents_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.Close();
+            ButtonControl();
         }
 
+        // 2-)
+        // 2.1-)
+        private async void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            TrainerStudentAdd trainerStudentAdd = new TrainerStudentAdd(trainerID);
+            trainerStudentAdd.ShowDialog();
+
+            string query = "SELECT mt.trainer_id, m.member_id, m.member_name, m.member_surname " +
+               "FROM member_trainers mt " +
+               "JOIN members m ON m.member_id = mt.member_id " +
+               "WHERE mt.trainer_id = " + trainerID;
+
+            await Functions.GetDatasManualAsync(query, dtTrainerStudents);
+            dtTrainerStudents.SelectedItems.Clear();
+            ButtonControl();
+        }
+
+        // 2.2-)
         private async void btnDeleteStudent_Click(object sender, EventArgs e)
         {
             if (dtTrainerStudents.SelectedItems.Count > 0)
@@ -83,7 +117,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
                "JOIN members m ON m.member_id = mt.member_id " +
                "WHERE mt.trainer_id = " + trainerID;
 
-                await Functions.VerileriGetirManualAsync(query2, dtTrainerStudents);
+                await Functions.GetDatasManualAsync(query2, dtTrainerStudents);
             }
             else
             {
@@ -92,35 +126,11 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Trainers
             dtTrainerStudents.SelectedItems.Clear();
             ButtonControl();
         }
-        void ButtonControl()
-        {
-            if (dtTrainerStudents.SelectedItems.Count > 0)
-            {
-                btnDeleteStudent.Enabled = true;
-            }
-            else
-            {
-                btnDeleteStudent.Enabled = false;
-            }
-        }
-        private void dtTrainerStudents_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ButtonControl();
-        }
 
-        private async void btnAddStudent_Click(object sender, EventArgs e)
+        // 2.3-)
+        private void btnExitForm_Click(object sender, EventArgs e)
         {
-            TrainerStudentAdd trainerStudentAdd = new TrainerStudentAdd(trainerID);
-            trainerStudentAdd.ShowDialog();
-
-            string query = "SELECT mt.trainer_id, m.member_id, m.member_name, m.member_surname " +
-               "FROM member_trainers mt " +
-               "JOIN members m ON m.member_id = mt.member_id " +
-               "WHERE mt.trainer_id = " + trainerID;
-
-            await Functions.VerileriGetirManualAsync(query, dtTrainerStudents);
-            dtTrainerStudents.SelectedItems.Clear();
-            ButtonControl();
+            this.Close();
         }
     }
 }

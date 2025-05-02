@@ -47,10 +47,10 @@
             this.tabSelector.Depth = 0;
             this.tabSelector.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabSelector.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tabSelector.Location = new System.Drawing.Point(0, 0);
+            this.tabSelector.Location = new System.Drawing.Point(3, 0);
             this.tabSelector.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabSelector.Name = "tabSelector";
-            this.tabSelector.Size = new System.Drawing.Size(1004, 50);
+            this.tabSelector.Size = new System.Drawing.Size(998, 50);
             this.tabSelector.TabIndex = 2;
             // 
             // tabController
@@ -58,12 +58,12 @@
             this.tabController.Controls.Add(this.tabPage1);
             this.tabController.Depth = 0;
             this.tabController.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabController.Location = new System.Drawing.Point(0, 50);
+            this.tabController.Location = new System.Drawing.Point(3, 50);
             this.tabController.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabController.Multiline = true;
             this.tabController.Name = "tabController";
             this.tabController.SelectedIndex = 0;
-            this.tabController.Size = new System.Drawing.Size(1004, 639);
+            this.tabController.Size = new System.Drawing.Size(998, 636);
             this.tabController.TabIndex = 3;
             // 
             // tabPage1
@@ -75,7 +75,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(996, 613);
+            this.tabPage1.Size = new System.Drawing.Size(990, 610);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Antrenman Listelsi";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -173,9 +173,10 @@
             this.ClientSize = new System.Drawing.Size(1004, 689);
             this.Controls.Add(this.tabController);
             this.Controls.Add(this.tabSelector);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WorkoutList";
+            this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Spor Salonu Üye Yönetim Sistemi";
             this.Shown += new System.EventHandler(this.WorkoutList_Shown);

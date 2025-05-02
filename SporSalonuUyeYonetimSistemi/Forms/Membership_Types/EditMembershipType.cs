@@ -1,13 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +9,17 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Membership_Types
 {
     public partial class EditMembershipType : MaterialForm
     {
+
+        /*
+
+            1-) Forma Üyelik Türünün Özelliklerini Doldurur (GetMembershipTypeAsync)
+            2-) Üyelik Türünü Güncelle (UpdateMembershipTypeAsync)
+            3-) Butonlar
+                3.1-) Düzenle
+                3.2-) Formu Kapat
+
+         */
+
         string membershipTypeID;
         public EditMembershipType(string membershipTypeID)
         {
@@ -24,7 +29,9 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Membership_Types
             tbPrice.KeyPress += (sender, e) => CommonMethods.JustNumberEntering(this.Handle, e);
             this.membershipTypeID = membershipTypeID;
         }
-        private async Task UyelikTuruGetirAsync(string membershipTypeId)
+
+        // 1-)
+        private async Task GetMembershipTypeAsync(string membershipTypeId)
         {
             string query = "SELECT membership_type, membership_price FROM membership_types WHERE membership_type_id = @id";
 
@@ -55,7 +62,9 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Membership_Types
                 }
             }
         }
-        private async Task UyelikTuruGuncelleAsync(string membershipTypeId)
+
+        // 2-)
+        private async Task UpdateMembershipTypeAsync(string membershipTypeId)
         {
             string yeniTur = tbMembershipType.Text.Trim();
             string yeniFiyatText = tbPrice.Text.Trim();
@@ -107,14 +116,17 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Membership_Types
 
         private async void EditMembershipType_Shown(object sender, EventArgs e)
         {
-            await UyelikTuruGetirAsync(membershipTypeID);
+            await GetMembershipTypeAsync(membershipTypeID);
         }
-
+        
+        // 3-)
+        // 3.1-)
         private async void btnEditMembershipType_Click(object sender, EventArgs e)
         {
-            await UyelikTuruGuncelleAsync(membershipTypeID);
+            await UpdateMembershipTypeAsync(membershipTypeID);
         }
 
+        // 3.2-)
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();

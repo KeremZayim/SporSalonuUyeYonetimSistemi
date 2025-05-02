@@ -1,13 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +9,18 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
 {
     public partial class EditExercise : MaterialForm
     {
+
+        /*
+
+            1-) Combobox'lara 1-100 Arası Sayıları Ekler (NumberFill)
+            2-) Forma Egzersizin Bilgilerini Doldurur (LoadExerciseByIdAsync)
+            3-) Düzenle (UpdateExerciseAsync)
+            4-) Butonlar
+                4.1-) Düzenle
+                4.2-) Formu Kapat
+
+         */
+
         readonly string exerciseID;
         public EditExercise(string exerciseID)
         {
@@ -25,14 +31,18 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
             NumberFill(cbRepetitionCount);
             NumberFill(cbSetCount);
         }
-        void NumberFill(MaterialComboBox cb)
+
+        // 1-)
+        private void NumberFill(MaterialComboBox cb)
         {
             for (int i = 1; i <= 100; i++)
             {
                 cb.Items.Add(i.ToString());
             }
         }
-        public async Task LoadExerciseByIdAsync(string exerciseId)
+
+        // 2-)
+        private  async Task LoadExerciseByIdAsync(string exerciseId)
         {
             string query = @"
                             SELECT exercise_name, set_count, repetition_count
@@ -74,16 +84,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
             }
         }
 
-        private async void EditExercise_Shown(object sender, EventArgs e)
-        {
-            await LoadExerciseByIdAsync(exerciseID);
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        public async Task UpdateExerciseAsync(string exerciseId)
+        // 3-)
+        private async Task UpdateExerciseAsync(string exerciseId)
         {
             string name = tbExerciseName.Text.Trim();
             string setText = cbSetCount.Text;
@@ -141,11 +143,22 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Exercise
                 MessageBox.Show("Hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private async void EditExercise_Shown(object sender, EventArgs e)
+        {
+            await LoadExerciseByIdAsync(exerciseID);
+        }
 
-
+        // 4-)
+        // 4.1-)
         private async void btnEditExercise_Click(object sender, EventArgs e)
         {
             await UpdateExerciseAsync(exerciseID);
+        }
+
+        // 4.2-)
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

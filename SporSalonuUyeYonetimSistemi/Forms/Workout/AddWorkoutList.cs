@@ -1,13 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +9,21 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
 {
     public partial class AddWorkoutList : MaterialForm
     {
+
+        /*
+
+            1-) Combobox Çift Veri Tutma (ComboBoxItem)
+
+            2-) Combobox'a Üyeleri Listeleme (LoadMembersAsync)
+            3-) Buton Aktifliği - Tablodan Seçilen Öğe Kontrolü (ButtonControl)
+            4-) Antrenman Listesi Ekleme (AddWorkoutListInfo)
+            5-) Butonlar
+                5.1-) Ekle
+                5.2-) Form Kapatma
+
+         */
+
+        // 1-)
         private class ComboBoxItem
         {
             public string Text { get; set; }
@@ -39,10 +48,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
             pnlTitle.MouseDown += (sender, e) => CommonMethods.MoveForm(this.Handle, e);
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        // 2-)
         private async Task LoadMembersAsync()
         {
             cbMember.Items.Clear();
@@ -69,11 +75,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
             }
         }
 
-        private async void AddWorkout_Shown(object sender, EventArgs e)
-        {
-            await LoadMembersAsync();
-        }
-        void selectionControl()
+        // 3-)
+        private void ButtonControl()
         {
             if (cbMember.SelectedIndex != -1)
             {
@@ -96,7 +99,9 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
                 }
             }
         }
-        public async Task AddWorkoutListInfo(string memberID)
+
+        // 4-)
+        private async Task AddWorkoutListInfo(string memberID)
         {
             if (cbMember.SelectedItem == null || string.IsNullOrWhiteSpace(tbWorkoutName.Text) || string.IsNullOrWhiteSpace(tbTargetArea.Text) || string.IsNullOrWhiteSpace(tbWorkoutDay.Text))
             {
@@ -139,12 +144,18 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
             }
         }
 
+        private async void AddWorkout_Shown(object sender, EventArgs e)
+        {
+            await LoadMembersAsync();
+        }
 
         private void cbMember_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectionControl();
+            ButtonControl();
         }
 
+        // 5-)
+        // 5.1-)
         private async void btnAddWorkoutList_Click(object sender, EventArgs e)
         {
             if (cbMember.SelectedItem is ComboBoxItem selectedMember)
@@ -152,6 +163,12 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
                 string memberID = selectedMember.Value.ToString();
                 await AddWorkoutListInfo(memberID);
             }
+        }
+
+        // 5.2-)
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

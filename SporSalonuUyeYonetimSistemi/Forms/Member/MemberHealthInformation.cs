@@ -1,20 +1,21 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SporSalonuUyeYonetimSistemi.Forms.Member
 {
     public partial class MemberHealthInformation : MaterialForm
     {
+
+        /*
+
+            1-)
+            2-)
+                2.1-) üzenle
+                2.2-) Formu Kapat
+
+         */
+
         string memberID;
         public MemberHealthInformation(string memberID)
         {
@@ -24,11 +25,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             this.memberID = memberID;
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        void buttonControl()
+        // 1-)
+        void ButtonControl()
         {
             if (dtMemberHealthInfo.SelectedItems.Count > 0)
             {
@@ -39,12 +37,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
                 btnEdit.Enabled = false;
             }
         }
-        private void dtMemberHealthInfo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            buttonControl();
-        }
 
-        private async void MemberHealthInfo_Load(object sender, EventArgs e)
+        private async void MemberHealthInformation_Shown(object sender, EventArgs e)
         {
             string query = @"SELECT 
                     health_id,
@@ -57,14 +51,22 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
                  WHERE 
                     member_id = '" + memberID + "'";
 
-            await Functions.VerileriGetirManualAsync(query,dtMemberHealthInfo);
+            await Functions.GetDatasManualAsync(query, dtMemberHealthInfo);
         }
+
+        private void dtMemberHealthInfo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ButtonControl();
+        }
+
+        // 2-)
+        // 2.1-)
 
         private async void btnEdit_Click(object sender, EventArgs e)
         {
             MemberHealthInformationEdit membershipsForm = new MemberHealthInformationEdit(memberID);
             membershipsForm.ShowDialog();
-            buttonControl();
+            ButtonControl();
 
             string query = @"SELECT 
                     health_id,
@@ -77,7 +79,13 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
                  WHERE 
                     member_id = '" + memberID + "'";
 
-            await Functions.VerileriGetirManualAsync(query, dtMemberHealthInfo);
+            await Functions.GetDatasManualAsync(query, dtMemberHealthInfo);
+        }
+
+        // 2.2-)
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -9,9 +9,7 @@ namespace SporSalonuUyeYonetimSistemi.Classes
      1-) Form Taşıma
      2-) TextBox Sadece Rakam Girişi
      
-     
-     
-     */
+    */
 
     public static class CommonMethods
     {

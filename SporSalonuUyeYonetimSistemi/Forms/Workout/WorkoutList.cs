@@ -1,26 +1,35 @@
-﻿using SporSalonuUyeYonetimSistemi.Classes;
+﻿using MaterialSkin.Controls;
+using SporSalonuUyeYonetimSistemi.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SporSalonuUyeYonetimSistemi.Forms.Workout
 {
-    public partial class WorkoutList : Form
+    public partial class WorkoutList : MaterialForm
     {
+
+        /*
+
+            1-) ViewList'i Doldurma (FillList)
+            2-) Antrenman Listesini Silme (DeleteWorkoutAsync)
+            3-) Buton Aktifliği - Tablodan Seçilen Öğe Kontrolü (ButtonControl)
+            4-) Butonlar
+                4.1-) Ekle
+                4.2-) Düzenle
+                4.3-) Sil
+
+         */
+
         public WorkoutList()
         {
             InitializeComponent();
+            ThemeProperties.ApplyLightTheme(this);
         }
 
-        async void FillList()
+        // 1-)
+        private async void FillList()
         {
             string query = @"
                         SELECT 
@@ -33,14 +42,11 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
                         INNER JOIN members ON workout_list.member_id = members.member_id;
                         ";
 
-            await Functions.VerileriGetirManualAsync(query, dtWorkoutList);
-        }
-        private void WorkoutList_Shown(object sender, EventArgs e)
-        {
-            FillList();
+            await Functions.GetDatasManualAsync(query, dtWorkoutList);
         }
 
-        public async Task DeleteWorkoutAsync(string workoutId)
+        // 2-)
+        private async Task DeleteWorkoutAsync(string workoutId)
         {
             DialogResult result = MessageBox.Show(
                 "Bu antrenmanı silmek istediğinizden emin misiniz?",
@@ -84,14 +90,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
             }
         }
 
-
-        private async void btnDeleteWorkoutList_Click(object sender, EventArgs e)
-        {
-            string workout_id = dtWorkoutList.SelectedItems[0].SubItems[0].Text;
-            await DeleteWorkoutAsync(workout_id);
-            FillList();
-        }
-        void ButtonControl()
+        // 3-)
+        private void ButtonControl()
         {
             if (dtWorkoutList.SelectedItems.Count > 0)
             {
@@ -104,11 +104,19 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
                 btnDeleteWorkoutList.Enabled = false;
             }
         }
+
+        private void WorkoutList_Shown(object sender, EventArgs e)
+        {
+            FillList();
+        }
         private void dtWorkoutList_SelectedIndexChanged(object sender, EventArgs e)
         {
             ButtonControl();
         }
 
+        // 4-)
+
+        // 4.1-)
         private void btnAddWorkoutList_Click(object sender, EventArgs e)
         {
             AddWorkoutList addWorkoutList = new AddWorkoutList();
@@ -118,6 +126,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
             ButtonControl();
         }
 
+        // 4.2-)
         private void btnEditWorkoutList_Click(object sender, EventArgs e)
         {
             string workoutID = dtWorkoutList.SelectedItems[0].SubItems[0].Text;
@@ -126,6 +135,14 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
             FillList();
             dtWorkoutList.SelectedItems.Clear();
             ButtonControl();
+        }
+
+        // 4.3-)
+        private async void btnDeleteWorkoutList_Click(object sender, EventArgs e)
+        {
+            string workout_id = dtWorkoutList.SelectedItems[0].SubItems[0].Text;
+            await DeleteWorkoutAsync(workout_id);
+            FillList();
         }
     }
 }

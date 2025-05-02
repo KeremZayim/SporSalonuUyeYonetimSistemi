@@ -1,14 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
-using SporSalonuUyeYonetimSistemi.Forms.Trainers;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +9,18 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
 {
     public partial class MemberTrainers : MaterialForm
     {
+
+        /*
+
+            1-) Buton Aktifliği - Tablodan Seçilen Öğe Kontrolü (ButtonControl)
+            2-) Antrenör Öğrencisini Sil (DeleteMemberTrainerAsync)
+            3-) Butonlar
+                3.1-) Ekle
+                3.2-) Sil
+                3.3-) Formu Kapat
+
+         */
+
         string memberID;
         public MemberTrainers(string memberID)
         {
@@ -24,7 +29,9 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             pnlTitle.MouseDown += (sender, e) => CommonMethods.MoveForm(this.Handle, e);
             this.memberID = memberID;
         }
-        void buttonControl()
+
+        // 1-)
+        private void ButtonControl()
         {
             if (dtMemberTrainers.SelectedItems.Count > 0)
             {
@@ -35,26 +42,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
                 btnDeleteTrainer.Enabled = false;
             }
         }
-        private void dtMemberTrainers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            buttonControl();
-        }
 
-        private void btnExitForm_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private async void MemberTrainers_Shown(object sender, EventArgs e)
-        {
-            string query = @"
-                SELECT t.trainer_id, t.trainer_name, t.trainer_surname, t.phone_number
-                FROM member_trainers mt
-                JOIN trainers t ON mt.trainer_id = t.trainer_id
-                WHERE mt.member_id = '" + memberID + "'";
-            await Functions.VerileriGetirManualAsync(query, dtMemberTrainers);
-        }
-
+        // 2-)
         private async Task DeleteMemberTrainerAsync(string memberId, string trainerId)
         {
             DialogResult result = MessageBox.Show(
@@ -103,8 +92,35 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             }
         }
 
+        private async void MemberTrainers_Shown(object sender, EventArgs e)
+        {
+            string query = @"
+                SELECT t.trainer_id, t.trainer_name, t.trainer_surname, t.phone_number
+                FROM member_trainers mt
+                JOIN trainers t ON mt.trainer_id = t.trainer_id
+                WHERE mt.member_id = '" + memberID + "'";
+            await Functions.GetDatasManualAsync(query, dtMemberTrainers);
+        }
+        private void dtMemberTrainers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ButtonControl();
+        }
 
+        // 3-)
+        // 3.1-)
+        private async void btnAddTrainer_Click(object sender, EventArgs e)
+        {
+            AddMemberTrainer addMemberTrainer = new AddMemberTrainer(memberID);
+            addMemberTrainer.ShowDialog();
+            string query = @"
+                SELECT t.trainer_id, t.trainer_name, t.trainer_surname, t.phone_number
+                FROM member_trainers mt
+                JOIN trainers t ON mt.trainer_id = t.trainer_id
+                WHERE mt.member_id = '" + memberID + "'";
+            await Functions.GetDatasManualAsync(query, dtMemberTrainers);
+        }
 
+        // 3.2-)
         private async void btnDeleteTrainer_Click(object sender, EventArgs e)
         {
             string memberId = memberID;
@@ -115,19 +131,13 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
                              FROM member_trainers mt
                              JOIN trainers t ON mt.trainer_id = t.trainer_id
                              WHERE mt.member_id = '" + memberID + "'";
-            await Functions.VerileriGetirManualAsync(query, dtMemberTrainers);
+            await Functions.GetDatasManualAsync(query, dtMemberTrainers);
         }
 
-        private async void btnAddTrainer_Click(object sender, EventArgs e)
+        // 3.3-)
+        private void btnExitForm_Click(object sender, EventArgs e)
         {
-            AddMemberTrainer addMemberTrainer = new AddMemberTrainer(memberID);
-            addMemberTrainer.ShowDialog();
-            string query = @"
-                SELECT t.trainer_id, t.trainer_name, t.trainer_surname, t.phone_number
-                FROM member_trainers mt
-                JOIN trainers t ON mt.trainer_id = t.trainer_id
-                WHERE mt.member_id = '" + memberID + "'";
-            await Functions.VerileriGetirManualAsync(query, dtMemberTrainers);
+            this.Close();
         }
     }
 }

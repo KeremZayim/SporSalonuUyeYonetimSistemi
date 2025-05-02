@@ -138,7 +138,7 @@
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Üye Sağlık Bilgileri";
-            this.Load += new System.EventHandler(this.MemberHealthInfo_Load);
+            this.Shown += new System.EventHandler(this.MemberHealthInformation_Shown);
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);
 
