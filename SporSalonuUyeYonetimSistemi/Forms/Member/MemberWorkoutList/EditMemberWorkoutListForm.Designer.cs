@@ -172,7 +172,7 @@
             this.Name = "EditMemberWorkoutListForm";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EditMemberWorkoutListForm";
+            this.Text = "Üye Antrenman Listesi Düzenle";
             this.Shown += new System.EventHandler(this.EditMemberWorkoutListForm_Shown);
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);

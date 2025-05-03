@@ -27,6 +27,7 @@ namespace SporSalonuUyeYonetimSistemi.Classes
             { "membership_start_date", "Başlangıç Tarihi" },
             { "membership_end_date", "Bitiş Tarihi" },
             { "membership_price", "Üyelik Ücreti" },
+            { "membership_type_id", "Üyelik Türü ID" },
             { "payment_id", "Ödeme ID" },
             { "payment_status", "Ödeme Durumu" },
             { "payment_date", "Ödeme Tarihi" },

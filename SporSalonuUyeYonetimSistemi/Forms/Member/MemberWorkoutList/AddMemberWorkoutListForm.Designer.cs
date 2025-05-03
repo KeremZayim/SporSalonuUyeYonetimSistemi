@@ -172,7 +172,7 @@
             this.Name = "AddMemberWorkoutListForm";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddMemberWorkoutListForm";
+            this.Text = "Üye Antrenman Listesi Ekle";
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);
 

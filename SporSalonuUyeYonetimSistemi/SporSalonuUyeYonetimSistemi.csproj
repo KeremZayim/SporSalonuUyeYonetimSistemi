@@ -73,6 +73,12 @@
     <Compile Include="Classes\DatabaseServer.cs" />
     <Compile Include="Classes\Functions.cs" />
     <Compile Include="Classes\ThemeProperties.cs" />
+    <Compile Include="Forms\EditMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditMember.Designer.cs">
+      <DependentUpon>EditMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Exercise\AddExercise.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,12 @@
     </Compile>
     <Compile Include="Forms\Membership_Types\MembershipTypes.Designer.cs">
       <DependentUpon>MembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Member\AddMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\AddMember.Designer.cs">
+      <DependentUpon>AddMember.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Member\MemberTrainers\AddMemberTrainer.cs">
       <SubType>Form</SubType>
@@ -255,6 +267,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\EditMember.resx">
+      <DependentUpon>EditMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Exercise\AddExercise.resx">
       <DependentUpon>AddExercise.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Membership_Types\MembershipTypes.resx">
       <DependentUpon>MembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\AddMember.resx">
+      <DependentUpon>AddMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Member\MemberTrainers\AddMemberTrainer.resx">
       <DependentUpon>AddMemberTrainer.cs</DependentUpon>

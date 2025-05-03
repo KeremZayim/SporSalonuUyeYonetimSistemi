@@ -116,15 +116,24 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
 
         // 3-)
         // 3.1-)
-        private void btnAddMember_Click(object sender, EventArgs e)
+        private async void btnAddMember_Click(object sender, EventArgs e)
         {
-
+            AddMember addMember = new AddMember();
+            addMember.ShowDialog();
+            dtMemberInfo.SelectedItems.Clear();
+            ButtonControl();
+            await Functions.GetDatasAsync("members", dtMemberInfo);
         }
 
         // 3.2-)
-        private void btnEditMember_Click(object sender, EventArgs e)
+        private async void btnEditMember_Click(object sender, EventArgs e)
         {
-
+            string memberID = dtMemberInfo.SelectedItems[0].SubItems[0].Text.Trim();
+            EditMember editMember = new EditMember(memberID);
+            editMember.ShowDialog();
+            dtMemberInfo.SelectedItems.Clear();
+            ButtonControl();
+            await Functions.GetDatasAsync("members", dtMemberInfo);
         }
 
         // 3.3-)
