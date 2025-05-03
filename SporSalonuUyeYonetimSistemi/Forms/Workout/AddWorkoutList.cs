@@ -13,7 +13,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
         /*
 
             1-) Combobox Çift Veri Tutma (ComboBoxItem)
-
             2-) Combobox'a Üyeleri Listeleme (LoadMembersAsync)
             3-) Buton Aktifliği - Tablodan Seçilen Öğe Kontrolü (ButtonControl)
             4-) Antrenman Listesi Ekleme (AddWorkoutListInfo)

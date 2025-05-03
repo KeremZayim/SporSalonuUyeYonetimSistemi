@@ -50,6 +50,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.member_birthday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.phone_number = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.note = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnWorkoutList = new MaterialSkin.Controls.MaterialButton();
             this.tabControl.SuspendLayout();
             this.tabMemberInfo.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +83,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             // 
             // tabMemberInfo
             // 
+            this.tabMemberInfo.Controls.Add(this.btnWorkoutList);
             this.tabMemberInfo.Controls.Add(this.btnMembership);
             this.tabMemberInfo.Controls.Add(this.btnAttendance);
             this.tabMemberInfo.Controls.Add(this.btnAddMember);
@@ -131,7 +133,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnAttendance.Enabled = false;
             this.btnAttendance.HighEmphasis = true;
             this.btnAttendance.Icon = null;
-            this.btnAttendance.Location = new System.Drawing.Point(835, 484);
+            this.btnAttendance.Location = new System.Drawing.Point(835, 536);
             this.btnAttendance.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAttendance.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAttendance.Name = "btnAttendance";
@@ -284,7 +286,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnPayments.Enabled = false;
             this.btnPayments.HighEmphasis = true;
             this.btnPayments.Icon = null;
-            this.btnPayments.Location = new System.Drawing.Point(835, 432);
+            this.btnPayments.Location = new System.Drawing.Point(835, 484);
             this.btnPayments.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnPayments.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPayments.Name = "btnPayments";
@@ -356,6 +358,28 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.note.Text = "Not";
             this.note.Width = 240;
             // 
+            // btnWorkoutList
+            // 
+            this.btnWorkoutList.AutoSize = false;
+            this.btnWorkoutList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnWorkoutList.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnWorkoutList.Depth = 0;
+            this.btnWorkoutList.Enabled = false;
+            this.btnWorkoutList.HighEmphasis = true;
+            this.btnWorkoutList.Icon = null;
+            this.btnWorkoutList.Location = new System.Drawing.Point(835, 432);
+            this.btnWorkoutList.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnWorkoutList.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnWorkoutList.Name = "btnWorkoutList";
+            this.btnWorkoutList.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnWorkoutList.Size = new System.Drawing.Size(133, 40);
+            this.btnWorkoutList.TabIndex = 3;
+            this.btnWorkoutList.Text = "Antrenman Listesi";
+            this.btnWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnWorkoutList.UseAccentColor = false;
+            this.btnWorkoutList.UseVisualStyleBackColor = true;
+            this.btnWorkoutList.Click += new System.EventHandler(this.btnWorkoutList_Click);
+            // 
             // MemberPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,5 +421,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
         private MaterialSkin.Controls.MaterialButton btnEditMember;
         private MaterialSkin.Controls.MaterialButton btnAddMember;
         private MaterialSkin.Controls.MaterialButton btnDeleteMember;
+        private MaterialSkin.Controls.MaterialButton btnWorkoutList;
     }
 }

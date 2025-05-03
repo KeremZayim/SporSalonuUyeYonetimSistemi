@@ -82,7 +82,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(248, 30);
             this.lblTitle.TabIndex = 4;
-            this.lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi";
+            this.lblTitle.Text = "Üye Sağlık Bilgileri Düzenle";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tbMedicalConditions

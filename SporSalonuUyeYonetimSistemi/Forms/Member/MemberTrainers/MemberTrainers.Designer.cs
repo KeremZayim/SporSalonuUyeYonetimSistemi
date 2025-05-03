@@ -59,7 +59,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(450, 30);
             this.lblTitle.TabIndex = 5;
-            this.lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi";
+            this.lblTitle.Text = "Üye Antrenörleri";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnExitForm

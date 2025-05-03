@@ -1,6 +1,6 @@
-﻿namespace SporSalonuUyeYonetimSistemi.Forms.Workout
+﻿namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberWorkoutList
 {
-    partial class EditWorkoutList
+    partial class AddMemberWorkoutListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditWorkoutList));
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlTitleSeperator = new System.Windows.Forms.Panel();
             this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
-            this.btnEditWorkoutList = new MaterialSkin.Controls.MaterialButton();
+            this.btnAddWorkoutList = new MaterialSkin.Controls.MaterialButton();
             this.tbWorkoutDay = new MaterialSkin.Controls.MaterialTextBox();
             this.tbTargetArea = new MaterialSkin.Controls.MaterialTextBox();
             this.tbWorkoutName = new MaterialSkin.Controls.MaterialTextBox();
@@ -76,34 +75,34 @@
             this.lblTitle.Depth = 0;
             this.lblTitle.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblTitle.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
-            this.lblTitle.Location = new System.Drawing.Point(60, -1);
+            this.lblTitle.Location = new System.Drawing.Point(55, 0);
             this.lblTitle.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(231, 30);
+            this.lblTitle.Size = new System.Drawing.Size(241, 30);
             this.lblTitle.TabIndex = 7;
-            this.lblTitle.Text = "Antrenman Listesi Düzenle";
+            this.lblTitle.Text = "Üye Antrenman Listesi Ekle";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnEditWorkoutList
+            // btnAddWorkoutList
             // 
-            this.btnEditWorkoutList.AutoSize = false;
-            this.btnEditWorkoutList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnEditWorkoutList.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnEditWorkoutList.Depth = 0;
-            this.btnEditWorkoutList.HighEmphasis = true;
-            this.btnEditWorkoutList.Icon = null;
-            this.btnEditWorkoutList.Location = new System.Drawing.Point(109, 272);
-            this.btnEditWorkoutList.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnEditWorkoutList.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnEditWorkoutList.Name = "btnEditWorkoutList";
-            this.btnEditWorkoutList.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnEditWorkoutList.Size = new System.Drawing.Size(133, 40);
-            this.btnEditWorkoutList.TabIndex = 10;
-            this.btnEditWorkoutList.Text = "Düzenle";
-            this.btnEditWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnEditWorkoutList.UseAccentColor = false;
-            this.btnEditWorkoutList.UseVisualStyleBackColor = true;
-            this.btnEditWorkoutList.Click += new System.EventHandler(this.btnEditWorkoutList_Click);
+            this.btnAddWorkoutList.AutoSize = false;
+            this.btnAddWorkoutList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAddWorkoutList.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnAddWorkoutList.Depth = 0;
+            this.btnAddWorkoutList.HighEmphasis = true;
+            this.btnAddWorkoutList.Icon = null;
+            this.btnAddWorkoutList.Location = new System.Drawing.Point(109, 275);
+            this.btnAddWorkoutList.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAddWorkoutList.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAddWorkoutList.Name = "btnAddWorkoutList";
+            this.btnAddWorkoutList.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnAddWorkoutList.Size = new System.Drawing.Size(133, 40);
+            this.btnAddWorkoutList.TabIndex = 10;
+            this.btnAddWorkoutList.Text = " Ekle";
+            this.btnAddWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAddWorkoutList.UseAccentColor = false;
+            this.btnAddWorkoutList.UseVisualStyleBackColor = true;
+            this.btnAddWorkoutList.Click += new System.EventHandler(this.btnAddWorkoutList_Click);
             // 
             // tbWorkoutDay
             // 
@@ -113,7 +112,7 @@
             this.tbWorkoutDay.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbWorkoutDay.Hint = "Çalışma Günü";
             this.tbWorkoutDay.LeadingIcon = null;
-            this.tbWorkoutDay.Location = new System.Drawing.Point(76, 188);
+            this.tbWorkoutDay.Location = new System.Drawing.Point(76, 187);
             this.tbWorkoutDay.MaxLength = 50;
             this.tbWorkoutDay.MouseState = MaterialSkin.MouseState.OUT;
             this.tbWorkoutDay.Multiline = false;
@@ -131,7 +130,7 @@
             this.tbTargetArea.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbTargetArea.Hint = "Hedef Bölge";
             this.tbTargetArea.LeadingIcon = null;
-            this.tbTargetArea.Location = new System.Drawing.Point(76, 132);
+            this.tbTargetArea.Location = new System.Drawing.Point(76, 131);
             this.tbTargetArea.MaxLength = 50;
             this.tbTargetArea.MouseState = MaterialSkin.MouseState.OUT;
             this.tbTargetArea.Multiline = false;
@@ -149,7 +148,7 @@
             this.tbWorkoutName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbWorkoutName.Hint = "Liste Adı";
             this.tbWorkoutName.LeadingIcon = null;
-            this.tbWorkoutName.Location = new System.Drawing.Point(76, 76);
+            this.tbWorkoutName.Location = new System.Drawing.Point(76, 75);
             this.tbWorkoutName.MaxLength = 50;
             this.tbWorkoutName.MouseState = MaterialSkin.MouseState.OUT;
             this.tbWorkoutName.Multiline = false;
@@ -159,23 +158,21 @@
             this.tbWorkoutName.Text = "";
             this.tbWorkoutName.TrailingIcon = null;
             // 
-            // EditWorkoutList
+            // AddMemberWorkoutListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 350);
-            this.Controls.Add(this.btnEditWorkoutList);
+            this.Controls.Add(this.btnAddWorkoutList);
             this.Controls.Add(this.tbWorkoutDay);
             this.Controls.Add(this.tbTargetArea);
             this.Controls.Add(this.tbWorkoutName);
             this.Controls.Add(this.pnlTitle);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "EditWorkoutList";
+            this.Name = "AddMemberWorkoutListForm";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Antrenman Listesi Düzenle";
-            this.Shown += new System.EventHandler(this.EditWorkoutList_Shown);
+            this.Text = "AddMemberWorkoutListForm";
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -187,7 +184,7 @@
         private System.Windows.Forms.Panel pnlTitleSeperator;
         private System.Windows.Forms.Button btnExit;
         private MaterialSkin.Controls.MaterialLabel lblTitle;
-        private MaterialSkin.Controls.MaterialButton btnEditWorkoutList;
+        private MaterialSkin.Controls.MaterialButton btnAddWorkoutList;
         private MaterialSkin.Controls.MaterialTextBox tbWorkoutDay;
         private MaterialSkin.Controls.MaterialTextBox tbTargetArea;
         private MaterialSkin.Controls.MaterialTextBox tbWorkoutName;
