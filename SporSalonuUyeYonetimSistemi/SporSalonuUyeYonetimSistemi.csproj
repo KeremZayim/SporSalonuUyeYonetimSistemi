@@ -73,10 +73,10 @@
     <Compile Include="Classes\DatabaseServer.cs" />
     <Compile Include="Classes\Functions.cs" />
     <Compile Include="Classes\ThemeProperties.cs" />
-    <Compile Include="Forms\EditMember.cs">
+    <Compile Include="Forms\Member\EditMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\EditMember.Designer.cs">
+    <Compile Include="Forms\Member\EditMember.Designer.cs">
       <DependentUpon>EditMember.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Exercise\AddExercise.cs">
@@ -205,6 +205,18 @@
     <Compile Include="Forms\Member\MemberWorkoutList\MemberWorkoutListForm.Designer.cs">
       <DependentUpon>MemberWorkoutListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Member\MemberWorkoutStats\MemberWorkoutAddStatsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\MemberWorkoutStats\MemberWorkoutAddStatsForm.Designer.cs">
+      <DependentUpon>MemberWorkoutAddStatsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Member\MemberWorkoutStats\MemberWorkoutStatsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\MemberWorkoutStats\MemberWorkoutStatsForm.Designer.cs">
+      <DependentUpon>MemberWorkoutStatsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ParticipationHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,27 +259,27 @@
     <Compile Include="Forms\Trainers\TrainerStudents.Designer.cs">
       <DependentUpon>TrainerStudents.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Workout\AddWorkoutList.cs">
+    <Compile Include="Forms\WorkoutList\AddWorkoutListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Workout\AddWorkoutList.Designer.cs">
-      <DependentUpon>AddWorkoutList.cs</DependentUpon>
+    <Compile Include="Forms\WorkoutList\AddWorkoutListForm.Designer.cs">
+      <DependentUpon>AddWorkoutListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Workout\EditWorkoutList.cs">
+    <Compile Include="Forms\WorkoutList\EditWorkoutListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Workout\EditWorkoutList.Designer.cs">
-      <DependentUpon>EditWorkoutList.cs</DependentUpon>
+    <Compile Include="Forms\WorkoutList\EditWorkoutListForm.Designer.cs">
+      <DependentUpon>EditWorkoutListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Workout\WorkoutList.cs">
+    <Compile Include="Forms\WorkoutList\WorkoutListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Workout\WorkoutList.Designer.cs">
-      <DependentUpon>WorkoutList.cs</DependentUpon>
+    <Compile Include="Forms\WorkoutList\WorkoutListForm.Designer.cs">
+      <DependentUpon>WorkoutListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\EditMember.resx">
+    <EmbeddedResource Include="Forms\Member\EditMember.resx">
       <DependentUpon>EditMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Exercise\AddExercise.resx">
@@ -333,6 +345,12 @@
     <EmbeddedResource Include="Forms\Member\MemberWorkoutList\MemberWorkoutListForm.resx">
       <DependentUpon>MemberWorkoutListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\MemberWorkoutStats\MemberWorkoutAddStatsForm.resx">
+      <DependentUpon>MemberWorkoutAddStatsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\MemberWorkoutStats\MemberWorkoutStatsForm.resx">
+      <DependentUpon>MemberWorkoutStatsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ParticipationHistory.resx">
       <DependentUpon>ParticipationHistory.cs</DependentUpon>
     </EmbeddedResource>
@@ -354,14 +372,14 @@
     <EmbeddedResource Include="Forms\Trainers\TrainerStudents.resx">
       <DependentUpon>TrainerStudents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Workout\AddWorkoutList.resx">
-      <DependentUpon>AddWorkoutList.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\WorkoutList\AddWorkoutListForm.resx">
+      <DependentUpon>AddWorkoutListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Workout\EditWorkoutList.resx">
-      <DependentUpon>EditWorkoutList.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\WorkoutList\EditWorkoutListForm.resx">
+      <DependentUpon>EditWorkoutListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Workout\WorkoutList.resx">
-      <DependentUpon>WorkoutList.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\WorkoutList\WorkoutListForm.resx">
+      <DependentUpon>WorkoutListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

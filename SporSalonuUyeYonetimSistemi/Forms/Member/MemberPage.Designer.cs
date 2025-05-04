@@ -34,6 +34,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.tabSelector = new MaterialSkin.Controls.MaterialTabSelector();
             this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.tabMemberInfo = new System.Windows.Forms.TabPage();
+            this.btnWorkoutList = new MaterialSkin.Controls.MaterialButton();
             this.btnMembership = new MaterialSkin.Controls.MaterialButton();
             this.btnAttendance = new MaterialSkin.Controls.MaterialButton();
             this.btnAddMember = new MaterialSkin.Controls.MaterialButton();
@@ -50,7 +51,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.member_birthday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.phone_number = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.note = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnWorkoutList = new MaterialSkin.Controls.MaterialButton();
             this.tabControl.SuspendLayout();
             this.tabMemberInfo.SuspendLayout();
             this.SuspendLayout();
@@ -101,6 +101,28 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.tabMemberInfo.TabIndex = 0;
             this.tabMemberInfo.Text = "Üye Bilgileri";
             this.tabMemberInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnWorkoutList
+            // 
+            this.btnWorkoutList.AutoSize = false;
+            this.btnWorkoutList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnWorkoutList.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnWorkoutList.Depth = 0;
+            this.btnWorkoutList.Enabled = false;
+            this.btnWorkoutList.HighEmphasis = true;
+            this.btnWorkoutList.Icon = null;
+            this.btnWorkoutList.Location = new System.Drawing.Point(835, 380);
+            this.btnWorkoutList.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnWorkoutList.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnWorkoutList.Name = "btnWorkoutList";
+            this.btnWorkoutList.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnWorkoutList.Size = new System.Drawing.Size(133, 40);
+            this.btnWorkoutList.TabIndex = 3;
+            this.btnWorkoutList.Text = "Antrenman Listesi";
+            this.btnWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnWorkoutList.UseAccentColor = false;
+            this.btnWorkoutList.UseVisualStyleBackColor = true;
+            this.btnWorkoutList.Click += new System.EventHandler(this.btnWorkoutList_Click);
             // 
             // btnMembership
             // 
@@ -242,7 +264,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnTrainingInfo.Enabled = false;
             this.btnTrainingInfo.HighEmphasis = true;
             this.btnTrainingInfo.Icon = null;
-            this.btnTrainingInfo.Location = new System.Drawing.Point(835, 380);
+            this.btnTrainingInfo.Location = new System.Drawing.Point(835, 432);
             this.btnTrainingInfo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnTrainingInfo.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnTrainingInfo.Name = "btnTrainingInfo";
@@ -357,28 +379,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             // 
             this.note.Text = "Not";
             this.note.Width = 240;
-            // 
-            // btnWorkoutList
-            // 
-            this.btnWorkoutList.AutoSize = false;
-            this.btnWorkoutList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnWorkoutList.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnWorkoutList.Depth = 0;
-            this.btnWorkoutList.Enabled = false;
-            this.btnWorkoutList.HighEmphasis = true;
-            this.btnWorkoutList.Icon = null;
-            this.btnWorkoutList.Location = new System.Drawing.Point(835, 432);
-            this.btnWorkoutList.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnWorkoutList.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnWorkoutList.Name = "btnWorkoutList";
-            this.btnWorkoutList.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnWorkoutList.Size = new System.Drawing.Size(133, 40);
-            this.btnWorkoutList.TabIndex = 3;
-            this.btnWorkoutList.Text = "Antrenman Listesi";
-            this.btnWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnWorkoutList.UseAccentColor = false;
-            this.btnWorkoutList.UseVisualStyleBackColor = true;
-            this.btnWorkoutList.Click += new System.EventHandler(this.btnWorkoutList_Click);
             // 
             // MemberPage
             // 

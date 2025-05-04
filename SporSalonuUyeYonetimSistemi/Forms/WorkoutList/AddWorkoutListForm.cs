@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace SporSalonuUyeYonetimSistemi.Forms.Workout
 {
-    public partial class AddWorkoutList : MaterialForm
+    public partial class AddWorkoutListForm : MaterialForm
     {
 
         /*
@@ -40,7 +40,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
             }
         }
 
-        public AddWorkoutList()
+        public AddWorkoutListForm()
         {
             InitializeComponent();
             lblTitle.MouseDown += (sender, e) => CommonMethods.MoveForm(this.Handle, e);

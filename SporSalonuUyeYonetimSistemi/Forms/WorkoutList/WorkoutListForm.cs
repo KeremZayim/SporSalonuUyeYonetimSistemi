@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace SporSalonuUyeYonetimSistemi.Forms.Workout
 {
-    public partial class WorkoutList : MaterialForm
+    public partial class WorkoutListForm : MaterialForm
     {
 
         /*
@@ -22,7 +22,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
 
          */
 
-        public WorkoutList()
+        public WorkoutListForm()
         {
             InitializeComponent();
             ThemeProperties.ApplyLightTheme(this);
@@ -119,7 +119,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
         // 4.1-)
         private void btnAddWorkoutList_Click(object sender, EventArgs e)
         {
-            AddWorkoutList addWorkoutList = new AddWorkoutList();
+            AddWorkoutListForm addWorkoutList = new AddWorkoutListForm();
             addWorkoutList.ShowDialog();
             FillList();
             dtWorkoutList.SelectedItems.Clear();
@@ -130,7 +130,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
         private void btnEditWorkoutList_Click(object sender, EventArgs e)
         {
             string workoutID = dtWorkoutList.SelectedItems[0].SubItems[0].Text;
-            EditWorkoutList editWorkoutList = new EditWorkoutList(workoutID);
+            EditWorkoutListForm editWorkoutList = new EditWorkoutListForm(workoutID);
             editWorkoutList.ShowDialog();
             FillList();
             dtWorkoutList.SelectedItems.Clear();

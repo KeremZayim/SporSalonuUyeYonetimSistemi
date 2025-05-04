@@ -90,8 +90,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
         // 2.1-)
         private async void btnEdit_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tbMedicalConditions.Text) ||
-                string.IsNullOrWhiteSpace(tbAllergies.Text) ||
+            if (
                 string.IsNullOrWhiteSpace(tbEmergencyContactName.Text) ||
                 string.IsNullOrWhiteSpace(tbEmergencyContactPhone.Text))
             {

@@ -115,7 +115,7 @@ namespace SporSalonuUyeYonetimSistemi
         // 3.6-)
         private void btnTraningLists_Click(object sender, EventArgs e)
         {
-            ChildFormOpen(new WorkoutList());
+            ChildFormOpen(new WorkoutListForm());
             lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi | " + btnWorkoutLists.Text;
         }
 

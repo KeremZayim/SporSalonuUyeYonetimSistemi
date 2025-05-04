@@ -1,6 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using SporSalonuUyeYonetimSistemi.Classes;
 using SporSalonuUyeYonetimSistemi.Forms.Member.MemberWorkoutList;
+using SporSalonuUyeYonetimSistemi.Forms.Member.MemberWorkoutStats;
 using System;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
@@ -22,8 +23,8 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
                 3.4-) Üyelik Bilgileri
                 3.5-) Sağlık Bilgileri
                 3.6-) Antrenörler
-                3.7-) Antrenman Bilgileri
-                3.8-) Antrenman Listeleri
+                3.7-) Antrenman Listeleri
+                3.8-) Antrenman Bilgileri
                 3.9-) Ödeme Bilgileri
                 3.10-) Giriş-Çıkışlar
 
@@ -181,17 +182,21 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
         }
 
         // 3.7-)
-        private void btnTrainingInfo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // 3.8-)
         private void btnWorkoutList_Click(object sender, EventArgs e)
         {
             string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
             MemberWorkoutListForm memberWorkoutList = new MemberWorkoutListForm(memberId);
             memberWorkoutList.ShowDialog();
+            dtMemberInfo.SelectedItems.Clear();
+            ButtonControl();
+        }
+
+        // 3.8-)
+        private void btnTrainingInfo_Click(object sender, EventArgs e)
+        {
+            string memberId = dtMemberInfo.SelectedItems[0].SubItems[0].Text;
+            MemberWorkoutStatsForm memberWorkoutStatsForm = new MemberWorkoutStatsForm(memberId);
+            memberWorkoutStatsForm.ShowDialog();
             dtMemberInfo.SelectedItems.Clear();
             ButtonControl();
         }

@@ -83,8 +83,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
                 birthday == default(DateTime) ||
                 string.IsNullOrWhiteSpace(phoneNumber) ||
                 membershipTypeId <= 0 ||
-                string.IsNullOrWhiteSpace(medicalConditions) ||
-                string.IsNullOrWhiteSpace(allergies) ||
                 string.IsNullOrWhiteSpace(emergencyContactName) ||
                 string.IsNullOrWhiteSpace(emergencyContactPhone))
             {

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace SporSalonuUyeYonetimSistemi.Forms.Workout
 {
-    public partial class EditWorkoutList : MaterialForm
+    public partial class EditWorkoutListForm : MaterialForm
     {
 
         /*
@@ -21,7 +21,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Workout
          */
 
         string workoutID;
-        public EditWorkoutList(string workoutID)
+        public EditWorkoutListForm(string workoutID)
         {
             InitializeComponent();
             pnlTitle.MouseDown += (sender, e) => CommonMethods.MoveForm(this.Handle, e);

@@ -1,6 +1,6 @@
 ﻿namespace SporSalonuUyeYonetimSistemi.Forms.Workout
 {
-    partial class WorkoutList
+    partial class WorkoutListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkoutList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkoutListForm));
             this.tabSelector = new MaterialSkin.Controls.MaterialTabSelector();
             this.tabController = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -77,7 +77,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(990, 610);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Antrenman Listelsi";
+            this.tabPage1.Text = "Antrenman Listesi";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnAddWorkoutList
@@ -166,7 +166,7 @@
             this.dtWorkoutList.View = System.Windows.Forms.View.Details;
             this.dtWorkoutList.SelectedIndexChanged += new System.EventHandler(this.dtWorkoutList_SelectedIndexChanged);
             // 
-            // WorkoutList
+            // WorkoutListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -175,7 +175,7 @@
             this.Controls.Add(this.tabSelector);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "WorkoutList";
+            this.Name = "WorkoutListForm";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Spor Salonu Üye Yönetim Sistemi";
