@@ -95,8 +95,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberWorkoutStats
             }
         }
 
-
-
         private void dtMemberWorkoutStats_SelectedIndexChanged(object sender, EventArgs e)
         {
             ButtonControl();
@@ -113,6 +111,14 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberWorkoutStats
         }
 
         // 3.2-)
+        private async void btnEditWorkoutStats_Click(object sender, EventArgs e)
+        {
+            string workoutID = dtMemberWorkoutStats.SelectedItems[0].SubItems[0].Text.Trim();
+            MemberWorkoutEditStatsForm memberWorkoutEditStatsForm = new MemberWorkoutEditStatsForm(workoutID);
+            memberWorkoutEditStatsForm.ShowDialog();
+            dtMemberWorkoutStats.SelectedItems.Clear();
+            await Functions.GetDataByMemberIDAsync("workout_stats", memberID, dtMemberWorkoutStats);
+        }
 
         // 3.3-)
         private async void btnDeleteWorkoutStats_Click(object sender, EventArgs e)
@@ -128,7 +134,5 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberWorkoutStats
         {
             this.Close();
         }
-
-
     }
 }

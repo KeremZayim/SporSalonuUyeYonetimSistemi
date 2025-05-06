@@ -33,7 +33,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberPayments));
             this.dtData = new MaterialSkin.Controls.MaterialListView();
             this.btnPay = new MaterialSkin.Controls.MaterialButton();
-            this.cbAraVerdiMi = new MaterialSkin.Controls.MaterialCheckbox();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
             this.btnExitApplication = new System.Windows.Forms.Button();
@@ -82,22 +81,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             this.btnPay.UseAccentColor = false;
             this.btnPay.UseVisualStyleBackColor = true;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
-            // 
-            // cbAraVerdiMi
-            // 
-            this.cbAraVerdiMi.AutoSize = true;
-            this.cbAraVerdiMi.Depth = 0;
-            this.cbAraVerdiMi.Location = new System.Drawing.Point(223, 438);
-            this.cbAraVerdiMi.Margin = new System.Windows.Forms.Padding(0);
-            this.cbAraVerdiMi.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.cbAraVerdiMi.MouseState = MaterialSkin.MouseState.HOVER;
-            this.cbAraVerdiMi.Name = "cbAraVerdiMi";
-            this.cbAraVerdiMi.ReadOnly = false;
-            this.cbAraVerdiMi.Ripple = true;
-            this.cbAraVerdiMi.Size = new System.Drawing.Size(112, 37);
-            this.cbAraVerdiMi.TabIndex = 2;
-            this.cbAraVerdiMi.Text = "Ara Vermiş";
-            this.cbAraVerdiMi.UseVisualStyleBackColor = true;
             // 
             // pnlTitle
             // 
@@ -149,7 +132,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             this.ClientSize = new System.Drawing.Size(800, 500);
             this.Controls.Add(this.pnlTitleSeperator);
             this.Controls.Add(this.pnlTitle);
-            this.Controls.Add(this.cbAraVerdiMi);
             this.Controls.Add(this.btnPay);
             this.Controls.Add(this.dtData);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
@@ -169,7 +151,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
 
         private MaterialSkin.Controls.MaterialListView dtData;
         private MaterialSkin.Controls.MaterialButton btnPay;
-        private MaterialSkin.Controls.MaterialCheckbox cbAraVerdiMi;
         private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.Panel pnlTitleSeperator;
         private System.Windows.Forms.Button btnExitApplication;

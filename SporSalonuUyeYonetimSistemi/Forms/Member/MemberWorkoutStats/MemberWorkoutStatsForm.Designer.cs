@@ -144,6 +144,7 @@
             this.btnEditWorkoutStats.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditWorkoutStats.UseAccentColor = false;
             this.btnEditWorkoutStats.UseVisualStyleBackColor = true;
+            this.btnEditWorkoutStats.Click += new System.EventHandler(this.btnEditWorkoutStats_Click);
             // 
             // btnDeleteWorkoutStats
             // 

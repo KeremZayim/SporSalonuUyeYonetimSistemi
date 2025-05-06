@@ -211,6 +211,12 @@
     <Compile Include="Forms\Member\MemberWorkoutStats\MemberWorkoutAddStatsForm.Designer.cs">
       <DependentUpon>MemberWorkoutAddStatsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Member\MemberWorkoutStats\MemberWorkoutEditStatsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\MemberWorkoutStats\MemberWorkoutEditStatsForm.Designer.cs">
+      <DependentUpon>MemberWorkoutEditStatsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Member\MemberWorkoutStats\MemberWorkoutStatsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -347,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Member\MemberWorkoutStats\MemberWorkoutAddStatsForm.resx">
       <DependentUpon>MemberWorkoutAddStatsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\MemberWorkoutStats\MemberWorkoutEditStatsForm.resx">
+      <DependentUpon>MemberWorkoutEditStatsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Member\MemberWorkoutStats\MemberWorkoutStatsForm.resx">
       <DependentUpon>MemberWorkoutStatsForm.cs</DependentUpon>

@@ -34,6 +34,8 @@
             this.btnExitApplication = new System.Windows.Forms.Button();
             this.pnlTitleSeperator = new System.Windows.Forms.Panel();
             this.dtMemberMemberships = new MaterialSkin.Controls.MaterialListView();
+            this.btnStartMembership = new MaterialSkin.Controls.MaterialButton();
+            this.btnEndMembership = new MaterialSkin.Controls.MaterialButton();
             this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,16 +96,60 @@
             this.dtMemberMemberships.MouseState = MaterialSkin.MouseState.OUT;
             this.dtMemberMemberships.Name = "dtMemberMemberships";
             this.dtMemberMemberships.OwnerDraw = true;
-            this.dtMemberMemberships.Size = new System.Drawing.Size(671, 431);
+            this.dtMemberMemberships.Size = new System.Drawing.Size(671, 369);
             this.dtMemberMemberships.TabIndex = 5;
             this.dtMemberMemberships.UseCompatibleStateImageBehavior = false;
             this.dtMemberMemberships.View = System.Windows.Forms.View.Details;
+            // 
+            // btnStartMembership
+            // 
+            this.btnStartMembership.AutoSize = false;
+            this.btnStartMembership.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnStartMembership.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnStartMembership.Depth = 0;
+            this.btnStartMembership.HighEmphasis = true;
+            this.btnStartMembership.Icon = null;
+            this.btnStartMembership.Location = new System.Drawing.Point(232, 480);
+            this.btnStartMembership.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnStartMembership.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnStartMembership.Name = "btnStartMembership";
+            this.btnStartMembership.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnStartMembership.Size = new System.Drawing.Size(140, 40);
+            this.btnStartMembership.TabIndex = 18;
+            this.btnStartMembership.Text = "Üyeliği Başlat";
+            this.btnStartMembership.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnStartMembership.UseAccentColor = false;
+            this.btnStartMembership.UseVisualStyleBackColor = true;
+            this.btnStartMembership.Click += new System.EventHandler(this.btnStartMembership_Click);
+            // 
+            // btnEndMembership
+            // 
+            this.btnEndMembership.AutoSize = false;
+            this.btnEndMembership.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEndMembership.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnEndMembership.Depth = 0;
+            this.btnEndMembership.HighEmphasis = true;
+            this.btnEndMembership.Icon = null;
+            this.btnEndMembership.Location = new System.Drawing.Point(380, 480);
+            this.btnEndMembership.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnEndMembership.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEndMembership.Name = "btnEndMembership";
+            this.btnEndMembership.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnEndMembership.Size = new System.Drawing.Size(140, 40);
+            this.btnEndMembership.TabIndex = 18;
+            this.btnEndMembership.Text = "Üyeliği Bitir";
+            this.btnEndMembership.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnEndMembership.UseAccentColor = false;
+            this.btnEndMembership.UseVisualStyleBackColor = true;
+            this.btnEndMembership.Click += new System.EventHandler(this.btnEndMembership_Click);
             // 
             // MemberMemberships
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 550);
+            this.Controls.Add(this.btnEndMembership);
+            this.Controls.Add(this.btnStartMembership);
             this.Controls.Add(this.pnlTitleSeperator);
             this.Controls.Add(this.dtMemberMemberships);
             this.Controls.Add(this.pnlTitle);
@@ -126,5 +172,7 @@
         private MaterialSkin.Controls.MaterialLabel lblTitle;
         private System.Windows.Forms.Button btnExitApplication;
         private MaterialSkin.Controls.MaterialListView dtMemberMemberships;
+        private MaterialSkin.Controls.MaterialButton btnStartMembership;
+        private MaterialSkin.Controls.MaterialButton btnEndMembership;
     }
 }

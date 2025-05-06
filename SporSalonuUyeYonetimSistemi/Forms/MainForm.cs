@@ -7,6 +7,8 @@ using SporSalonuUyeYonetimSistemi.Forms.Trainers;
 using SporSalonuUyeYonetimSistemi.Forms.Exercise;
 using SporSalonuUyeYonetimSistemi.Forms.Membership_Types;
 using SporSalonuUyeYonetimSistemi.Forms.Workout;
+using System.Data.SqlClient;
+using System.Threading.Tasks;
 
 namespace SporSalonuUyeYonetimSistemi
 {
@@ -28,6 +30,7 @@ namespace SporSalonuUyeYonetimSistemi
             3.6-) Antrenman Listeleri
             3.7-) Ödemeler
             3.8-) Giriş Çıkışlar
+
          */
 
         // 1-)

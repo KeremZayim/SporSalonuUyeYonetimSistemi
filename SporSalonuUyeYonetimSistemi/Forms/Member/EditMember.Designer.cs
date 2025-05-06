@@ -96,7 +96,7 @@
             this.tbEmergencyContactPhone.AnimateReadOnly = false;
             this.tbEmergencyContactPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbEmergencyContactPhone.Depth = 0;
-            this.tbEmergencyContactPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbEmergencyContactPhone.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbEmergencyContactPhone.Hint = "Acil Durum Telefon Numarası";
             this.tbEmergencyContactPhone.LeadingIcon = null;
             this.tbEmergencyContactPhone.Location = new System.Drawing.Point(399, 225);
@@ -114,7 +114,7 @@
             this.tbEmergencyContactName.AnimateReadOnly = false;
             this.tbEmergencyContactName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbEmergencyContactName.Depth = 0;
-            this.tbEmergencyContactName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbEmergencyContactName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbEmergencyContactName.Hint = "Acil Durum Kişi Adı";
             this.tbEmergencyContactName.LeadingIcon = null;
             this.tbEmergencyContactName.Location = new System.Drawing.Point(399, 169);
@@ -132,7 +132,7 @@
             this.tbAllergies.AnimateReadOnly = false;
             this.tbAllergies.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbAllergies.Depth = 0;
-            this.tbAllergies.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbAllergies.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbAllergies.Hint = "Alerjiler";
             this.tbAllergies.LeadingIcon = null;
             this.tbAllergies.Location = new System.Drawing.Point(399, 113);
@@ -150,7 +150,7 @@
             this.tbMedicalConditions.AnimateReadOnly = false;
             this.tbMedicalConditions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMedicalConditions.Depth = 0;
-            this.tbMedicalConditions.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbMedicalConditions.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbMedicalConditions.Hint = "Sağlık Durumu";
             this.tbMedicalConditions.LeadingIcon = null;
             this.tbMedicalConditions.Location = new System.Drawing.Point(399, 57);
@@ -262,7 +262,7 @@
             this.tbMemberPhoneNumber.AnimateReadOnly = false;
             this.tbMemberPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMemberPhoneNumber.Depth = 0;
-            this.tbMemberPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbMemberPhoneNumber.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbMemberPhoneNumber.Hint = "Telefon No";
             this.tbMemberPhoneNumber.LeadingIcon = null;
             this.tbMemberPhoneNumber.Location = new System.Drawing.Point(67, 169);
@@ -280,7 +280,7 @@
             this.tbMemberSurname.AnimateReadOnly = false;
             this.tbMemberSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMemberSurname.Depth = 0;
-            this.tbMemberSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbMemberSurname.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbMemberSurname.Hint = "Soyad";
             this.tbMemberSurname.LeadingIcon = null;
             this.tbMemberSurname.Location = new System.Drawing.Point(67, 113);
@@ -298,7 +298,7 @@
             this.tbMemberName.AnimateReadOnly = false;
             this.tbMemberName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMemberName.Depth = 0;
-            this.tbMemberName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbMemberName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbMemberName.Hint = "Ad";
             this.tbMemberName.LeadingIcon = null;
             this.tbMemberName.Location = new System.Drawing.Point(67, 57);
