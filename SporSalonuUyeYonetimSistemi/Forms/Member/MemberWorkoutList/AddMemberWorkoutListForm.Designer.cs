@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddMemberWorkoutListForm));
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlTitleSeperator = new System.Windows.Forms.Panel();
@@ -56,7 +57,7 @@
             this.btnExit.Location = new System.Drawing.Point(299, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 5;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -97,7 +98,7 @@
             this.btnAddWorkoutList.Name = "btnAddWorkoutList";
             this.btnAddWorkoutList.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAddWorkoutList.Size = new System.Drawing.Size(133, 40);
-            this.btnAddWorkoutList.TabIndex = 10;
+            this.btnAddWorkoutList.TabIndex = 4;
             this.btnAddWorkoutList.Text = " Ekle";
             this.btnAddWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddWorkoutList.UseAccentColor = false;
@@ -118,7 +119,7 @@
             this.tbWorkoutDay.Multiline = false;
             this.tbWorkoutDay.Name = "tbWorkoutDay";
             this.tbWorkoutDay.Size = new System.Drawing.Size(199, 50);
-            this.tbWorkoutDay.TabIndex = 9;
+            this.tbWorkoutDay.TabIndex = 3;
             this.tbWorkoutDay.Text = "";
             this.tbWorkoutDay.TrailingIcon = null;
             // 
@@ -136,7 +137,7 @@
             this.tbTargetArea.Multiline = false;
             this.tbTargetArea.Name = "tbTargetArea";
             this.tbTargetArea.Size = new System.Drawing.Size(199, 50);
-            this.tbTargetArea.TabIndex = 8;
+            this.tbTargetArea.TabIndex = 2;
             this.tbTargetArea.Text = "";
             this.tbTargetArea.TrailingIcon = null;
             // 
@@ -154,7 +155,7 @@
             this.tbWorkoutName.Multiline = false;
             this.tbWorkoutName.Name = "tbWorkoutName";
             this.tbWorkoutName.Size = new System.Drawing.Size(199, 50);
-            this.tbWorkoutName.TabIndex = 7;
+            this.tbWorkoutName.TabIndex = 1;
             this.tbWorkoutName.Text = "";
             this.tbWorkoutName.TrailingIcon = null;
             // 
@@ -169,6 +170,7 @@
             this.Controls.Add(this.tbWorkoutName);
             this.Controls.Add(this.pnlTitle);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddMemberWorkoutListForm";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

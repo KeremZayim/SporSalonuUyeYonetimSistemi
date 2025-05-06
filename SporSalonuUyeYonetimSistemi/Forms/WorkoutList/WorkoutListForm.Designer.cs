@@ -94,7 +94,7 @@
             this.btnAddWorkoutList.Name = "btnAddWorkoutList";
             this.btnAddWorkoutList.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAddWorkoutList.Size = new System.Drawing.Size(133, 40);
-            this.btnAddWorkoutList.TabIndex = 7;
+            this.btnAddWorkoutList.TabIndex = 1;
             this.btnAddWorkoutList.Text = "Antrenman Listesi Ekle";
             this.btnAddWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddWorkoutList.UseAccentColor = false;
@@ -116,7 +116,7 @@
             this.btnEditWorkoutList.Name = "btnEditWorkoutList";
             this.btnEditWorkoutList.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEditWorkoutList.Size = new System.Drawing.Size(133, 40);
-            this.btnEditWorkoutList.TabIndex = 8;
+            this.btnEditWorkoutList.TabIndex = 2;
             this.btnEditWorkoutList.Text = "Antrenman Listesini Düzenle";
             this.btnEditWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditWorkoutList.UseAccentColor = false;
@@ -138,7 +138,7 @@
             this.btnDeleteWorkoutList.Name = "btnDeleteWorkoutList";
             this.btnDeleteWorkoutList.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnDeleteWorkoutList.Size = new System.Drawing.Size(133, 40);
-            this.btnDeleteWorkoutList.TabIndex = 9;
+            this.btnDeleteWorkoutList.TabIndex = 3;
             this.btnDeleteWorkoutList.Text = "Antrenman Listesini Sil";
             this.btnDeleteWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnDeleteWorkoutList.UseAccentColor = false;

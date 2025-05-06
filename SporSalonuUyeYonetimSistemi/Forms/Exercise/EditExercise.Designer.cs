@@ -57,7 +57,7 @@
             this.btnExit.Location = new System.Drawing.Point(249, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 5;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -98,7 +98,7 @@
             this.btnEditExercise.Name = "btnEditExercise";
             this.btnEditExercise.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEditExercise.Size = new System.Drawing.Size(149, 51);
-            this.btnEditExercise.TabIndex = 10;
+            this.btnEditExercise.TabIndex = 4;
             this.btnEditExercise.Text = "Egzersizi Düzenle";
             this.btnEditExercise.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditExercise.UseAccentColor = false;
@@ -126,7 +126,7 @@
             this.cbRepetitionCount.Name = "cbRepetitionCount";
             this.cbRepetitionCount.Size = new System.Drawing.Size(199, 49);
             this.cbRepetitionCount.StartIndex = 0;
-            this.cbRepetitionCount.TabIndex = 8;
+            this.cbRepetitionCount.TabIndex = 3;
             // 
             // cbSetCount
             // 
@@ -149,7 +149,7 @@
             this.cbSetCount.Name = "cbSetCount";
             this.cbSetCount.Size = new System.Drawing.Size(199, 49);
             this.cbSetCount.StartIndex = 0;
-            this.cbSetCount.TabIndex = 9;
+            this.cbSetCount.TabIndex = 2;
             // 
             // tbExerciseName
             // 
@@ -165,7 +165,7 @@
             this.tbExerciseName.Multiline = false;
             this.tbExerciseName.Name = "tbExerciseName";
             this.tbExerciseName.Size = new System.Drawing.Size(199, 50);
-            this.tbExerciseName.TabIndex = 5;
+            this.tbExerciseName.TabIndex = 1;
             this.tbExerciseName.Text = "";
             this.tbExerciseName.TrailingIcon = null;
             // 

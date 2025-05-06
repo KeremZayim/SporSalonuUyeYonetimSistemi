@@ -59,7 +59,7 @@
             this.btnExit.Location = new System.Drawing.Point(549, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 7;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -101,7 +101,7 @@
             this.tbExerciseName.Multiline = false;
             this.tbExerciseName.Name = "tbExerciseName";
             this.tbExerciseName.Size = new System.Drawing.Size(199, 50);
-            this.tbExerciseName.TabIndex = 1;
+            this.tbExerciseName.TabIndex = 2;
             this.tbExerciseName.Text = "";
             this.tbExerciseName.TrailingIcon = null;
             // 
@@ -127,7 +127,7 @@
             this.cbSetCount.Name = "cbSetCount";
             this.cbSetCount.Size = new System.Drawing.Size(199, 49);
             this.cbSetCount.StartIndex = 0;
-            this.cbSetCount.TabIndex = 2;
+            this.cbSetCount.TabIndex = 3;
             // 
             // cbRepetitionCount
             // 
@@ -151,7 +151,7 @@
             this.cbRepetitionCount.Name = "cbRepetitionCount";
             this.cbRepetitionCount.Size = new System.Drawing.Size(199, 49);
             this.cbRepetitionCount.StartIndex = 0;
-            this.cbRepetitionCount.TabIndex = 2;
+            this.cbRepetitionCount.TabIndex = 4;
             // 
             // cbWorkout
             // 
@@ -175,7 +175,7 @@
             this.cbWorkout.Name = "cbWorkout";
             this.cbWorkout.Size = new System.Drawing.Size(199, 49);
             this.cbWorkout.StartIndex = 0;
-            this.cbWorkout.TabIndex = 2;
+            this.cbWorkout.TabIndex = 5;
             // 
             // cbMember
             // 
@@ -198,7 +198,7 @@
             this.cbMember.Name = "cbMember";
             this.cbMember.Size = new System.Drawing.Size(199, 49);
             this.cbMember.StartIndex = 0;
-            this.cbMember.TabIndex = 2;
+            this.cbMember.TabIndex = 1;
             this.cbMember.SelectedIndexChanged += new System.EventHandler(this.cbMember_SelectedIndexChanged);
             // 
             // btnAddExercise
@@ -215,7 +215,7 @@
             this.btnAddExercise.Name = "btnAddExercise";
             this.btnAddExercise.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAddExercise.Size = new System.Drawing.Size(133, 40);
-            this.btnAddExercise.TabIndex = 4;
+            this.btnAddExercise.TabIndex = 6;
             this.btnAddExercise.Text = "Egzersiz Ekle";
             this.btnAddExercise.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddExercise.UseAccentColor = false;

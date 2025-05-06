@@ -111,7 +111,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member
             this.btnExitApplication.Location = new System.Drawing.Point(749, 0);
             this.btnExitApplication.Name = "btnExitApplication";
             this.btnExitApplication.Size = new System.Drawing.Size(45, 30);
-            this.btnExitApplication.TabIndex = 0;
+            this.btnExitApplication.TabIndex = 2;
             this.btnExitApplication.Text = "X";
             this.btnExitApplication.UseVisualStyleBackColor = true;
             this.btnExitApplication.Click += new System.EventHandler(this.btnFormExit_Click);

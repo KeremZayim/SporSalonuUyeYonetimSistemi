@@ -103,7 +103,7 @@
             this.cbMember.Name = "cbMember";
             this.cbMember.Size = new System.Drawing.Size(156, 49);
             this.cbMember.StartIndex = 0;
-            this.cbMember.TabIndex = 4;
+            this.cbMember.TabIndex = 0;
             this.cbMember.SelectedIndexChanged += new System.EventHandler(this.cbMember_SelectedIndexChanged);
             // 
             // btnAddExercise
@@ -120,7 +120,7 @@
             this.btnAddExercise.Name = "btnAddExercise";
             this.btnAddExercise.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAddExercise.Size = new System.Drawing.Size(133, 40);
-            this.btnAddExercise.TabIndex = 3;
+            this.btnAddExercise.TabIndex = 1;
             this.btnAddExercise.Text = "Egzersiz Ekle";
             this.btnAddExercise.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddExercise.UseAccentColor = false;
@@ -142,7 +142,7 @@
             this.btnEditExercise.Name = "btnEditExercise";
             this.btnEditExercise.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEditExercise.Size = new System.Drawing.Size(133, 40);
-            this.btnEditExercise.TabIndex = 3;
+            this.btnEditExercise.TabIndex = 2;
             this.btnEditExercise.Text = "Egzersizi Düzenle";
             this.btnEditExercise.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditExercise.UseAccentColor = false;

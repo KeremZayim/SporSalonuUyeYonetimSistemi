@@ -96,9 +96,9 @@
             // 
             // pnlTitle
             // 
+            this.pnlTitle.Controls.Add(this.btnExitForm);
             this.pnlTitle.Controls.Add(this.pnlTitleSeperator);
             this.pnlTitle.Controls.Add(this.lblTitle);
-            this.pnlTitle.Controls.Add(this.btnExitForm);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(3, 0);
             this.pnlTitle.Name = "pnlTitle";
@@ -111,7 +111,7 @@
             this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 30);
             this.pnlTitleSeperator.Name = "pnlTitleSeperator";
-            this.pnlTitleSeperator.Size = new System.Drawing.Size(349, 1);
+            this.pnlTitleSeperator.Size = new System.Drawing.Size(394, 1);
             this.pnlTitleSeperator.TabIndex = 9;
             // 
             // lblTitle
@@ -132,8 +132,8 @@
             this.btnExitForm.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExitForm.Location = new System.Drawing.Point(349, 0);
             this.btnExitForm.Name = "btnExitForm";
-            this.btnExitForm.Size = new System.Drawing.Size(45, 31);
-            this.btnExitForm.TabIndex = 0;
+            this.btnExitForm.Size = new System.Drawing.Size(45, 30);
+            this.btnExitForm.TabIndex = 5;
             this.btnExitForm.Text = "X";
             this.btnExitForm.UseVisualStyleBackColor = true;
             this.btnExitForm.Click += new System.EventHandler(this.btnExitForm_Click);
@@ -152,7 +152,7 @@
             this.btnAddTrainer.Name = "btnAddTrainer";
             this.btnAddTrainer.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAddTrainer.Size = new System.Drawing.Size(165, 44);
-            this.btnAddTrainer.TabIndex = 5;
+            this.btnAddTrainer.TabIndex = 4;
             this.btnAddTrainer.Text = "Antrenörü Ekle";
             this.btnAddTrainer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddTrainer.UseAccentColor = false;

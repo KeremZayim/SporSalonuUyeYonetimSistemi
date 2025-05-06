@@ -37,6 +37,7 @@
             this.pnlBody = new System.Windows.Forms.Panel();
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMembershipTypes = new MaterialSkin.Controls.MaterialButton();
             this.btnPayments = new MaterialSkin.Controls.MaterialButton();
             this.btnParticipationHistory = new MaterialSkin.Controls.MaterialButton();
@@ -46,7 +47,6 @@
             this.btnTrainers = new MaterialSkin.Controls.MaterialButton();
             this.btnMainPage = new MaterialSkin.Controls.MaterialButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlTitle.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.pnlBody.SuspendLayout();
@@ -83,7 +83,7 @@
             this.btnExitApplication.Location = new System.Drawing.Point(1235, 0);
             this.btnExitApplication.Name = "btnExitApplication";
             this.btnExitApplication.Size = new System.Drawing.Size(45, 30);
-            this.btnExitApplication.TabIndex = 1;
+            this.btnExitApplication.TabIndex = 9;
             this.btnExitApplication.Text = "X";
             this.btnExitApplication.UseVisualStyleBackColor = true;
             this.btnExitApplication.Click += new System.EventHandler(this.btnExitApplication_Click);
@@ -143,6 +143,16 @@
             this.pnlMenu.Size = new System.Drawing.Size(276, 689);
             this.pnlMenu.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SporSalonuUyeYonetimSistemi.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(74, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnMembershipTypes
             // 
             this.btnMembershipTypes.AutoSize = false;
@@ -157,7 +167,7 @@
             this.btnMembershipTypes.Name = "btnMembershipTypes";
             this.btnMembershipTypes.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnMembershipTypes.Size = new System.Drawing.Size(275, 66);
-            this.btnMembershipTypes.TabIndex = 9;
+            this.btnMembershipTypes.TabIndex = 3;
             this.btnMembershipTypes.Text = "Üyelik Türleri";
             this.btnMembershipTypes.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnMembershipTypes.UseAccentColor = false;
@@ -178,7 +188,7 @@
             this.btnPayments.Name = "btnPayments";
             this.btnPayments.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnPayments.Size = new System.Drawing.Size(275, 66);
-            this.btnPayments.TabIndex = 4;
+            this.btnPayments.TabIndex = 7;
             this.btnPayments.Text = "Ödemeler";
             this.btnPayments.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnPayments.UseAccentColor = false;
@@ -199,7 +209,7 @@
             this.btnParticipationHistory.Name = "btnParticipationHistory";
             this.btnParticipationHistory.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnParticipationHistory.Size = new System.Drawing.Size(275, 66);
-            this.btnParticipationHistory.TabIndex = 5;
+            this.btnParticipationHistory.TabIndex = 8;
             this.btnParticipationHistory.Text = "Giriş Çıkışlar";
             this.btnParticipationHistory.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnParticipationHistory.UseAccentColor = false;
@@ -220,7 +230,7 @@
             this.btnWorkoutLists.Name = "btnWorkoutLists";
             this.btnWorkoutLists.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnWorkoutLists.Size = new System.Drawing.Size(275, 66);
-            this.btnWorkoutLists.TabIndex = 8;
+            this.btnWorkoutLists.TabIndex = 6;
             this.btnWorkoutLists.Text = "Antrenman Listeleri";
             this.btnWorkoutLists.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnWorkoutLists.UseAccentColor = false;
@@ -241,7 +251,7 @@
             this.btnExercises.Name = "btnExercises";
             this.btnExercises.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnExercises.Size = new System.Drawing.Size(275, 66);
-            this.btnExercises.TabIndex = 6;
+            this.btnExercises.TabIndex = 5;
             this.btnExercises.Text = "Egzersizler";
             this.btnExercises.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnExercises.UseAccentColor = false;
@@ -262,7 +272,7 @@
             this.btnMembers.Name = "btnMembers";
             this.btnMembers.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnMembers.Size = new System.Drawing.Size(275, 66);
-            this.btnMembers.TabIndex = 3;
+            this.btnMembers.TabIndex = 2;
             this.btnMembers.Text = "Üyeler";
             this.btnMembers.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnMembers.UseAccentColor = false;
@@ -283,7 +293,7 @@
             this.btnTrainers.Name = "btnTrainers";
             this.btnTrainers.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnTrainers.Size = new System.Drawing.Size(275, 66);
-            this.btnTrainers.TabIndex = 2;
+            this.btnTrainers.TabIndex = 4;
             this.btnTrainers.Text = "Antrenörler";
             this.btnTrainers.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnTrainers.UseAccentColor = false;
@@ -319,16 +329,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 689);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SporSalonuUyeYonetimSistemi.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(74, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 

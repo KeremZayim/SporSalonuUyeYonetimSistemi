@@ -57,7 +57,7 @@
             this.btnExit.Location = new System.Drawing.Point(299, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 5;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -98,7 +98,7 @@
             this.btnEditWorkoutList.Name = "btnEditWorkoutList";
             this.btnEditWorkoutList.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEditWorkoutList.Size = new System.Drawing.Size(133, 40);
-            this.btnEditWorkoutList.TabIndex = 10;
+            this.btnEditWorkoutList.TabIndex = 4;
             this.btnEditWorkoutList.Text = "Düzenle";
             this.btnEditWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditWorkoutList.UseAccentColor = false;
@@ -119,7 +119,7 @@
             this.tbWorkoutDay.Multiline = false;
             this.tbWorkoutDay.Name = "tbWorkoutDay";
             this.tbWorkoutDay.Size = new System.Drawing.Size(199, 50);
-            this.tbWorkoutDay.TabIndex = 9;
+            this.tbWorkoutDay.TabIndex = 3;
             this.tbWorkoutDay.Text = "";
             this.tbWorkoutDay.TrailingIcon = null;
             // 
@@ -137,7 +137,7 @@
             this.tbTargetArea.Multiline = false;
             this.tbTargetArea.Name = "tbTargetArea";
             this.tbTargetArea.Size = new System.Drawing.Size(199, 50);
-            this.tbTargetArea.TabIndex = 8;
+            this.tbTargetArea.TabIndex = 2;
             this.tbTargetArea.Text = "";
             this.tbTargetArea.TrailingIcon = null;
             // 
@@ -155,11 +155,11 @@
             this.tbWorkoutName.Multiline = false;
             this.tbWorkoutName.Name = "tbWorkoutName";
             this.tbWorkoutName.Size = new System.Drawing.Size(199, 50);
-            this.tbWorkoutName.TabIndex = 7;
+            this.tbWorkoutName.TabIndex = 1;
             this.tbWorkoutName.Text = "";
             this.tbWorkoutName.TrailingIcon = null;
             // 
-            // EditWorkoutList
+            // EditWorkoutListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -171,7 +171,7 @@
             this.Controls.Add(this.pnlTitle);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "EditWorkoutList";
+            this.Name = "EditWorkoutListForm";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Antrenman Listesi Düzenle";

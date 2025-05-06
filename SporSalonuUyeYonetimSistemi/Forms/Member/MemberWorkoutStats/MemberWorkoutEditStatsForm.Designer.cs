@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberWorkoutEditStatsForm));
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlTitleSeperator = new System.Windows.Forms.Panel();
@@ -58,7 +59,7 @@
             this.btnExit.Location = new System.Drawing.Point(309, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 7;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -99,7 +100,7 @@
             this.btnEditWorkoutStats.Name = "btnEditWorkoutStats";
             this.btnEditWorkoutStats.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEditWorkoutStats.Size = new System.Drawing.Size(140, 40);
-            this.btnEditWorkoutStats.TabIndex = 17;
+            this.btnEditWorkoutStats.TabIndex = 6;
             this.btnEditWorkoutStats.Text = "Düzenle";
             this.btnEditWorkoutStats.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditWorkoutStats.UseAccentColor = false;
@@ -111,7 +112,7 @@
             this.tbGoal.AnimateReadOnly = false;
             this.tbGoal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbGoal.Depth = 0;
-            this.tbGoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbGoal.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbGoal.Hint = "Hedef ";
             this.tbGoal.LeadingIcon = null;
             this.tbGoal.Location = new System.Drawing.Point(77, 304);
@@ -120,7 +121,7 @@
             this.tbGoal.Multiline = false;
             this.tbGoal.Name = "tbGoal";
             this.tbGoal.Size = new System.Drawing.Size(206, 50);
-            this.tbGoal.TabIndex = 12;
+            this.tbGoal.TabIndex = 5;
             this.tbGoal.Text = "";
             this.tbGoal.TrailingIcon = null;
             // 
@@ -129,7 +130,7 @@
             this.tbMuscleMass.AnimateReadOnly = false;
             this.tbMuscleMass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMuscleMass.Depth = 0;
-            this.tbMuscleMass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbMuscleMass.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbMuscleMass.Hint = "Kas Kütlesi";
             this.tbMuscleMass.LeadingIcon = null;
             this.tbMuscleMass.Location = new System.Drawing.Point(77, 248);
@@ -138,7 +139,7 @@
             this.tbMuscleMass.Multiline = false;
             this.tbMuscleMass.Name = "tbMuscleMass";
             this.tbMuscleMass.Size = new System.Drawing.Size(206, 50);
-            this.tbMuscleMass.TabIndex = 13;
+            this.tbMuscleMass.TabIndex = 4;
             this.tbMuscleMass.Text = "";
             this.tbMuscleMass.TrailingIcon = null;
             // 
@@ -147,7 +148,7 @@
             this.tbBodyFatPercentage.AnimateReadOnly = false;
             this.tbBodyFatPercentage.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbBodyFatPercentage.Depth = 0;
-            this.tbBodyFatPercentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbBodyFatPercentage.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbBodyFatPercentage.Hint = "Yağ Oranı";
             this.tbBodyFatPercentage.LeadingIcon = null;
             this.tbBodyFatPercentage.Location = new System.Drawing.Point(77, 192);
@@ -156,7 +157,7 @@
             this.tbBodyFatPercentage.Multiline = false;
             this.tbBodyFatPercentage.Name = "tbBodyFatPercentage";
             this.tbBodyFatPercentage.Size = new System.Drawing.Size(206, 50);
-            this.tbBodyFatPercentage.TabIndex = 14;
+            this.tbBodyFatPercentage.TabIndex = 3;
             this.tbBodyFatPercentage.Text = "";
             this.tbBodyFatPercentage.TrailingIcon = null;
             // 
@@ -165,7 +166,7 @@
             this.tbWeight.AnimateReadOnly = false;
             this.tbWeight.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbWeight.Depth = 0;
-            this.tbWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbWeight.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbWeight.Hint = "Kilo (kg)";
             this.tbWeight.LeadingIcon = null;
             this.tbWeight.Location = new System.Drawing.Point(77, 136);
@@ -174,7 +175,7 @@
             this.tbWeight.Multiline = false;
             this.tbWeight.Name = "tbWeight";
             this.tbWeight.Size = new System.Drawing.Size(206, 50);
-            this.tbWeight.TabIndex = 15;
+            this.tbWeight.TabIndex = 2;
             this.tbWeight.Text = "";
             this.tbWeight.TrailingIcon = null;
             // 
@@ -183,7 +184,7 @@
             this.tbHeight.AnimateReadOnly = false;
             this.tbHeight.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbHeight.Depth = 0;
-            this.tbHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbHeight.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbHeight.Hint = "Boy (cm)";
             this.tbHeight.LeadingIcon = null;
             this.tbHeight.Location = new System.Drawing.Point(77, 80);
@@ -192,7 +193,7 @@
             this.tbHeight.Multiline = false;
             this.tbHeight.Name = "tbHeight";
             this.tbHeight.Size = new System.Drawing.Size(206, 50);
-            this.tbHeight.TabIndex = 16;
+            this.tbHeight.TabIndex = 1;
             this.tbHeight.Text = "";
             this.tbHeight.TrailingIcon = null;
             // 
@@ -209,6 +210,7 @@
             this.Controls.Add(this.tbHeight);
             this.Controls.Add(this.pnlTitle);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MemberWorkoutEditStatsForm";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -55,7 +55,7 @@
             this.btnExit.Location = new System.Drawing.Point(369, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 3;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -118,7 +118,7 @@
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAddStudent.Size = new System.Drawing.Size(142, 44);
-            this.btnAddStudent.TabIndex = 8;
+            this.btnAddStudent.TabIndex = 2;
             this.btnAddStudent.Text = "Öğrenci Ekle";
             this.btnAddStudent.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddStudent.UseAccentColor = false;

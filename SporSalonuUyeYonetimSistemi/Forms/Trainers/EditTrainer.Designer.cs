@@ -42,9 +42,9 @@
             // 
             // pnlTitle
             // 
+            this.pnlTitle.Controls.Add(this.btnExitForm);
             this.pnlTitle.Controls.Add(this.pnlTitleSeperator);
             this.pnlTitle.Controls.Add(this.lblTitle);
-            this.pnlTitle.Controls.Add(this.btnExitForm);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(3, 0);
             this.pnlTitle.Name = "pnlTitle";
@@ -57,7 +57,7 @@
             this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 30);
             this.pnlTitleSeperator.Name = "pnlTitleSeperator";
-            this.pnlTitleSeperator.Size = new System.Drawing.Size(349, 1);
+            this.pnlTitleSeperator.Size = new System.Drawing.Size(394, 1);
             this.pnlTitleSeperator.TabIndex = 8;
             // 
             // lblTitle
@@ -78,8 +78,8 @@
             this.btnExitForm.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExitForm.Location = new System.Drawing.Point(349, 0);
             this.btnExitForm.Name = "btnExitForm";
-            this.btnExitForm.Size = new System.Drawing.Size(45, 31);
-            this.btnExitForm.TabIndex = 0;
+            this.btnExitForm.Size = new System.Drawing.Size(45, 30);
+            this.btnExitForm.TabIndex = 5;
             this.btnExitForm.Text = "X";
             this.btnExitForm.UseVisualStyleBackColor = true;
             this.btnExitForm.Click += new System.EventHandler(this.btnExitForm_Click);
@@ -98,7 +98,7 @@
             this.tbTrainerPhoneNumber.Multiline = false;
             this.tbTrainerPhoneNumber.Name = "tbTrainerPhoneNumber";
             this.tbTrainerPhoneNumber.Size = new System.Drawing.Size(257, 50);
-            this.tbTrainerPhoneNumber.TabIndex = 8;
+            this.tbTrainerPhoneNumber.TabIndex = 3;
             this.tbTrainerPhoneNumber.Text = "";
             this.tbTrainerPhoneNumber.TrailingIcon = global::SporSalonuUyeYonetimSistemi.Properties.Resources.Phone;
             // 
@@ -116,7 +116,7 @@
             this.tbTrainerSurname.Multiline = false;
             this.tbTrainerSurname.Name = "tbTrainerSurname";
             this.tbTrainerSurname.Size = new System.Drawing.Size(257, 50);
-            this.tbTrainerSurname.TabIndex = 7;
+            this.tbTrainerSurname.TabIndex = 2;
             this.tbTrainerSurname.Text = "";
             this.tbTrainerSurname.TrailingIcon = null;
             // 
@@ -134,7 +134,7 @@
             this.tbTrainerName.Multiline = false;
             this.tbTrainerName.Name = "tbTrainerName";
             this.tbTrainerName.Size = new System.Drawing.Size(257, 50);
-            this.tbTrainerName.TabIndex = 6;
+            this.tbTrainerName.TabIndex = 1;
             this.tbTrainerName.Text = "";
             this.tbTrainerName.TrailingIcon = null;
             // 
@@ -152,7 +152,7 @@
             this.btnEditTrainer.Name = "btnEditTrainer";
             this.btnEditTrainer.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEditTrainer.Size = new System.Drawing.Size(165, 44);
-            this.btnEditTrainer.TabIndex = 9;
+            this.btnEditTrainer.TabIndex = 4;
             this.btnEditTrainer.Text = "Antrenörü Düzenle";
             this.btnEditTrainer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditTrainer.UseAccentColor = false;

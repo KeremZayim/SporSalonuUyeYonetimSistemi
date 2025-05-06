@@ -68,7 +68,7 @@
             this.btnExitApplication.Location = new System.Drawing.Point(699, 0);
             this.btnExitApplication.Name = "btnExitApplication";
             this.btnExitApplication.Size = new System.Drawing.Size(45, 30);
-            this.btnExitApplication.TabIndex = 0;
+            this.btnExitApplication.TabIndex = 3;
             this.btnExitApplication.Text = "X";
             this.btnExitApplication.UseVisualStyleBackColor = true;
             this.btnExitApplication.Click += new System.EventHandler(this.btnExitForm_Click);
@@ -115,7 +115,7 @@
             this.btnStartMembership.Name = "btnStartMembership";
             this.btnStartMembership.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnStartMembership.Size = new System.Drawing.Size(140, 40);
-            this.btnStartMembership.TabIndex = 18;
+            this.btnStartMembership.TabIndex = 1;
             this.btnStartMembership.Text = "Üyeliği Başlat";
             this.btnStartMembership.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnStartMembership.UseAccentColor = false;
@@ -136,7 +136,7 @@
             this.btnEndMembership.Name = "btnEndMembership";
             this.btnEndMembership.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEndMembership.Size = new System.Drawing.Size(140, 40);
-            this.btnEndMembership.TabIndex = 18;
+            this.btnEndMembership.TabIndex = 2;
             this.btnEndMembership.Text = "Üyeliği Bitir";
             this.btnEndMembership.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEndMembership.UseAccentColor = false;

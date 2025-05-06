@@ -52,7 +52,7 @@
             this.tbFilter.Multiline = false;
             this.tbFilter.Name = "tbFilter";
             this.tbFilter.Size = new System.Drawing.Size(270, 50);
-            this.tbFilter.TabIndex = 3;
+            this.tbFilter.TabIndex = 1;
             this.tbFilter.Text = "";
             this.tbFilter.TrailingIcon = global::SporSalonuUyeYonetimSistemi.Properties.Resources.Filter;
             this.tbFilter.TextChanged += new System.EventHandler(this.tbFilter_TextChanged);

@@ -117,7 +117,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnWorkoutList.Name = "btnWorkoutList";
             this.btnWorkoutList.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnWorkoutList.Size = new System.Drawing.Size(133, 40);
-            this.btnWorkoutList.TabIndex = 3;
+            this.btnWorkoutList.TabIndex = 7;
             this.btnWorkoutList.Text = "Antrenman Listesi";
             this.btnWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnWorkoutList.UseAccentColor = false;
@@ -139,7 +139,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnMembership.Name = "btnMembership";
             this.btnMembership.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnMembership.Size = new System.Drawing.Size(133, 40);
-            this.btnMembership.TabIndex = 2;
+            this.btnMembership.TabIndex = 4;
             this.btnMembership.Text = "Üyelik Bilgileri";
             this.btnMembership.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnMembership.UseAccentColor = false;
@@ -161,7 +161,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnAttendance.Name = "btnAttendance";
             this.btnAttendance.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAttendance.Size = new System.Drawing.Size(133, 40);
-            this.btnAttendance.TabIndex = 1;
+            this.btnAttendance.TabIndex = 10;
             this.btnAttendance.Text = "Katılım Geçmişi";
             this.btnAttendance.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAttendance.UseAccentColor = false;
@@ -204,7 +204,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnDeleteMember.Name = "btnDeleteMember";
             this.btnDeleteMember.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnDeleteMember.Size = new System.Drawing.Size(133, 40);
-            this.btnDeleteMember.TabIndex = 1;
+            this.btnDeleteMember.TabIndex = 3;
             this.btnDeleteMember.Text = "Üyeyi Sil";
             this.btnDeleteMember.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnDeleteMember.UseAccentColor = true;
@@ -226,7 +226,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnEditMember.Name = "btnEditMember";
             this.btnEditMember.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEditMember.Size = new System.Drawing.Size(133, 40);
-            this.btnEditMember.TabIndex = 1;
+            this.btnEditMember.TabIndex = 2;
             this.btnEditMember.Text = "Üyeyi Düzenle";
             this.btnEditMember.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditMember.UseAccentColor = true;
@@ -248,7 +248,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnHealthInfo.Name = "btnHealthInfo";
             this.btnHealthInfo.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnHealthInfo.Size = new System.Drawing.Size(133, 40);
-            this.btnHealthInfo.TabIndex = 1;
+            this.btnHealthInfo.TabIndex = 5;
             this.btnHealthInfo.Text = "Sağlık Bilgileri";
             this.btnHealthInfo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnHealthInfo.UseAccentColor = false;
@@ -270,7 +270,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnTrainingInfo.Name = "btnTrainingInfo";
             this.btnTrainingInfo.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnTrainingInfo.Size = new System.Drawing.Size(133, 40);
-            this.btnTrainingInfo.TabIndex = 1;
+            this.btnTrainingInfo.TabIndex = 8;
             this.btnTrainingInfo.Text = "Antrenman Bilgileri";
             this.btnTrainingInfo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnTrainingInfo.UseAccentColor = false;
@@ -292,7 +292,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnMemberTrainers.Name = "btnMemberTrainers";
             this.btnMemberTrainers.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnMemberTrainers.Size = new System.Drawing.Size(133, 40);
-            this.btnMemberTrainers.TabIndex = 1;
+            this.btnMemberTrainers.TabIndex = 6;
             this.btnMemberTrainers.Text = "Antrenörleri";
             this.btnMemberTrainers.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnMemberTrainers.UseAccentColor = false;
@@ -314,7 +314,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms.Member.MemberInformation
             this.btnPayments.Name = "btnPayments";
             this.btnPayments.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnPayments.Size = new System.Drawing.Size(133, 40);
-            this.btnPayments.TabIndex = 1;
+            this.btnPayments.TabIndex = 9;
             this.btnPayments.Text = "Ödemeler";
             this.btnPayments.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnPayments.UseAccentColor = false;

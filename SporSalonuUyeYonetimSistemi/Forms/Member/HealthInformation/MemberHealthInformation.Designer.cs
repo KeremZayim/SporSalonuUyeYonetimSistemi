@@ -55,7 +55,7 @@
             this.btnExit.Location = new System.Drawing.Point(549, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 2;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -117,7 +117,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEdit.Size = new System.Drawing.Size(185, 45);
-            this.btnEdit.TabIndex = 2;
+            this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Bilgileri Düzenle";
             this.btnEdit.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEdit.UseAccentColor = false;

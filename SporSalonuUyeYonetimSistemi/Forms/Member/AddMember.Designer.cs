@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddMember));
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlTitleSeperator = new System.Windows.Forms.Panel();
@@ -64,7 +65,7 @@
             this.btnExit.Location = new System.Drawing.Point(1049, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 12;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -96,7 +97,7 @@
             this.tbMemberSurname.AnimateReadOnly = false;
             this.tbMemberSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMemberSurname.Depth = 0;
-            this.tbMemberSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbMemberSurname.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbMemberSurname.Hint = "Soyad";
             this.tbMemberSurname.LeadingIcon = null;
             this.tbMemberSurname.Location = new System.Drawing.Point(67, 113);
@@ -105,7 +106,7 @@
             this.tbMemberSurname.Multiline = false;
             this.tbMemberSurname.Name = "tbMemberSurname";
             this.tbMemberSurname.Size = new System.Drawing.Size(294, 50);
-            this.tbMemberSurname.TabIndex = 1;
+            this.tbMemberSurname.TabIndex = 2;
             this.tbMemberSurname.Text = "";
             this.tbMemberSurname.TrailingIcon = null;
             // 
@@ -114,7 +115,7 @@
             this.tbMemberPhoneNumber.AnimateReadOnly = false;
             this.tbMemberPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMemberPhoneNumber.Depth = 0;
-            this.tbMemberPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbMemberPhoneNumber.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbMemberPhoneNumber.Hint = "Telefon No";
             this.tbMemberPhoneNumber.LeadingIcon = null;
             this.tbMemberPhoneNumber.Location = new System.Drawing.Point(67, 169);
@@ -123,7 +124,7 @@
             this.tbMemberPhoneNumber.Multiline = false;
             this.tbMemberPhoneNumber.Name = "tbMemberPhoneNumber";
             this.tbMemberPhoneNumber.Size = new System.Drawing.Size(294, 50);
-            this.tbMemberPhoneNumber.TabIndex = 1;
+            this.tbMemberPhoneNumber.TabIndex = 3;
             this.tbMemberPhoneNumber.Text = "";
             this.tbMemberPhoneNumber.TrailingIcon = null;
             // 
@@ -136,7 +137,7 @@
             this.cbMembershipType.DropDownHeight = 174;
             this.cbMembershipType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMembershipType.DropDownWidth = 121;
-            this.cbMembershipType.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbMembershipType.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cbMembershipType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbMembershipType.FormattingEnabled = true;
             this.cbMembershipType.Hint = "Üyelik Tipi";
@@ -148,7 +149,7 @@
             this.cbMembershipType.Name = "cbMembershipType";
             this.cbMembershipType.Size = new System.Drawing.Size(294, 49);
             this.cbMembershipType.StartIndex = 0;
-            this.cbMembershipType.TabIndex = 3;
+            this.cbMembershipType.TabIndex = 4;
             // 
             // dtpBirthday
             // 
@@ -158,7 +159,7 @@
             this.dtpBirthday.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpBirthday.Name = "dtpBirthday";
             this.dtpBirthday.Size = new System.Drawing.Size(200, 20);
-            this.dtpBirthday.TabIndex = 4;
+            this.dtpBirthday.TabIndex = 9;
             this.dtpBirthday.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // btnAddMember
@@ -175,7 +176,7 @@
             this.btnAddMember.Name = "btnAddMember";
             this.btnAddMember.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAddMember.Size = new System.Drawing.Size(133, 40);
-            this.btnAddMember.TabIndex = 9;
+            this.btnAddMember.TabIndex = 11;
             this.btnAddMember.Text = "Üye Ekle";
             this.btnAddMember.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddMember.UseAccentColor = false;
@@ -234,7 +235,7 @@
             this.tbNotes.SelectionStart = 0;
             this.tbNotes.ShortcutsEnabled = true;
             this.tbNotes.Size = new System.Drawing.Size(300, 162);
-            this.tbNotes.TabIndex = 12;
+            this.tbNotes.TabIndex = 10;
             this.tbNotes.TabStop = false;
             this.tbNotes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tbNotes.UseSystemPasswordChar = false;
@@ -253,7 +254,7 @@
             this.tbMedicalConditions.Multiline = false;
             this.tbMedicalConditions.Name = "tbMedicalConditions";
             this.tbMedicalConditions.Size = new System.Drawing.Size(300, 50);
-            this.tbMedicalConditions.TabIndex = 13;
+            this.tbMedicalConditions.TabIndex = 5;
             this.tbMedicalConditions.Text = "";
             this.tbMedicalConditions.TrailingIcon = null;
             // 
@@ -271,7 +272,7 @@
             this.tbAllergies.Multiline = false;
             this.tbAllergies.Name = "tbAllergies";
             this.tbAllergies.Size = new System.Drawing.Size(300, 50);
-            this.tbAllergies.TabIndex = 14;
+            this.tbAllergies.TabIndex = 6;
             this.tbAllergies.Text = "";
             this.tbAllergies.TrailingIcon = null;
             // 
@@ -289,7 +290,7 @@
             this.tbEmergencyContactName.Multiline = false;
             this.tbEmergencyContactName.Name = "tbEmergencyContactName";
             this.tbEmergencyContactName.Size = new System.Drawing.Size(300, 50);
-            this.tbEmergencyContactName.TabIndex = 15;
+            this.tbEmergencyContactName.TabIndex = 7;
             this.tbEmergencyContactName.Text = "";
             this.tbEmergencyContactName.TrailingIcon = null;
             // 
@@ -307,7 +308,7 @@
             this.tbEmergencyContactPhone.Multiline = false;
             this.tbEmergencyContactPhone.Name = "tbEmergencyContactPhone";
             this.tbEmergencyContactPhone.Size = new System.Drawing.Size(300, 50);
-            this.tbEmergencyContactPhone.TabIndex = 16;
+            this.tbEmergencyContactPhone.TabIndex = 8;
             this.tbEmergencyContactPhone.Text = "";
             this.tbEmergencyContactPhone.TrailingIcon = null;
             // 
@@ -330,6 +331,7 @@
             this.Controls.Add(this.tbMemberName);
             this.Controls.Add(this.pnlTitle);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddMember";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -94,7 +94,7 @@
             this.btnAddMembershipType.Name = "btnAddMembershipType";
             this.btnAddMembershipType.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAddMembershipType.Size = new System.Drawing.Size(133, 40);
-            this.btnAddMembershipType.TabIndex = 4;
+            this.btnAddMembershipType.TabIndex = 1;
             this.btnAddMembershipType.Text = "Üyelik Türü Ekle";
             this.btnAddMembershipType.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddMembershipType.UseAccentColor = false;
@@ -116,7 +116,7 @@
             this.btnEditMembershipType.Name = "btnEditMembershipType";
             this.btnEditMembershipType.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEditMembershipType.Size = new System.Drawing.Size(133, 40);
-            this.btnEditMembershipType.TabIndex = 5;
+            this.btnEditMembershipType.TabIndex = 2;
             this.btnEditMembershipType.Text = "Üyelik Türünü Düzenle";
             this.btnEditMembershipType.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditMembershipType.UseAccentColor = false;
@@ -138,7 +138,7 @@
             this.btnDeleteMembershipType.Name = "btnDeleteMembershipType";
             this.btnDeleteMembershipType.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnDeleteMembershipType.Size = new System.Drawing.Size(133, 40);
-            this.btnDeleteMembershipType.TabIndex = 6;
+            this.btnDeleteMembershipType.TabIndex = 3;
             this.btnDeleteMembershipType.Text = "Üyelik Türünü Sil";
             this.btnDeleteMembershipType.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnDeleteMembershipType.UseAccentColor = false;

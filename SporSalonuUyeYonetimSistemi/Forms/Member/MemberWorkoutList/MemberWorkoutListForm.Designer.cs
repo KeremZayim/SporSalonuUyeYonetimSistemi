@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberWorkoutListForm));
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlTitleSeperator = new System.Windows.Forms.Panel();
@@ -56,7 +57,7 @@
             this.btnExit.Location = new System.Drawing.Point(834, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 4;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -117,7 +118,7 @@
             this.btnAddWorkoutList.Name = "btnAddWorkoutList";
             this.btnAddWorkoutList.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAddWorkoutList.Size = new System.Drawing.Size(133, 40);
-            this.btnAddWorkoutList.TabIndex = 10;
+            this.btnAddWorkoutList.TabIndex = 1;
             this.btnAddWorkoutList.Text = "Antrenman Listesi Ekle";
             this.btnAddWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddWorkoutList.UseAccentColor = false;
@@ -139,7 +140,7 @@
             this.btnEditWorkoutList.Name = "btnEditWorkoutList";
             this.btnEditWorkoutList.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEditWorkoutList.Size = new System.Drawing.Size(133, 40);
-            this.btnEditWorkoutList.TabIndex = 11;
+            this.btnEditWorkoutList.TabIndex = 2;
             this.btnEditWorkoutList.Text = "Antrenman Listesini Düzenle";
             this.btnEditWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditWorkoutList.UseAccentColor = false;
@@ -161,7 +162,7 @@
             this.btnDeleteWorkoutList.Name = "btnDeleteWorkoutList";
             this.btnDeleteWorkoutList.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnDeleteWorkoutList.Size = new System.Drawing.Size(133, 40);
-            this.btnDeleteWorkoutList.TabIndex = 12;
+            this.btnDeleteWorkoutList.TabIndex = 3;
             this.btnDeleteWorkoutList.Text = "Antrenman Listesini Sil";
             this.btnDeleteWorkoutList.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnDeleteWorkoutList.UseAccentColor = false;
@@ -179,6 +180,7 @@
             this.Controls.Add(this.dtWorkoutList);
             this.Controls.Add(this.pnlTitle);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MemberWorkoutListForm";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

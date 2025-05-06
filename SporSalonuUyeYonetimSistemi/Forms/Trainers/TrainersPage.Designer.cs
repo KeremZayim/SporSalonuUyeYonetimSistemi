@@ -101,7 +101,7 @@
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnStudents.Size = new System.Drawing.Size(142, 44);
-            this.btnStudents.TabIndex = 6;
+            this.btnStudents.TabIndex = 4;
             this.btnStudents.Text = "Öğrencileri";
             this.btnStudents.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnStudents.UseAccentColor = false;
@@ -123,7 +123,7 @@
             this.btnDeleteTrainer.Name = "btnDeleteTrainer";
             this.btnDeleteTrainer.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnDeleteTrainer.Size = new System.Drawing.Size(142, 44);
-            this.btnDeleteTrainer.TabIndex = 6;
+            this.btnDeleteTrainer.TabIndex = 3;
             this.btnDeleteTrainer.Text = "Antrenörü Sil";
             this.btnDeleteTrainer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnDeleteTrainer.UseAccentColor = false;
@@ -145,7 +145,7 @@
             this.btnEditTrainer.Name = "btnEditTrainer";
             this.btnEditTrainer.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEditTrainer.Size = new System.Drawing.Size(142, 44);
-            this.btnEditTrainer.TabIndex = 6;
+            this.btnEditTrainer.TabIndex = 2;
             this.btnEditTrainer.Text = "Antrenörü Düzenle";
             this.btnEditTrainer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditTrainer.UseAccentColor = false;
@@ -166,7 +166,7 @@
             this.btnAddTrainer.Name = "btnAddTrainer";
             this.btnAddTrainer.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAddTrainer.Size = new System.Drawing.Size(142, 44);
-            this.btnAddTrainer.TabIndex = 6;
+            this.btnAddTrainer.TabIndex = 1;
             this.btnAddTrainer.Text = "Antrenör Ekle";
             this.btnAddTrainer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddTrainer.UseAccentColor = false;

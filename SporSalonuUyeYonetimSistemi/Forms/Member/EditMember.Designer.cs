@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditMember));
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlTitleSeperator = new System.Windows.Forms.Panel();
@@ -64,7 +65,7 @@
             this.btnExit.Location = new System.Drawing.Point(1049, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 12;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -105,7 +106,7 @@
             this.tbEmergencyContactPhone.Multiline = false;
             this.tbEmergencyContactPhone.Name = "tbEmergencyContactPhone";
             this.tbEmergencyContactPhone.Size = new System.Drawing.Size(300, 50);
-            this.tbEmergencyContactPhone.TabIndex = 28;
+            this.tbEmergencyContactPhone.TabIndex = 8;
             this.tbEmergencyContactPhone.Text = "";
             this.tbEmergencyContactPhone.TrailingIcon = null;
             // 
@@ -123,7 +124,7 @@
             this.tbEmergencyContactName.Multiline = false;
             this.tbEmergencyContactName.Name = "tbEmergencyContactName";
             this.tbEmergencyContactName.Size = new System.Drawing.Size(300, 50);
-            this.tbEmergencyContactName.TabIndex = 27;
+            this.tbEmergencyContactName.TabIndex = 7;
             this.tbEmergencyContactName.Text = "";
             this.tbEmergencyContactName.TrailingIcon = null;
             // 
@@ -141,7 +142,7 @@
             this.tbAllergies.Multiline = false;
             this.tbAllergies.Name = "tbAllergies";
             this.tbAllergies.Size = new System.Drawing.Size(300, 50);
-            this.tbAllergies.TabIndex = 26;
+            this.tbAllergies.TabIndex = 6;
             this.tbAllergies.Text = "";
             this.tbAllergies.TrailingIcon = null;
             // 
@@ -159,7 +160,7 @@
             this.tbMedicalConditions.Multiline = false;
             this.tbMedicalConditions.Name = "tbMedicalConditions";
             this.tbMedicalConditions.Size = new System.Drawing.Size(300, 50);
-            this.tbMedicalConditions.TabIndex = 25;
+            this.tbMedicalConditions.TabIndex = 5;
             this.tbMedicalConditions.Text = "";
             this.tbMedicalConditions.TrailingIcon = null;
             // 
@@ -184,7 +185,7 @@
             this.tbNotes.SelectionStart = 0;
             this.tbNotes.ShortcutsEnabled = true;
             this.tbNotes.Size = new System.Drawing.Size(300, 162);
-            this.tbNotes.TabIndex = 24;
+            this.tbNotes.TabIndex = 10;
             this.tbNotes.TabStop = false;
             this.tbNotes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tbNotes.UseSystemPasswordChar = false;
@@ -216,7 +217,7 @@
             this.btnEditMember.Name = "btnEditMember";
             this.btnEditMember.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEditMember.Size = new System.Drawing.Size(133, 40);
-            this.btnEditMember.TabIndex = 22;
+            this.btnEditMember.TabIndex = 11;
             this.btnEditMember.Text = "Üyeyi Düzenle";
             this.btnEditMember.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditMember.UseAccentColor = false;
@@ -231,7 +232,7 @@
             this.dtpBirthday.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpBirthday.Name = "dtpBirthday";
             this.dtpBirthday.Size = new System.Drawing.Size(200, 20);
-            this.dtpBirthday.TabIndex = 21;
+            this.dtpBirthday.TabIndex = 9;
             this.dtpBirthday.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // cbMembershipType
@@ -255,7 +256,7 @@
             this.cbMembershipType.Name = "cbMembershipType";
             this.cbMembershipType.Size = new System.Drawing.Size(294, 49);
             this.cbMembershipType.StartIndex = 0;
-            this.cbMembershipType.TabIndex = 20;
+            this.cbMembershipType.TabIndex = 4;
             // 
             // tbMemberPhoneNumber
             // 
@@ -271,7 +272,7 @@
             this.tbMemberPhoneNumber.Multiline = false;
             this.tbMemberPhoneNumber.Name = "tbMemberPhoneNumber";
             this.tbMemberPhoneNumber.Size = new System.Drawing.Size(294, 50);
-            this.tbMemberPhoneNumber.TabIndex = 17;
+            this.tbMemberPhoneNumber.TabIndex = 3;
             this.tbMemberPhoneNumber.Text = "";
             this.tbMemberPhoneNumber.TrailingIcon = null;
             // 
@@ -289,7 +290,7 @@
             this.tbMemberSurname.Multiline = false;
             this.tbMemberSurname.Name = "tbMemberSurname";
             this.tbMemberSurname.Size = new System.Drawing.Size(294, 50);
-            this.tbMemberSurname.TabIndex = 18;
+            this.tbMemberSurname.TabIndex = 2;
             this.tbMemberSurname.Text = "";
             this.tbMemberSurname.TrailingIcon = null;
             // 
@@ -307,7 +308,7 @@
             this.tbMemberName.Multiline = false;
             this.tbMemberName.Name = "tbMemberName";
             this.tbMemberName.Size = new System.Drawing.Size(294, 50);
-            this.tbMemberName.TabIndex = 19;
+            this.tbMemberName.TabIndex = 1;
             this.tbMemberName.Text = "";
             this.tbMemberName.TrailingIcon = null;
             // 
@@ -330,6 +331,7 @@
             this.Controls.Add(this.tbMemberName);
             this.Controls.Add(this.pnlTitle);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditMember";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

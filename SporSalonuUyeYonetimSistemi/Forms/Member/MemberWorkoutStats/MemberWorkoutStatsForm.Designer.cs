@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberWorkoutStatsForm));
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlTitleSeperator = new System.Windows.Forms.Panel();
@@ -56,7 +57,7 @@
             this.btnExit.Location = new System.Drawing.Point(1099, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 4;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -117,7 +118,7 @@
             this.btnAddWorkoutStats.Name = "btnAddWorkoutStats";
             this.btnAddWorkoutStats.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAddWorkoutStats.Size = new System.Drawing.Size(140, 40);
-            this.btnAddWorkoutStats.TabIndex = 10;
+            this.btnAddWorkoutStats.TabIndex = 1;
             this.btnAddWorkoutStats.Text = "Ekle";
             this.btnAddWorkoutStats.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddWorkoutStats.UseAccentColor = false;
@@ -139,7 +140,7 @@
             this.btnEditWorkoutStats.Name = "btnEditWorkoutStats";
             this.btnEditWorkoutStats.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEditWorkoutStats.Size = new System.Drawing.Size(140, 40);
-            this.btnEditWorkoutStats.TabIndex = 11;
+            this.btnEditWorkoutStats.TabIndex = 2;
             this.btnEditWorkoutStats.Text = "Düzenle";
             this.btnEditWorkoutStats.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditWorkoutStats.UseAccentColor = false;
@@ -161,7 +162,7 @@
             this.btnDeleteWorkoutStats.Name = "btnDeleteWorkoutStats";
             this.btnDeleteWorkoutStats.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnDeleteWorkoutStats.Size = new System.Drawing.Size(140, 40);
-            this.btnDeleteWorkoutStats.TabIndex = 12;
+            this.btnDeleteWorkoutStats.TabIndex = 3;
             this.btnDeleteWorkoutStats.Text = "Sil";
             this.btnDeleteWorkoutStats.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnDeleteWorkoutStats.UseAccentColor = false;
@@ -179,6 +180,7 @@
             this.Controls.Add(this.dtMemberWorkoutStats);
             this.Controls.Add(this.pnlTitle);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MemberWorkoutStatsForm";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

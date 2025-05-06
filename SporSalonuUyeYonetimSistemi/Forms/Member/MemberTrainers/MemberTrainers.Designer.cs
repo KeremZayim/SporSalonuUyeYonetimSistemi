@@ -68,7 +68,7 @@
             this.btnExitForm.Location = new System.Drawing.Point(499, 0);
             this.btnExitForm.Name = "btnExitForm";
             this.btnExitForm.Size = new System.Drawing.Size(45, 30);
-            this.btnExitForm.TabIndex = 0;
+            this.btnExitForm.TabIndex = 3;
             this.btnExitForm.Text = "X";
             this.btnExitForm.UseVisualStyleBackColor = true;
             this.btnExitForm.Click += new System.EventHandler(this.btnExitForm_Click);
@@ -97,7 +97,7 @@
             this.btnDeleteTrainer.Name = "btnDeleteTrainer";
             this.btnDeleteTrainer.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnDeleteTrainer.Size = new System.Drawing.Size(142, 44);
-            this.btnDeleteTrainer.TabIndex = 9;
+            this.btnDeleteTrainer.TabIndex = 2;
             this.btnDeleteTrainer.Text = "Antrenörü Sil";
             this.btnDeleteTrainer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnDeleteTrainer.UseAccentColor = false;
@@ -138,7 +138,7 @@
             this.btnAddTrainer.Name = "btnAddTrainer";
             this.btnAddTrainer.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAddTrainer.Size = new System.Drawing.Size(142, 44);
-            this.btnAddTrainer.TabIndex = 9;
+            this.btnAddTrainer.TabIndex = 1;
             this.btnAddTrainer.Text = "Antrenör Ekle";
             this.btnAddTrainer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddTrainer.UseAccentColor = false;

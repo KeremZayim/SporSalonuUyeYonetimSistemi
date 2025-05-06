@@ -58,7 +58,7 @@
             this.btnExit.Location = new System.Drawing.Point(349, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 6;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -137,7 +137,7 @@
             this.tbAllergies.SelectionStart = 0;
             this.tbAllergies.ShortcutsEnabled = true;
             this.tbAllergies.Size = new System.Drawing.Size(300, 48);
-            this.tbAllergies.TabIndex = 1;
+            this.tbAllergies.TabIndex = 2;
             this.tbAllergies.TabStop = false;
             this.tbAllergies.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tbAllergies.TrailingIcon = null;
@@ -166,7 +166,7 @@
             this.tbEmergencyContactName.SelectionStart = 0;
             this.tbEmergencyContactName.ShortcutsEnabled = true;
             this.tbEmergencyContactName.Size = new System.Drawing.Size(300, 48);
-            this.tbEmergencyContactName.TabIndex = 1;
+            this.tbEmergencyContactName.TabIndex = 3;
             this.tbEmergencyContactName.TabStop = false;
             this.tbEmergencyContactName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tbEmergencyContactName.TrailingIcon = null;
@@ -195,7 +195,7 @@
             this.tbEmergencyContactPhone.SelectionStart = 0;
             this.tbEmergencyContactPhone.ShortcutsEnabled = true;
             this.tbEmergencyContactPhone.Size = new System.Drawing.Size(300, 48);
-            this.tbEmergencyContactPhone.TabIndex = 1;
+            this.tbEmergencyContactPhone.TabIndex = 4;
             this.tbEmergencyContactPhone.TabStop = false;
             this.tbEmergencyContactPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tbEmergencyContactPhone.TrailingIcon = null;
@@ -215,7 +215,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEdit.Size = new System.Drawing.Size(185, 45);
-            this.btnEdit.TabIndex = 3;
+            this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "Bilgileri Düzenle";
             this.btnEdit.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEdit.UseAccentColor = false;

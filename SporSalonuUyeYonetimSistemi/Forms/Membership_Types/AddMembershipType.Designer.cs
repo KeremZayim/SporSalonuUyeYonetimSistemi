@@ -56,7 +56,7 @@
             this.btnExit.Location = new System.Drawing.Point(349, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 4;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -115,7 +115,7 @@
             this.tbPrice.Multiline = false;
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(216, 50);
-            this.tbPrice.TabIndex = 1;
+            this.tbPrice.TabIndex = 2;
             this.tbPrice.Text = "";
             this.tbPrice.TrailingIcon = null;
             // 
@@ -133,7 +133,7 @@
             this.btnAddMembershipType.Name = "btnAddMembershipType";
             this.btnAddMembershipType.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAddMembershipType.Size = new System.Drawing.Size(126, 44);
-            this.btnAddMembershipType.TabIndex = 2;
+            this.btnAddMembershipType.TabIndex = 3;
             this.btnAddMembershipType.Text = "Ekle";
             this.btnAddMembershipType.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddMembershipType.UseAccentColor = false;

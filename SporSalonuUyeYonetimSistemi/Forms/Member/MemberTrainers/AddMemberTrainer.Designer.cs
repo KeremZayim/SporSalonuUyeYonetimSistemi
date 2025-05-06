@@ -77,7 +77,7 @@
             this.btnExitForm.Location = new System.Drawing.Point(349, 0);
             this.btnExitForm.Name = "btnExitForm";
             this.btnExitForm.Size = new System.Drawing.Size(45, 31);
-            this.btnExitForm.TabIndex = 0;
+            this.btnExitForm.TabIndex = 3;
             this.btnExitForm.Text = "X";
             this.btnExitForm.UseVisualStyleBackColor = true;
             this.btnExitForm.Click += new System.EventHandler(this.btnExitForm_Click);
@@ -103,7 +103,7 @@
             this.cbTrainers.Name = "cbTrainers";
             this.cbTrainers.Size = new System.Drawing.Size(222, 49);
             this.cbTrainers.StartIndex = 0;
-            this.cbTrainers.TabIndex = 6;
+            this.cbTrainers.TabIndex = 1;
             // 
             // btnAddTrainer
             // 
@@ -119,7 +119,7 @@
             this.btnAddTrainer.Name = "btnAddTrainer";
             this.btnAddTrainer.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAddTrainer.Size = new System.Drawing.Size(142, 44);
-            this.btnAddTrainer.TabIndex = 10;
+            this.btnAddTrainer.TabIndex = 2;
             this.btnAddTrainer.Text = "Antrenör Ekle";
             this.btnAddTrainer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAddTrainer.UseAccentColor = false;
