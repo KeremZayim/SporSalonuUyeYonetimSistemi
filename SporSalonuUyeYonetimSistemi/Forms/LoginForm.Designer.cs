@@ -39,7 +39,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms
             this.tbPassword = new MaterialSkin.Controls.MaterialTextBox2();
             this.tbUsername = new MaterialSkin.Controls.MaterialTextBox2();
             this.pnlLeftImage = new System.Windows.Forms.Panel();
-            this.pbLoginImage = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
             this.pnlTitleSeperator = new System.Windows.Forms.Panel();
@@ -48,7 +48,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms
             this.pnlRightLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRightImage)).BeginInit();
             this.pnlLeftImage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLoginImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -186,33 +186,42 @@ namespace SporSalonuUyeYonetimSistemi.Forms
             // 
             // pnlLeftImage
             // 
-            this.pnlLeftImage.Controls.Add(this.pbLoginImage);
+            this.pnlLeftImage.Controls.Add(this.pictureBox1);
             this.pnlLeftImage.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeftImage.Location = new System.Drawing.Point(0, 31);
             this.pnlLeftImage.Name = "pnlLeftImage";
             this.pnlLeftImage.Size = new System.Drawing.Size(650, 516);
             this.pnlLeftImage.TabIndex = 6;
             // 
-            // pbLoginImage
+            // pictureBox1
             // 
-            this.pbLoginImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbLoginImage.Location = new System.Drawing.Point(0, 0);
-            this.pbLoginImage.Name = "pbLoginImage";
-            this.pbLoginImage.Size = new System.Drawing.Size(650, 516);
-            this.pbLoginImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLoginImage.TabIndex = 0;
-            this.pbLoginImage.TabStop = false;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::SporSalonuUyeYonetimSistemi.Properties.Resources.bg_login;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(650, 516);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // pnlTitle
             // 
-            this.pnlTitle.Controls.Add(this.lblTitle);
             this.pnlTitle.Controls.Add(this.pnlTitleSeperator);
+            this.pnlTitle.Controls.Add(this.lblTitle);
             this.pnlTitle.Controls.Add(this.btnExitApplication);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(0, 0);
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(994, 31);
             this.pnlTitle.TabIndex = 0;
+            // 
+            // pnlTitleSeperator
+            // 
+            this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
+            this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 30);
+            this.pnlTitleSeperator.Name = "pnlTitleSeperator";
+            this.pnlTitleSeperator.Size = new System.Drawing.Size(994, 1);
+            this.pnlTitleSeperator.TabIndex = 8;
             // 
             // lblTitle
             // 
@@ -226,15 +235,6 @@ namespace SporSalonuUyeYonetimSistemi.Forms
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Text = "Spor Salonu Üye Yönetim Sistemi";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlTitleSeperator
-            // 
-            this.pnlTitleSeperator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(40)))));
-            this.pnlTitleSeperator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTitleSeperator.Location = new System.Drawing.Point(0, 30);
-            this.pnlTitleSeperator.Name = "pnlTitleSeperator";
-            this.pnlTitleSeperator.Size = new System.Drawing.Size(994, 1);
-            this.pnlTitleSeperator.TabIndex = 8;
             // 
             // btnExitApplication
             // 
@@ -264,7 +264,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms
             this.pnlRightLogin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbRightImage)).EndInit();
             this.pnlLeftImage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLoginImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -274,9 +274,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms
 
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Panel pnlTitle;
-        private System.Windows.Forms.Panel pnlLeftImage;
         private System.Windows.Forms.Panel pnlRightLogin;
-        private System.Windows.Forms.PictureBox pbLoginImage;
         private System.Windows.Forms.Button btnExitApplication;
         private System.Windows.Forms.Panel pnlTitleSeperator;
         private MaterialSkin.Controls.MaterialLabel lblTitle;
@@ -285,5 +283,7 @@ namespace SporSalonuUyeYonetimSistemi.Forms
         private MaterialSkin.Controls.MaterialSwitch switchRememberMe;
         private MaterialSkin.Controls.MaterialButton btnLogin;
         private System.Windows.Forms.PictureBox pbRightImage;
+        private System.Windows.Forms.Panel pnlLeftImage;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
