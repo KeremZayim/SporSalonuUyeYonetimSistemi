@@ -66,3 +66,7 @@ Bu proje, spor salonları için kapsamlı bir üye yönetim sistemi sunarak salo
 *Proje Başlangıç Tarihi: 08.03.2025*
 
 *Otomasyon Yapımı Başlangıç Tarihi: 22.04.2025*
+
+*Otomasyon Yapımı Bitiş Tarihi: 13.05.2025*
+
+*Otomasyon Tamamlama Süresi (Boş Günler Haricinde): 13 Gün*
